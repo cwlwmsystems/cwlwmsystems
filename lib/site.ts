@@ -102,7 +102,7 @@ export const solutions = [
   },
 ];
 
-export const process = [
+export const processSteps = [
   {
     number: "01",
     title: "Diagnose",

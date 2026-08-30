@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CTA } from "@/components/CTA";
-import { process } from "@/lib/site";
+import { processSteps } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "How We Work",
@@ -37,7 +37,7 @@ export default function HowWeWorkPage() {
 
       <section className="section">
         <div className="container process-detail-list">
-          {process.map((step) => (
+          {processSteps.map((step) => (
             <article key={step.title}>
               <span>{step.number}</span>
               <h2>{step.title}</h2>

@@ -5,7 +5,7 @@ import { CaseStudyCard } from "@/components/CaseStudyCard";
 import { SectionIntro } from "@/components/SectionIntro";
 import { SystemMap } from "@/components/SystemMap";
 import { caseStudies } from "@/lib/case-studies";
-import { faqs, industries, process, solutions } from "@/lib/site";
+import { faqs, industries, processSteps, solutions } from "@/lib/site";
 
 const friction = [
   "Critical workflows live in spreadsheets, inboxes, and tribal knowledge.",
@@ -117,7 +117,7 @@ export default function HomePage() {
             action={<Link className="text-link light-link" href="/how-we-work">Our approach →</Link>}
           />
           <div className="process-line">
-            {process.map((step) => (
+            {processSteps.map((step) => (
               <article key={step.title}>
                 <span>{step.number}</span>
                 <h3>{step.title}</h3>
