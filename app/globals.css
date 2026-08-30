@@ -939,3 +939,104 @@ p { line-height: 1.68; }
   --booking-charcoal: #252825;
   align-self: start;
 }
+
+/* Technology experience strip */
+.technology-strip {
+  background: var(--cream, #f4f0e7);
+  border-top: 1px solid rgba(37, 40, 37, .1);
+  padding: 46px 0 42px;
+}
+
+.technology-strip-heading {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  align-items: end;
+  gap: 42px;
+  margin-bottom: 30px;
+}
+
+.technology-strip-eyebrow {
+  display: block;
+  color: var(--forest, #02592d);
+  font-size: .68rem;
+  font-weight: 850;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.technology-strip h2 {
+  margin: 0;
+  color: #173226;
+  font-size: clamp(1.7rem, 2.5vw, 2.3rem);
+  line-height: 1.05;
+}
+
+.technology-strip-heading p {
+  margin: 0;
+  max-width: 670px;
+  color: #59635c;
+  font-size: .92rem;
+  line-height: 1.65;
+}
+
+.technology-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  border-top: 1px solid rgba(37, 40, 37, .11);
+  border-bottom: 1px solid rgba(37, 40, 37, .11);
+}
+
+.technology-logo-item {
+  min-width: 0;
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 12px;
+  border-right: 1px solid rgba(37, 40, 37, .08);
+  color: #39453e;
+}
+
+.technology-logo-item:nth-child(7n) { border-right: 0; }
+.technology-logo-item:nth-child(n+8) { border-top: 1px solid rgba(37, 40, 37, .08); }
+
+.technology-logo-item img {
+  width: 27px;
+  height: 27px;
+  flex: 0 0 auto;
+  opacity: .72;
+  filter: grayscale(1);
+}
+
+.technology-logo-item span {
+  min-width: 0;
+  font-size: .78rem;
+  font-weight: 750;
+  line-height: 1.15;
+  text-align: left;
+}
+
+@media (max-width: 1050px) {
+  .technology-logo-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .technology-logo-item { border-top: 1px solid rgba(37, 40, 37, .08); }
+  .technology-logo-item:nth-child(-n+4) { border-top: 0; }
+  .technology-logo-item:nth-child(7n) { border-right: 1px solid rgba(37, 40, 37, .08); }
+  .technology-logo-item:nth-child(4n) { border-right: 0; }
+}
+
+@media (max-width: 700px) {
+  .technology-strip { padding: 38px 0 34px; }
+  .technology-strip-heading { grid-template-columns: 1fr; gap: 13px; margin-bottom: 24px; }
+  .technology-logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .technology-logo-item,
+  .technology-logo-item:nth-child(-n+4) { border-top: 1px solid rgba(37, 40, 37, .08); }
+  .technology-logo-item:nth-child(-n+2) { border-top: 0; }
+  .technology-logo-item:nth-child(4n) { border-right: 1px solid rgba(37, 40, 37, .08); }
+  .technology-logo-item:nth-child(2n) { border-right: 0; }
+}
+
+@media print {
+  .technology-strip { display: none !important; }
+}
