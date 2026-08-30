@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/systems-review" },
 };
 
+const stripeCheckoutUrl = "https://buy.stripe.com/cNi5kC1ykamq3lD6pAaZi00";
+
 const deliverables = [
   ["Current-state workflow map", "A clear view of how work moves today: people, systems, decisions, handoffs, and exceptions."],
   ["Systems & data inventory", "The applications, spreadsheets, databases, forms, APIs, and sources of truth involved in the workflow."],
@@ -37,7 +39,9 @@ export default function SystemsReviewPage() {
             <span>Fixed engagement</span>
             <strong>$750</strong>
             <p>Designed for one defined workflow or operating problem.</p>
-            <Link className="button button-light" href="/contact?interest=systems-review">Request a Systems Review</Link>
+            <a className="button button-light" href={stripeCheckoutUrl}>Purchase the Systems Review</a>
+            <small>Secure checkout powered by Stripe.</small>
+            <Link className="text-link light-link" href="/book">Questions first? Book a 30-minute fit call →</Link>
           </aside>
         </div>
       </section>
@@ -73,6 +77,21 @@ export default function SystemsReviewPage() {
             <li><strong>Analysis</strong><span>I organize the current state, identify friction and risk, and compare practical solution paths.</span></li>
             <li><strong>Readout</strong><span>You receive the documented findings and a prioritized recommendation for what to do next.</span></li>
           </ol>
+        </div>
+      </section>
+
+      <section className="review-band">
+        <div className="container review-band-grid">
+          <div>
+            <p className="eyebrow light">Ready to begin?</p>
+            <h2>Start with a fixed-price Systems &amp; Workflow Review.</h2>
+            <p>Purchase the review securely through Stripe. After payment, the next step is gathering the workflow details and scheduling the working session.</p>
+          </div>
+          <div className="review-band-price">
+            <span>One-time engagement</span>
+            <strong>$750</strong>
+            <a className="button button-light" href={stripeCheckoutUrl}>Purchase securely</a>
+          </div>
         </div>
       </section>
 
