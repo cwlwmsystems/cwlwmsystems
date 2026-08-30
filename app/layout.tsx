@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TechnologyStrip } from "@/components/TechnologyStrip";
+import { GoogleAnalyticsEvents } from "@/components/GoogleAnalyticsEvents";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -82,14 +83,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           src="https://www.googletagmanager.com/gtag/js?id=G-7Y9QPDV3CF"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-7Y9QPDV3CF');
+            gtag('config', 'G-7Y9QPDV3CF', { send_page_view: false });
           `}
         </Script>
+        <GoogleAnalyticsEvents />
         <a className="skip-link" href="#main">Skip to content</a>
         <Header />
         <main id="main">{children}</main>
