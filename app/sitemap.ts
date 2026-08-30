@@ -1,15 +1,22 @@
 import type { MetadataRoute } from "next";
 import { caseStudies } from "@/lib/case-studies";
+import { insights } from "@/lib/insights";
 import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "",
     "/solutions",
+    "/problems",
     "/case-studies",
+    "/pricing",
+    "/systems-review",
     "/industries",
     "/approach",
+    "/trust",
+    "/insights",
     "/about",
+    "/book",
     "/contact",
     "/legal",
     "/terms",
@@ -28,14 +35,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...routes.map((route) => ({
       url: `${site.url}${route}`,
       lastModified: new Date(),
-      changeFrequency: route === "" ? "weekly" as const : "monthly" as const,
-      priority: route === "" ? 1 : route.startsWith("/case-studies") ? 0.8 : 0.65,
+      changeFrequency: route === "" || route === "/insights" ? "weekly" as const : "monthly" as const,
+      priority: route === "" ? 1 : ["/solutions", "/case-studies", "/pricing", "/contact"].includes(route) ? 0.85 : 0.7,
     })),
     ...caseStudies.map((study) => ({
       url: `${site.url}/case-studies/${study.slug}`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    })),
+    ...insights.map((insight) => ({
+      url: `${site.url}/insights/${insight.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.72,
     })),
   ];
 }

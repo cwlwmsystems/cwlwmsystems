@@ -1,12 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
-import { nav, site } from "@/lib/site";
+import { site } from "@/lib/site";
+
+const exploreLinks = [
+  { href: "/solutions", label: "Solutions" },
+  { href: "/problems", label: "Problems I Solve" },
+  { href: "/case-studies", label: "Case Studies" },
+  { href: "/industries", label: "Industries" },
+  { href: "/insights", label: "Insights" },
+];
+
+const workLinks = [
+  { href: "/pricing", label: "Engagements & Pricing" },
+  { href: "/systems-review", label: "Systems Review" },
+  { href: "/book", label: "20-Minute Fit Call" },
+  { href: "/approach", label: "Approach" },
+  { href: "/trust", label: "Trust & Ownership" },
+];
 
 const legalLinks = [
   { href: "/terms", label: "Terms of Service" },
   { href: "/service-agreement", label: "Service Agreement" },
   { href: "/privacy", label: "Privacy Policy" },
-  { href: "/data-processing", label: "Data Processing" },
   { href: "/security", label: "Security" },
   { href: "/legal", label: "All legal & policies" },
 ];
@@ -14,7 +29,7 @@ const legalLinks = [
 export function Footer() {
   return (
     <footer className="site-footer">
-      <div className="container footer-grid">
+      <div className="container footer-grid footer-grid-expanded">
         <div className="footer-brand">
           <Image src="/cwlwm-knot.png" alt="" width={514} height={505} aria-hidden="true" />
           <div>
@@ -24,7 +39,11 @@ export function Footer() {
         </div>
         <div className="footer-column">
           <span>Explore</span>
-          {nav.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
+          {exploreLinks.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
+        </div>
+        <div className="footer-column">
+          <span>Work with me</span>
+          {workLinks.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
         </div>
         <div className="footer-column">
           <span>Legal</span>
@@ -34,6 +53,7 @@ export function Footer() {
           <span>Contact</span>
           <a href={`mailto:${site.email}`}>{site.email}</a>
           <Link href="/contact">Project inquiry</Link>
+          <Link href="/about">About Cwlwm</Link>
         </div>
       </div>
       <div className="container footer-bottom">

@@ -1,54 +1,81 @@
-# Cwlwm Systems — Launch Checklist
+# Cwlwm Systems — Professional Launch Checklist
 
-## Brand and content
-- [ ] Confirm final company domain and spelling everywhere.
+## Brand and commercial positioning
+- [ ] Confirm the final company domain and spelling everywhere.
 - [ ] Confirm `cwlwmsystems@gmail.com` is the public inquiry email you want to use.
-- [ ] Review all case studies for anything you consider confidential.
-- [ ] Add a founder/team section later if you want the company to be more personal.
-- [ ] Add real testimonials only after you have permission to publish them.
+- [ ] Confirm the published pricing is commercially acceptable:
+  - [ ] Systems & Workflow Review — $750 fixed
+  - [ ] Automation & Integration — from $2,500
+  - [ ] Custom Internal Tool — from $5,000
+  - [ ] Operational Platform — from $10,000
+- [ ] Review all case studies for anything confidential.
+- [ ] Add real client names, metrics, screenshots, and testimonials only with permission.
 
 ## Vercel
-- [ ] Create a separate Vercel project for Cwlwm Systems.
+- [ ] Push the final project to GitHub.
+- [ ] Create/update the dedicated Vercel project.
 - [ ] Set `NEXT_PUBLIC_SITE_URL` to the final production domain.
 - [ ] Confirm Production deployment is green.
-- [ ] Test `/sitemap.xml` and `/robots.txt` after deployment.
-- [ ] Test the mobile menu.
+- [ ] Test `/sitemap.xml`, `/robots.txt`, and `/llms.txt`.
+- [ ] Test the mobile menu and all major CTA buttons.
 
-## Contact / lead capture
-- [ ] Verify the Cwlwm domain with Resend (optional but recommended).
+## Lead capture
+- [ ] Verify the Cwlwm domain with Resend.
 - [ ] Add `RESEND_API_KEY`.
 - [ ] Add `CONTACT_TO_EMAIL=cwlwmsystems@gmail.com`.
 - [ ] Add a verified `CONTACT_FROM_EMAIL`.
-- [ ] Submit a test inquiry from desktop.
-- [ ] Submit a test inquiry from mobile.
+- [ ] Submit a standard project inquiry from desktop.
+- [ ] Submit a project inquiry from mobile.
+- [ ] Submit a `/book` 20-minute fit-call request.
+- [ ] Submit a Systems Review inquiry.
 - [ ] Confirm Reply-To goes to the prospect.
+- [ ] Confirm the budget, interest, timeline, and preferred-call-time fields appear in the received email.
 
 ## Domain and email
 - [ ] Connect the custom domain in Vercel.
 - [ ] Confirm HTTPS is active.
-- [ ] Consider creating `hello@yourdomain.com` or `projects@yourdomain.com` once the domain is live.
-- [ ] Configure SPF, DKIM, and DMARC for any domain-based email you add.
+- [ ] Consider replacing the Gmail address publicly with `hello@yourdomain.com` or `projects@yourdomain.com` once domain email is ready.
+- [ ] Configure SPF, DKIM, and DMARC for any domain-based email.
 
-## Search visibility
+## Search and discoverability
 - [ ] Add the domain to Google Search Console.
 - [ ] Add the domain to Bing Webmaster Tools.
 - [ ] Submit `/sitemap.xml`.
-- [ ] Verify social sharing preview on LinkedIn/Facebook.
-- [ ] Create/claim a Google Business Profile only if the business is eligible and you want local visibility.
+- [ ] Verify social sharing previews on LinkedIn and Facebook.
+- [ ] Review all six Insights articles and publish only the ones you are comfortable attaching to the company brand.
+- [ ] Add new Insights content over time based on real client questions instead of publishing filler for volume.
+- [ ] Create/claim a Google Business Profile only if the business is eligible and local visibility matters.
 
-## Later improvements
-- [ ] Add a real scheduling link if you want prospects to book discovery calls.
-- [ ] Add privacy-friendly analytics or Vercel Analytics if desired.
-- [ ] Add CRM integration once lead volume justifies it.
-- [ ] Add new case studies as Cwlwm Systems completes client work.
+## Conversion review
+- [ ] Read the homepage as a first-time business owner and verify these questions are answered quickly:
+  - [ ] What does Cwlwm Systems do?
+  - [ ] Is this relevant to a business like mine?
+  - [ ] What kinds of problems does it solve?
+  - [ ] What does it roughly cost?
+  - [ ] Why should I trust one person to build it?
+  - [ ] What happens after I make contact?
+- [ ] Test all Pricing page CTAs.
+- [ ] Test the Systems Review page CTA.
+- [ ] Test the Trust & Ownership links.
+- [ ] Confirm no public section implies a larger team or uses first-person plural company language.
+
+## Testimonials and proof
+- [ ] Leave `lib/testimonials.ts` empty until a real client approves a quote.
+- [ ] After the first client project, request permission for a specific outcome-focused testimonial.
+- [ ] Add measurable outcomes to case studies only when they are accurate and publishable.
+- [ ] Prefer concrete proof such as time saved, steps removed, error reduction, capacity improved, or reporting automated over generic praise.
+
+## Scheduling later
+- [ ] The current `/book` page collects preferred times by form.
+- [ ] If lead volume grows, connect a live scheduling platform such as Calendly or Cal.com and update `/book` to show live availability.
 
 ## Legal / contracting
 - [ ] Read every page under `/legal` and confirm it matches how you plan to sell and deliver services.
 - [ ] Have a licensed attorney review the Standard Service Agreement before relying on it for the first paid client engagement.
-- [ ] Decide whether your contracts need a specific governing-law, venue, or arbitration clause.
+- [ ] Decide whether contracts need a specific governing-law, venue, or arbitration clause.
 - [ ] Confirm the default 14-day invoice term matches how you want to bill clients.
 - [ ] Confirm the default IP model: client owns project-specific paid deliverables; Cwlwm Systems retains reusable background technology and know-how.
-- [ ] Use a project-specific proposal or SOW for scope, fees, milestones, acceptance criteria, third-party costs, support, data types, and special compliance requirements.
+- [ ] Use a project-specific proposal/SOW for scope, fees, milestones, acceptance criteria, third-party costs, support, data types, and special compliance requirements.
 - [ ] Update `/privacy` and `/cookies` before enabling new analytics, advertising pixels, session replay, CRM tracking, or other non-essential tracking.
 - [ ] Identify project-specific subprocessors in the SOW when they will materially process client personal data.
 - [ ] Do not claim SOC 2, ISO 27001, HIPAA compliance, PCI compliance, or another certification unless it is actually applicable and documented.

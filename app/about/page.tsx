@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CTA } from "@/components/CTA";
+import { fitReasons, notFitReasons } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
@@ -35,7 +36,23 @@ export default function AboutPage() {
           <div><p className="eyebrow">Why “Cwlwm”</p><h2>A knot is only useful because of what it connects.</h2></div>
           <div>
             <p><strong>Cwlwm</strong> is a Welsh word for a knot, tie, or bond. It fits the work: connecting the pieces of a business so information, decisions, and work can move reliably between them.</p>
-            <p>The goal is not software for software's sake. It is a business that is easier to operate because the system underneath it is clearer.</p>
+            <p>The goal is not software for software&apos;s sake. It is a business that is easier to operate because the system underneath it is clearer.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section founder-detail-section">
+        <div className="container founder-detail-grid">
+          <div>
+            <p className="eyebrow">Founder-led delivery</p>
+            <h2>The person selling the work is the person doing the work.</h2>
+          </div>
+          <div>
+            <p>I keep Cwlwm Systems deliberately direct. I am responsible for discovery, workflow mapping, architecture, development, integration, testing, documentation, and client communication.</p>
+            <p>That means the business context does not have to be translated through a sales team, account manager, project manager, and separate development group before it reaches the person making technical decisions.</p>
+            <div className="founder-detail-points">
+              <span>Direct access</span><span>Clear accountability</span><span>Business context stays intact</span><span>Fewer handoffs</span>
+            </div>
           </div>
         </div>
       </section>
@@ -48,6 +65,21 @@ export default function AboutPage() {
       </section>
 
       <section className="section">
+        <div className="container fit-grid">
+          <div className="fit-column fit-good">
+            <p className="eyebrow">A strong fit</p>
+            <h2>I work best with businesses that have a real operating problem to solve.</h2>
+            <ul>{fitReasons.map((reason) => <li key={reason}>{reason}</li>)}</ul>
+          </div>
+          <div className="fit-column fit-not">
+            <p className="eyebrow">Probably not the right fit</p>
+            <h2>Not every development request should become a Cwlwm project.</h2>
+            <ul>{notFitReasons.map((reason) => <li key={reason}>{reason}</li>)}</ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-tint">
         <div className="container about-positioning">
           <div>
             <p className="eyebrow">What makes Cwlwm different</p>
@@ -56,8 +88,7 @@ export default function AboutPage() {
           <div>
             <p>Many operational problems are not purely technical. They sit at the intersection of a business rule, a customer journey, a data model, a frontline workflow, and several existing tools.</p>
             <p>I approach the whole system: what the business is trying to accomplish, where the process breaks, what data is trustworthy, what should be automated, what requires a person, and how the result will be measured.</p>
-            <p>There is no account-manager handoff or separate delivery team. The person you speak with is the person diagnosing, designing, building, and refining the system.</p>
-            <Link className="text-link" href="/case-studies">See representative systems →</Link>
+            <div className="about-actions"><Link className="text-link" href="/case-studies">See representative systems →</Link><Link className="text-link" href="/pricing">See engagements & pricing →</Link></div>
           </div>
         </div>
       </section>

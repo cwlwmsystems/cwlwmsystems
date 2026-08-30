@@ -1,24 +1,90 @@
 # Cwlwm Systems Website
 
-A production-ready Next.js site for Cwlwm Systems, designed as a customer-facing company site rather than a personal portfolio.
+A production-ready Next.js customer-facing website for Cwlwm Systems, built to sell custom operational software, integrations, automation, internal tools, and systems consulting.
 
 ## What is included
 
-- Customer-facing homepage and positioning
-- Solutions page with six service categories
-- Five generalized business case studies
-- Industry/application page
-- Approach / engagement model page
-- About / Cwlwm brand story
+### Sales and conversion
+- Customer-facing homepage with founder-led positioning
+- Problems I Solve page
+- Solutions page with six system categories
+- Five generalized business case studies using a Before → System → Operational Outcome structure
+- Engagements & Pricing page with published starting prices
+- Fixed-price **Systems & Workflow Review — $750**
+- 20-minute project-fit call request flow
+- Industries page
+- Approach page showing what happens from inquiry through handoff
+- Trust & Ownership page covering access, handoff, lock-in, security, and project ownership in plain language
+- About page with direct founder-led delivery positioning and good-fit / poor-fit qualification
 - Project inquiry page with direct-email fallback
-- Optional native contact-form email delivery through Resend
-- Privacy policy
+- Six original Insights articles for search visibility and buyer education
+- Testimonial component that remains hidden until real approved testimonials are added
+
+### Lead capture
+The inquiry form supports:
+- General project inquiries
+- 20-minute project-fit call requests
+- Systems & Workflow Review requests
+- Automation & Integration
+- Custom Internal Tool
+- Operational Platform
+- Budget and timeline qualification
+- Optional preferred call times
+- Native delivery through Resend with a pre-filled email fallback
+
+### Legal and trust
+- `/legal` — legal and policy hub
+- `/terms` — website Terms of Service
+- `/service-agreement` — standard client Service Agreement
+- `/privacy` — Privacy Policy
+- `/cookies` — Cookie Policy
+- `/acceptable-use` — Acceptable Use Policy
+- `/data-processing` — Data Processing Terms
+- `/subprocessors` — subprocessor disclosure
+- `/billing-cancellation` — billing and cancellation policy
+- `/security` — Security Practices
+- `/accessibility` — Accessibility Statement
+
+### Technical / discoverability
 - Responsive mobile navigation
-- SEO metadata, canonical URLs, Open Graph image, sitemap, robots.txt, JSON-LD, web manifest
-- `llms.txt` endpoint with a concise AI-readable company and service summary
+- SEO metadata and canonical URLs
+- Open Graph image
+- Sitemap and robots.txt
+- JSON-LD ProfessionalService schema
+- Web manifest
+- `llms.txt` endpoint with company, service, pricing, case-study, and insight summaries
 - Basic security headers
 - Cwlwm Systems logo and knot branding
-- No client names, employer-specific terminology, fake testimonials, or invented performance claims
+- Georgia display typography with system fonts for body copy
+
+## Public site architecture
+
+- `/` — sales homepage
+- `/solutions` — system and service categories
+- `/problems` — common business problems Cwlwm Systems solves
+- `/case-studies` — generalized system case studies
+- `/case-studies/[slug]` — detailed system case studies
+- `/pricing` — engagement models and starting prices
+- `/systems-review` — fixed-price Systems & Workflow Review
+- `/book` — request a 20-minute project-fit call
+- `/industries` — where the system patterns apply
+- `/approach` — delivery process and operating principles
+- `/trust` — ownership, access, security, handoff, and lock-in principles
+- `/insights` — buyer education and thought leadership
+- `/insights/[slug]` — individual articles
+- `/about` — company and founder-led delivery positioning
+- `/contact` — project inquiry
+- `/legal` — legal and policy hub
+
+## Current published pricing
+
+- **Systems & Workflow Review:** $750 fixed
+- **Automation & Integration:** from $2,500
+- **Custom Internal Tool:** from $5,000
+- **Operational Platform:** from $10,000
+- General custom development positioning: most custom development engagements begin at **$2,500**
+
+These are public starting points, not promises that every project fits the minimum. Client-specific pricing is defined in the written proposal/SOW.
 
 ## Local development
 
@@ -39,8 +105,8 @@ npm run build
 
 ## Deploy to Vercel
 
-1. Create a new GitHub repository for this folder and push the files.
-2. In Vercel, choose **Add New → Project** and import the repository.
+1. Create or update the GitHub repository for this folder.
+2. In Vercel, import the repository as its own project.
 3. Vercel should detect **Next.js** automatically.
 4. Deploy once.
 5. Add the production URL as `NEXT_PUBLIC_SITE_URL` in **Project Settings → Environment Variables**.
@@ -52,18 +118,18 @@ Example:
 NEXT_PUBLIC_SITE_URL=https://cwlwmsystems.com
 ```
 
-Until you set this variable, the project uses `https://cwlwm-systems.vercel.app` as its metadata fallback.
+Until that variable is set, the project uses `https://cwlwm-systems.vercel.app` as its metadata fallback.
 
 ## Contact form setup
 
-The site always displays the direct contact email `cwlwmsystems@gmail.com`.
+The public email remains `cwlwmsystems@gmail.com`.
 
-The project inquiry form can also send directly from the website through Resend. Without Resend configured, the form preserves the entered information and presents a pre-filled email fallback instead of silently failing.
+The site can send inquiries directly through Resend. Without Resend configured, the form preserves the entered information and offers a pre-filled email fallback.
 
-### To enable native form delivery
+### Enable native form delivery
 
 1. Create a Resend account.
-2. Add and verify the domain you will use for Cwlwm Systems.
+2. Verify the domain used for Cwlwm Systems.
 3. Create an API key.
 4. Add these Vercel environment variables:
 
@@ -73,33 +139,23 @@ CONTACT_TO_EMAIL=cwlwmsystems@gmail.com
 CONTACT_FROM_EMAIL=Cwlwm Systems <website@yourdomain.com>
 ```
 
-`CONTACT_FROM_EMAIL` must use a sender/domain your email provider has verified.
+5. Redeploy.
+6. Test a normal inquiry and a `/book` fit-call request.
 
-5. Redeploy the site.
-6. Submit a test inquiry and verify that the message arrives and Reply uses the customer's email address.
+## Testimonials
 
-## Recommended launch order
+`lib/testimonials.ts` intentionally ships with an empty array. The public testimonial section renders only when approved real testimonials are added. Do not add fabricated quotes, customer names, or metrics.
 
-1. Deploy to a temporary Vercel URL.
-2. Review every page on desktop and mobile.
-3. Connect the project inquiry form.
-4. Buy/connect the Cwlwm Systems domain.
-5. Set `NEXT_PUBLIC_SITE_URL` to the final domain.
-6. Redeploy.
-7. Test the form again on the production domain.
-8. Submit the sitemap URL to Google Search Console and Bing Webmaster Tools after the domain is live.
+Example structure:
 
-## Content architecture
-
-- `/` — sales homepage
-- `/solutions` — what Cwlwm Systems builds
-- `/case-studies` — generalized system case studies
-- `/case-studies/[slug]` — detailed case study pages
-- `/industries` — where the system patterns apply
-- `/approach` — process and engagement models
-- `/about` — company positioning and brand story
-- `/contact` — project inquiry
-- `/privacy` — privacy policy
+```ts
+{
+  quote: "Approved client quote",
+  name: "Client Name",
+  role: "Operations Director",
+  company: "Client Company"
+}
+```
 
 ## Positioning
 
@@ -115,34 +171,18 @@ Brand line:
 
 > Connected systems. Clearer operations.
 
-## Notes before public launch
+## Important launch notes
 
-- Replace the fallback Vercel URL with your final domain.
-- Enable the contact form if you want form submissions without opening an email client.
-- Review the privacy policy against the exact analytics, CRM, scheduling, or tracking tools you add later.
-- If you add analytics, advertising pixels, a CRM form, a scheduling widget, or cookies, update the privacy policy accordingly.
-- Do not publish client/employer names, proprietary screenshots, credentials, internal data, or private implementation details unless you have permission.
+- Confirm that the published starting prices are the prices you actually want to honor before promoting the site.
+- Replace the fallback Vercel URL with the final domain.
+- Enable and test the contact form.
+- If you later connect Calendly, Cal.com, SavvyCal, or another scheduling platform, `/book` can be changed from a call-request form to live availability.
+- Review the privacy/cookie policies whenever analytics, CRM tracking, session replay, advertising pixels, or embedded scheduling tools are added.
+- Add customer-specific proof only with permission.
+- Keep case studies generalized when the underlying implementation contains employer or client confidential information.
 
-## Legal and policy pages
+## Legal review before the first signed client
 
-The site now includes a complete public legal/policy section:
+The legal pages are a practical baseline for a small custom-software and systems consultancy, but they are not a substitute for advice from a licensed attorney. Before relying on the Standard Service Agreement for paid client work, have counsel review the business structure, governing law, venue, liability caps, insurance needs, tax treatment, data obligations, and the exact services being sold.
 
-- `/legal` — legal and policy hub
-- `/terms` — website Terms of Service
-- `/service-agreement` — standard client Service Agreement
-- `/privacy` — Privacy Policy
-- `/cookies` — Cookie Policy
-- `/acceptable-use` — Acceptable Use Policy for hosted/managed systems
-- `/data-processing` — standard Data Processing Terms
-- `/security` — Security Practices
-- `/accessibility` — Accessibility Statement
-
-The footer links directly to the core legal pages, and all legal routes are included in the sitemap and `llms.txt` file.
-
-### Important legal review before the first signed client
-
-These pages are written as a practical launch-ready baseline for a small custom-software and systems consultancy, but they are not a substitute for advice from a licensed attorney who can review the business structure, jurisdiction, insurance, tax treatment, and the exact services you sell. Before relying on the Standard Service Agreement for a paid engagement, have counsel review it and decide whether you want to add a governing-law clause, venue, arbitration, insurance requirements, different liability caps, or industry-specific terms.
-
-For each client, the proposal/SOW should still define the exact scope, price, milestones, acceptance criteria, third-party costs, support period, hosting responsibilities, data types, compliance requirements, and any project-specific ownership terms.
-- `/subprocessors` — current website providers and project subprocessor approach
-- `/billing-cancellation` — default billing, cancellation, and refund policy
+For each client, the proposal/SOW should define the exact scope, fees, milestones, payment schedule, acceptance criteria, third-party costs, support period, hosting responsibilities, data types, compliance requirements, and project-specific ownership terms.

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const engagementTypes = [
-  { title: "Systems Diagnostic", copy: "A focused review of a broken workflow, its tools, data, handoffs, and options. Useful when you know the pain but not yet the right solution." },
+  { title: "Systems & Workflow Review", copy: "A fixed-price $750 review of one defined workflow, its tools, data, handoffs, risks, and options. Useful when you know the pain but not yet the right solution." },
   { title: "Focused Build", copy: "A clearly scoped operational application, portal, decision tool, or workflow designed around one high-value business problem." },
   { title: "Integration & Automation", copy: "Connect existing systems, remove repetitive work, automate handoffs, add validation, and create reliable event-driven or scheduled workflows." },
   { title: "Ongoing Improvement", copy: "Iterate on a system after launch, add workflows as the business learns, improve measurement, and maintain the connections around it." },
@@ -60,7 +60,7 @@ export default function ApproachPage() {
           <div className="principle-rows">
             {principles.map(([title, copy], index) => <div key={title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><p>{copy}</p></div>)}
           </div>
-          <div className="inline-cta"><p>Not sure whether the next step is a diagnostic, integration, or custom build?</p><Link className="text-link" href="/contact">Describe the problem →</Link></div>
+          <div className="inline-cta"><p>Not sure whether the next step is a systems review, integration, or custom build?</p><div className="inline-cta-links"><Link className="text-link" href="/book">Request a 20-minute fit call →</Link><Link className="text-link" href="/pricing">See engagement pricing →</Link></div></div>
         </div>
       </section>
       <CTA />

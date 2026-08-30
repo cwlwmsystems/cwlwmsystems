@@ -49,7 +49,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
       <section className="section case-body">
         <div className="container">
           <div className="case-section-grid">
-            <div className="case-side-title"><span>01</span><h2>The challenge</h2></div>
+            <div className="case-side-title"><span>01</span><h2>Before</h2></div>
             <div className="challenge-cards">{study.challenge.map((item) => <p key={item}>{item}</p>)}</div>
           </div>
 
@@ -75,8 +75,8 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
           </div>
 
           <div className="case-section-grid">
-            <div className="case-side-title"><span>04</span><h2>Business value</h2></div>
-            <div className="value-list">{study.value.map((item, index) => <div key={item}><span>{index + 1}</span><p>{item}</p></div>)}</div>
+            <div className="case-side-title"><span>04</span><h2>Operational outcome</h2></div>
+            <div><div className="value-list">{study.value.map((item, index) => <div key={item}><span>{index + 1}</span><p>{item}</p></div>)}</div><p className="case-proof-note">Case studies are presented as representative system patterns. Client-specific names, screenshots, testimonials, and measured results are only published with permission.</p></div>
           </div>
 
           <div className="case-section-grid technical-section">
@@ -85,6 +85,11 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
               <p className="muted-copy">The technology is selected to support the operating model, not the other way around. A system of this type may combine the following foundations:</p>
               <div className="pill-cloud">{study.foundation.map((item) => <span key={item}>{item}</span>)}</div>
             </div>
+          </div>
+
+          <div className="case-context-cta">
+            <div><p className="eyebrow">Could this pattern fit your business?</p><h2>Build the version that matches your workflow.</h2><p>The case study shows a reusable operating pattern, not a boxed product. I can adapt the architecture to the people, data, systems, and rules already inside your business.</p></div>
+            <Link className="button primary" href="/contact">Build something like this</Link>
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ContactForm } from "@/components/ContactForm";
 import { site } from "@/lib/site";
 
@@ -12,11 +13,22 @@ const goodFit = [
   "A process depends on repetitive manual work or spreadsheet coordination.",
   "Several tools are involved, but the handoffs between them are unreliable.",
   "You need an internal system that fits your workflow better than generic software.",
-  "You want to use AI or automation inside a controlled, measurable process.",
+  "You want automation or AI inside a controlled, measurable process.",
   "Your data exists, but it is difficult to turn into clear operational action.",
 ];
 
-export default function ContactPage() {
+const interestMap: Record<string, string> = {
+  "systems-review": "Systems & Workflow Review",
+  automation: "Automation & Integration",
+  "internal-tool": "Custom Internal Tool",
+  platform: "Operational Platform",
+  call: "20-minute project fit call",
+};
+
+export default async function ContactPage({ searchParams }: { searchParams: Promise<{ interest?: string }> }) {
+  const { interest = "" } = await searchParams;
+  const initialInterest = interestMap[interest] || "";
+
   return (
     <>
       <section className="page-hero contact-hero">
@@ -33,13 +45,17 @@ export default function ContactPage() {
             <p className="eyebrow">A strong starting point</p>
             <h2>One real operating problem.</h2>
             <div className="contact-fit-list">{goodFit.map((item) => <p key={item}>{item}</p>)}</div>
+            <div className="contact-choice-links">
+              <Link className="text-link" href="/book">Prefer a 20-minute fit call? →</Link>
+              <Link className="text-link" href="/pricing">See engagement pricing →</Link>
+            </div>
             <div className="direct-email">
               <span>Prefer email?</span>
               <a href={`mailto:${site.email}`}>{site.email}</a>
             </div>
           </div>
           <div className="contact-form-card">
-            <ContactForm />
+            <ContactForm initialInterest={initialInterest} />
           </div>
         </div>
       </section>

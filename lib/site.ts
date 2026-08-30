@@ -2,7 +2,7 @@ export const site = {
   name: "Cwlwm Systems",
   tagline: "Connected systems. Clearer operations.",
   description:
-    "Cwlwm Systems designs custom operational software, integrations, automation, AI-assisted workflows, and decision intelligence for businesses that have outgrown disconnected tools and manual handoffs.",
+    "Founder-led custom operational software, integrations, automation, internal tools, and decision systems for businesses that have outgrown disconnected tools, spreadsheets, and manual handoffs.",
   email: "cwlwmsystems@gmail.com",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://cwlwm-systems.vercel.app",
 };
@@ -10,8 +10,8 @@ export const site = {
 export const nav = [
   { href: "/solutions", label: "Solutions" },
   { href: "/case-studies", label: "Case Studies" },
-  { href: "/industries", label: "Industries" },
-  { href: "/approach", label: "Approach" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/insights", label: "Insights" },
   { href: "/about", label: "About" },
 ];
 
@@ -184,4 +184,80 @@ export const faqs = [
     q: "How does a project start?",
     a: "Start by describing what is not working, who is affected, what tools are involved, and what you wish happened instead. From there, I can determine whether the next step should be a focused diagnostic, an integration, a prototype, or a scoped build.",
   },
+];
+
+
+export const problemSignals = [
+  "Your team enters the same information into more than one system.",
+  "A spreadsheet has quietly become a mission-critical application.",
+  "Employees copy data between tools because the systems do not talk to each other.",
+  "Managers spend hours assembling reports before they can make a decision.",
+  "Important work is tracked through email, chat, or individual memory.",
+  "Your CRM, website, forms, database, and operations tools each tell a different story.",
+  "A repetitive process is consuming skilled employee time that should be spent elsewhere.",
+  "An off-the-shelf product gets you most of the way there, but the last 20% is where the business actually operates.",
+];
+
+export const engagementOptions = [
+  {
+    title: "Systems & Workflow Review",
+    price: "$750 fixed",
+    fit: "A defined operational problem that needs diagnosis before anyone starts building.",
+    includes: ["Current-state workflow map", "Systems and data inventory", "Bottlenecks and risk points", "Prioritized automation opportunities", "Recommended next-step roadmap"],
+    href: "/systems-review",
+  },
+  {
+    title: "Automation & Integration",
+    price: "From $2,500",
+    fit: "A focused workflow that can be improved by connecting systems or removing repetitive manual work.",
+    includes: ["API or database integration", "Workflow automation", "Validation and error handling", "Notifications or scheduled jobs", "Documentation and handoff"],
+    href: "/contact?interest=automation",
+  },
+  {
+    title: "Custom Internal Tool",
+    price: "From $5,000",
+    fit: "A portal, dashboard, workflow, admin tool, or operational application built around how your business works.",
+    includes: ["Requirements and workflow design", "User interface and application logic", "Authentication and permissions", "Data model and integrations", "Launch and documentation"],
+    href: "/contact?interest=internal-tool",
+  },
+  {
+    title: "Operational Platform",
+    price: "From $10,000",
+    fit: "A larger system spanning multiple workflows, users, data sources, integrations, and operational states.",
+    includes: ["Architecture and phased scope", "Multiple workflows or roles", "Operational reporting", "Integration layer", "Testing, launch, and stabilization"],
+    href: "/contact?interest=platform",
+  },
+];
+
+export const nextSteps = [
+  { number: "01", title: "Tell me what is happening", copy: "Describe the process, people, tools, and where work gets stuck. You do not need to know what software should be built." },
+  { number: "02", title: "Project-fit conversation", copy: "A short conversation determines whether the problem is a fit, whether an existing product may solve it, and what the most sensible next step is." },
+  { number: "03", title: "Discovery or systems review", copy: "For work that needs deeper understanding, I map the current workflow, data, rules, constraints, risks, and desired operating state." },
+  { number: "04", title: "Clear scope and price", copy: "Before development begins, you receive a written scope describing deliverables, assumptions, timeline, responsibilities, and cost." },
+  { number: "05", title: "Build with visibility", copy: "The system is built in understandable stages. You see working progress and can validate the workflow before launch." },
+  { number: "06", title: "Launch, document, hand off", copy: "The finished system is tested, documented, deployed, and transferred according to the project agreement. Ongoing support is optional, not forced." },
+];
+
+export const trustPoints = [
+  { title: "You work directly with the builder", copy: "There is no sales-to-delivery handoff. I am the person learning the process, designing the solution, building it, and refining it with you." },
+  { title: "No forced platform lock-in", copy: "Where practical, systems can be deployed into client-controlled infrastructure and accounts. Ongoing hosting or support is only included when you choose it." },
+  { title: "Project-specific work transfers", copy: "Ownership of project-specific deliverables is handled in the service agreement and statement of work, with transfer after the agreed payment terms are satisfied." },
+  { title: "Existing software comes first", copy: "I do not recommend custom development just to create a development project. If an existing product solves the problem cleanly, that should be considered first." },
+  { title: "Security is part of the design", copy: "Authentication, permissions, validation, auditability, data handling, backups, and failure recovery are considered as operating requirements, not afterthoughts." },
+  { title: "No invented proof", copy: "Client names, testimonials, screenshots, and metrics are only published with permission. Case studies focus on real system patterns without fabricating customer claims." },
+];
+
+export const fitReasons = [
+  "There is a specific operational problem with a measurable cost in time, errors, delay, risk, or missed opportunity.",
+  "The workflow crosses more than one person, tool, data source, or department.",
+  "You want a system that fits the business rather than forcing the business into a generic template.",
+  "You can provide access to the people who actually perform the workflow and the systems that support it.",
+  "You value reliability, documentation, and maintainability in addition to getting something working quickly.",
+];
+
+export const notFitReasons = [
+  "The main requirement is simply the lowest possible development price.",
+  "You want a clone of an existing commercial product without a distinct business need.",
+  "There is not yet a clear problem, owner, or workflow to improve.",
+  "The project requires a large full-time delivery team or enterprise staffing model from day one.",
 ];

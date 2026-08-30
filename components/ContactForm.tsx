@@ -10,40 +10,53 @@ type FormValues = {
   email: string;
   company: string;
   phone: string;
+  interest: string;
   problem: string;
+  success: string;
   tools: string;
   timeline: string;
   budget: string;
+  preferredTimes: string;
 };
 
-const initialValues: FormValues = {
-  name: "",
-  email: "",
-  company: "",
-  phone: "",
-  problem: "",
-  tools: "",
-  timeline: "",
-  budget: "",
-};
+function createInitialValues(initialInterest = ""): FormValues {
+  return {
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    interest: initialInterest,
+    problem: "",
+    success: "",
+    tools: "",
+    timeline: "",
+    budget: "",
+    preferredTimes: "",
+  };
+}
 
-export function ContactForm() {
+export function ContactForm({ initialInterest = "" }: { initialInterest?: string }) {
   const [status, setStatus] = useState<State>("idle");
-  const [values, setValues] = useState<FormValues>(initialValues);
+  const [values, setValues] = useState<FormValues>(() => createInitialValues(initialInterest));
   const [honeypot, setHoneypot] = useState("");
 
   const fallbackHref = useMemo(() => {
-    const subject = `Project inquiry${values.company ? ` — ${values.company}` : ""}`;
+    const subject = `${values.interest || "Project inquiry"}${values.company ? ` — ${values.company}` : ""}`;
     const body = [
       `Name: ${values.name}`,
       `Email: ${values.email}`,
       `Company: ${values.company}`,
       `Phone: ${values.phone}`,
+      `Interest: ${values.interest}`,
       `Timeline: ${values.timeline}`,
       `Budget range: ${values.budget}`,
+      `Preferred call times: ${values.preferredTimes}`,
       "",
       "What is not working:",
       values.problem,
+      "",
+      "What would success look like:",
+      values.success,
       "",
       "Current tools / systems:",
       values.tools,
@@ -64,7 +77,7 @@ export function ContactForm() {
       const data = await response.json().catch(() => ({}));
       if (response.ok && data.ok) {
         setStatus("sent");
-        setValues(initialValues);
+        setValues(createInitialValues(initialInterest));
         return;
       }
       if (data.code === "not_configured") {
@@ -80,6 +93,8 @@ export function ContactForm() {
   function field<K extends keyof FormValues>(key: K, value: FormValues[K]) {
     setValues((current) => ({ ...current, [key]: value }));
   }
+
+  const requestingCall = values.interest === "20-minute project fit call";
 
   return (
     <form className="contact-form" onSubmit={submit}>
@@ -104,8 +119,24 @@ export function ContactForm() {
         </label>
       </div>
       <label>
+        <span>How would you like to start?</span>
+        <select value={values.interest} onChange={(e) => field("interest", e.target.value)}>
+          <option value="">General project inquiry</option>
+          <option value="20-minute project fit call">20-minute project fit call</option>
+          <option value="Systems & Workflow Review">Systems &amp; Workflow Review — $750</option>
+          <option value="Automation & Integration">Automation &amp; Integration</option>
+          <option value="Custom Internal Tool">Custom Internal Tool</option>
+          <option value="Operational Platform">Operational Platform</option>
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
+      </label>
+      <label>
         <span>What is not working today? *</span>
         <textarea required rows={7} value={values.problem} onChange={(e) => field("problem", e.target.value)} placeholder="Describe the manual process, disconnected tools, reporting problem, handoff, bottleneck, or system you wish worked differently." />
+      </label>
+      <label>
+        <span>What would a better outcome look like?</span>
+        <textarea rows={4} value={values.success} onChange={(e) => field("success", e.target.value)} placeholder="Less manual entry, faster turnaround, one reliable status, fewer errors, better reporting, more capacity, etc." />
       </label>
       <label>
         <span>What tools or systems are involved?</span>
@@ -126,22 +157,29 @@ export function ContactForm() {
           <span>Estimated project budget</span>
           <select value={values.budget} onChange={(e) => field("budget", e.target.value)}>
             <option value="">Not sure yet</option>
-            <option>Under $5,000</option>
+            <option>Under $2,500</option>
+            <option>$2,500–$5,000</option>
             <option>$5,000–$15,000</option>
             <option>$15,000–$50,000</option>
             <option>$50,000+</option>
           </select>
         </label>
       </div>
+      {requestingCall ? (
+        <label>
+          <span>Preferred call times</span>
+          <input value={values.preferredTimes} onChange={(e) => field("preferredTimes", e.target.value)} placeholder="Example: Tuesday 10–12 ET or Wednesday after 2 ET" />
+        </label>
+      ) : null}
       <label className="honeypot" aria-hidden="true">
         Website
         <input tabIndex={-1} autoComplete="off" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
       </label>
       <div className="form-submit-row">
         <button className="button primary" type="submit" disabled={status === "sending" || status === "sent"}>
-          {status === "sending" ? "Sending…" : status === "sent" ? "Inquiry sent" : "Send project inquiry"}
+          {status === "sending" ? "Sending…" : status === "sent" ? "Inquiry sent" : requestingCall ? "Request fit call" : "Send project inquiry"}
         </button>
-        <p>By submitting, you agree that Cwlwm Systems may use these details to respond to your inquiry.</p>
+        <p>By submitting, you agree that Cwlwm Systems may use these details to respond to your inquiry. <a href="/privacy">Privacy Policy</a></p>
       </div>
       {status === "sent" ? <div className="form-message success">Thanks — your inquiry was sent. I will respond by email.</div> : null}
       {status === "fallback" ? (
