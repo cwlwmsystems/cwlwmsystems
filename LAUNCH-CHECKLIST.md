@@ -2,7 +2,7 @@
 
 ## Brand and commercial positioning
 - [ ] Confirm the final company domain and spelling everywhere.
-- [ ] Confirm `cwlwmsystems@gmail.com` is the public inquiry email you want to use.
+- [ ] Confirm `kasey@cwlwmsystems.com` is the public inquiry email you want to use.
 - [ ] Confirm the published project pricing is commercially acceptable:
   - [ ] Systems & Workflow Review — $750 fixed
   - [ ] Automation & Integration — from $2,500
@@ -32,7 +32,7 @@
 ## Lead capture
 - [ ] Verify the Cwlwm domain with Resend.
 - [ ] Add `RESEND_API_KEY`.
-- [ ] Add `CONTACT_TO_EMAIL=cwlwmsystems@gmail.com`.
+- [ ] Add `CONTACT_TO_EMAIL=kasey@cwlwmsystems.com`.
 - [ ] Add a verified `CONTACT_FROM_EMAIL`.
 - [ ] Submit a standard project inquiry from desktop.
 - [ ] Submit a project inquiry from mobile.

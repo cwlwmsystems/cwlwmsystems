@@ -3,8 +3,8 @@ export const site = {
   tagline: "Connected systems. Clearer operations.",
   description:
     "Founder-led custom operational software, integrations, automation, internal tools, implementation, training, and ongoing systems partnership for businesses that have outgrown disconnected tools, spreadsheets, and manual handoffs.",
-  email: "cwlwmsystems@gmail.com",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://cwlwm-systems.vercel.app",
+  email: "kasey@cwlwmsystems.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://cwlwmsystems.com",
 };
 
 export const nav = [

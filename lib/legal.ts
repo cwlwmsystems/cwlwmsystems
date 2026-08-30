@@ -1,7 +1,7 @@
 export const legal = {
   effectiveDate: "August 30, 2026",
   company: "Cwlwm Systems",
-  contactEmail: "cwlwmsystems@gmail.com",
+  contactEmail: "kasey@cwlwmsystems.com",
 };
 
 export const legalNav = [

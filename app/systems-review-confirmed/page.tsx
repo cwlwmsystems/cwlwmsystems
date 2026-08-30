@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const preworkMailto =
-  "mailto:cwlwmsystems@gmail.com?subject=Systems%20%26%20Workflow%20Review%20Pre-Work&body=Business%20name%3A%0A%0AWorkflow%20or%20process%20to%20review%3A%0A%0APeople%20or%20teams%20involved%3A%0A%0ACurrent%20systems%2C%20apps%2C%20spreadsheets%2C%20or%20tools%3A%0A%0AWhere%20the%20process%20slows%20down%20or%20breaks%3A%0A%0AWhat%20you%20wish%20worked%20differently%3A%0A%0AAnything%20else%20I%20should%20know%3A";
+  "mailto:kasey@cwlwmsystems.com?subject=Systems%20%26%20Workflow%20Review%20Pre-Work&body=Business%20name%3A%0A%0AWorkflow%20or%20process%20to%20review%3A%0A%0APeople%20or%20teams%20involved%3A%0A%0ACurrent%20systems%2C%20apps%2C%20spreadsheets%2C%20or%20tools%3A%0A%0AWhere%20the%20process%20slows%20down%20or%20breaks%3A%0A%0AWhat%20you%20wish%20worked%20differently%3A%0A%0AAnything%20else%20I%20should%20know%3A";
 
 export default function SystemsReviewConfirmedPage() {
   return (

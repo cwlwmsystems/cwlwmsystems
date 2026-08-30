@@ -154,11 +154,11 @@ Example:
 NEXT_PUBLIC_SITE_URL=https://cwlwmsystems.com
 ```
 
-Until that variable is set, the project uses `https://cwlwm-systems.vercel.app` as its metadata fallback.
+If that variable is not set, the project uses `https://cwlwmsystems.com` as its metadata fallback.
 
 ## Contact form setup
 
-The public email remains `cwlwmsystems@gmail.com`.
+The public email remains `kasey@cwlwmsystems.com`.
 
 The site can send inquiries directly through Resend. Without Resend configured, the form preserves the entered information and offers a pre-filled email fallback.
 
@@ -171,7 +171,7 @@ The site can send inquiries directly through Resend. Without Resend configured, 
 
 ```text
 RESEND_API_KEY=re_xxxxxxxxx
-CONTACT_TO_EMAIL=cwlwmsystems@gmail.com
+CONTACT_TO_EMAIL=kasey@cwlwmsystems.com
 CONTACT_FROM_EMAIL=Cwlwm Systems <website@yourdomain.com>
 ```
 
