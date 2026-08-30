@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ContactForm } from "@/components/ContactForm";
+import { CalendlyBooking } from "@/components/CalendlyBooking";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Start a Project",
-  description: "Tell Cwlwm Systems about a workflow, integration, automation, operational software project, phased build, or ongoing systems support need in your business.",
+  title: "Contact & Book a Project Fit Call",
+  description:
+    "Book a 30-minute project fit call with Cwlwm Systems to discuss a workflow, integration, automation, operational software project, phased build, or ongoing systems support need.",
   alternates: { canonical: "/contact" },
 };
 
@@ -18,26 +19,18 @@ const goodFit = [
   "A live system needs maintenance, training, future phases, or a clear ongoing owner.",
 ];
 
-const interestMap: Record<string, string> = {
-  "systems-review": "Systems & Workflow Review",
-  "ongoing-partnership": "Ongoing Systems Partnership / Retainer",
-  automation: "Automation & Integration",
-  "internal-tool": "Custom Internal Tool",
-  platform: "Operational Platform",
-  call: "30-minute project fit call",
-};
-
-export default async function ContactPage({ searchParams }: { searchParams: Promise<{ interest?: string }> }) {
-  const { interest = "" } = await searchParams;
-  const initialInterest = interestMap[interest] || "";
-
+export default function ContactPage() {
   return (
     <>
       <section className="page-hero contact-hero">
         <div className="container narrow-left">
-          <p className="eyebrow light">Start a project</p>
+          <p className="eyebrow light">Start a conversation</p>
           <h1>Tell me what is not working.</h1>
-          <p>You do not need to know what software should be built. Describe the process, the tools involved, where work gets stuck, and what you wish happened instead.</p>
+          <p>
+            You do not need to know what software should be built. Bring the process, the tools
+            involved, where work gets stuck, and what you wish happened instead. Choose a time
+            below and we can start there.
+          </p>
         </div>
       </section>
 
@@ -46,10 +39,14 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
           <div className="contact-side">
             <p className="eyebrow">A strong starting point</p>
             <h2>One real operating problem.</h2>
-            <div className="contact-fit-list">{goodFit.map((item) => <p key={item}>{item}</p>)}</div>
+            <div className="contact-fit-list">
+              {goodFit.map((item) => (
+                <p key={item}>{item}</p>
+              ))}
+            </div>
             <div className="contact-choice-links">
-              <Link className="text-link" href="/book">Prefer a 30-minute fit call? →</Link>
               <Link className="text-link" href="/pricing">See engagement pricing →</Link>
+              <Link className="text-link" href="/systems-review">Explore the Systems Review →</Link>
               <Link className="text-link" href="/ongoing-partnership">Explore ongoing systems partnership →</Link>
             </div>
             <div className="direct-email">
@@ -57,8 +54,25 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
               <a href={`mailto:${site.email}`}>{site.email}</a>
             </div>
           </div>
-          <div className="contact-form-card">
-            <ContactForm initialInterest={initialInterest} />
+
+          <div className="booking-calendar-card contact-calendly-card">
+            <div className="booking-calendar-heading">
+              <p className="eyebrow">Choose a time</p>
+              <h2>Book a 30-minute project fit call.</h2>
+              <p>
+                Pick an available time below. Calendly will collect a few details about what you
+                want to discuss before confirming the appointment.
+              </p>
+            </div>
+
+            <CalendlyBooking />
+
+            <p className="booking-privacy-note">
+              Scheduling is provided by Calendly. Information submitted through the scheduler is
+              processed by Calendly to create and manage the appointment. See the Cwlwm Systems{" "}
+              <Link href="/privacy">Privacy Policy</Link> and{" "}
+              <Link href="/subprocessors">Subprocessors</Link> page for more information.
+            </p>
           </div>
         </div>
       </section>

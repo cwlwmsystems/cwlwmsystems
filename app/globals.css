@@ -928,3 +928,14 @@ p { line-height: 1.68; }
   .booking-confirmed-panel { padding: 24px 20px; }
   .booking-confirmed-actions .button { width: 100%; }
 }
+
+/* Calendly on contact page */
+.contact-calendly-card {
+  --booking-forest: #02592D;
+  --booking-red: #C80014;
+  --booking-emerald: #0B4834;
+  --booking-sage: #9EAF9D;
+  --booking-cream: #F4F0E7;
+  --booking-charcoal: #252825;
+  align-self: start;
+}

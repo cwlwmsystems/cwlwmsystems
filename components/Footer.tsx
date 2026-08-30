@@ -53,7 +53,7 @@ export function Footer() {
         <div className="footer-column">
           <span>Contact</span>
           <a href={`mailto:${site.email}`}>{site.email}</a>
-          <Link href="/contact">Project inquiry</Link>
+          <Link href="/contact">Schedule a project fit call</Link>
           <Link href="/about">About Cwlwm</Link>
         </div>
       </div>
