@@ -79,7 +79,11 @@ export function GoogleAnalyticsEvents() {
 
       if (!isInternal && url.hostname === "buy.stripe.com") {
         sendGAEvent("begin_checkout", {
+          currency: "USD",
+          value: 750,
           checkout_provider: "stripe",
+          item_name: "Systems & Workflow Review",
+          item_category: "Professional Services",
           source_page: sourcePage,
           link_text: linkText,
         });
