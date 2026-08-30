@@ -21,12 +21,14 @@ export function SystemMap() {
         <path d="M300 250 C379 338 407 392 463 430" />
         <circle cx="300" cy="250" r="91" />
       </svg>
-      <div className="system-knot" aria-hidden="true">
-        <Image src="/cwlwm-knot.png" alt="" width={514} height={505} priority />
-      </div>
-      <div className="system-center">
-        <span>Cwlwm</span>
-        <strong>Connected<br />operating layer</strong>
+      <div className="system-core">
+        <div className="system-knot" aria-hidden="true">
+          <Image src="/cwlwm-knot.png" alt="" width={514} height={505} priority />
+        </div>
+        <div className="system-center">
+          <span>Cwlwm</span>
+          <strong>Connected<br />operating layer</strong>
+        </div>
       </div>
       {nodes.map((node) => <div key={node.label} className={`system-node ${node.className}`}>{node.label}</div>)}
     </div>
