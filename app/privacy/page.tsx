@@ -16,7 +16,7 @@ export default function PrivacyPage() {
       <section className="section legal-page">
         <div className="container legal-copy">
           <h2>Information you provide</h2>
-          <p>If you contact Cwlwm Systems or submit the project inquiry form, we may receive information such as your name, email address, company, phone number, project details, and any other information you choose to provide.</p>
+          <p>If you contact Cwlwm Systems or submit the project inquiry form, Cwlwm Systems may receive information such as your name, email address, company, phone number, project details, and any other information you choose to provide.</p>
           <h2>How information is used</h2>
           <p>Information submitted through this site is used to respond to inquiries, evaluate potential projects, communicate about requested services, protect the site from abuse, and maintain business records related to those communications.</p>
           <h2>Service providers</h2>

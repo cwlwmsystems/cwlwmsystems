@@ -8,7 +8,7 @@ A production-ready Next.js site for Cwlwm Systems, designed as a customer-facing
 - Solutions page with six service categories
 - Five generalized business case studies
 - Industry/application page
-- How We Work / engagement model page
+- Approach / engagement model page
 - About / Cwlwm brand story
 - Project inquiry page with direct-email fallback
 - Optional native contact-form email delivery through Resend
@@ -96,7 +96,7 @@ CONTACT_FROM_EMAIL=Cwlwm Systems <website@yourdomain.com>
 - `/case-studies` — generalized system case studies
 - `/case-studies/[slug]` — detailed case study pages
 - `/industries` — where the system patterns apply
-- `/how-we-work` — process and engagement models
+- `/approach` — process and engagement models
 - `/about` — company positioning and brand story
 - `/contact` — project inquiry
 - `/privacy` — privacy policy

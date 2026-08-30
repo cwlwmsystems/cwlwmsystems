@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const values = [
-  ["Connect before replacing", "Most businesses already own useful software. We look for the missing connections and operating layer before recommending a rebuild."],
+  ["Connect before replacing", "Most businesses already own useful software. I look for the missing connections and operating layer before recommending a rebuild."],
   ["Build for the real user", "A system has to fit the people doing the work — including the rushed user, the field user, the manager, and the person handling an exception."],
   ["Make logic explainable", "Scoring, automation, and AI should have clear rules, evidence, and control points so the business can understand why the system acted."],
   ["Treat edge cases as operations", "Retries, duplicate protection, permissions, audit trails, validation, and recovery are part of how the business works, not engineering trivia."],
@@ -23,8 +23,8 @@ export default function AboutPage() {
         <div className="container about-hero-grid">
           <div>
             <p className="eyebrow light">About Cwlwm Systems</p>
-            <h1>We build the systems between the systems.</h1>
-            <p>Cwlwm Systems is an independent systems studio focused on the operational gaps that appear when people, software, data, and business rules have to work together.</p>
+            <h1>I build the systems between the systems.</h1>
+            <p>Cwlwm Systems is an independent, one-person systems studio. I work directly with each client to solve the operational gaps that appear when people, software, data, and business rules have to work together.</p>
           </div>
           <div className="about-knot"><Image src="/cwlwm-knot.png" alt="Cwlwm Systems knot mark" width={514} height={505} /></div>
         </div>
@@ -55,7 +55,8 @@ export default function AboutPage() {
           </div>
           <div>
             <p>Many operational problems are not purely technical. They sit at the intersection of a business rule, a customer journey, a data model, a frontline workflow, and several existing tools.</p>
-            <p>Cwlwm Systems approaches the whole system: what the business is trying to accomplish, where the process breaks, what data is trustworthy, what should be automated, what requires a person, and how the result will be measured.</p>
+            <p>I approach the whole system: what the business is trying to accomplish, where the process breaks, what data is trustworthy, what should be automated, what requires a person, and how the result will be measured.</p>
+            <p>There is no account-manager handoff or separate delivery team. The person you speak with is the person diagnosing, designing, building, and refining the system.</p>
             <Link className="text-link" href="/case-studies">See representative systems →</Link>
           </div>
         </div>

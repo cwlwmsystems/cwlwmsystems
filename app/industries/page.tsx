@@ -37,8 +37,8 @@ export default function IndustriesPage() {
         <div className="container principle-grid">
           <div><p className="eyebrow">Not seeing your industry?</p><h2>Describe the workflow instead.</h2></div>
           <div className="principle-copy">
-            <p>If your problem sounds like “we copy this by hand,” “these systems do not talk,” “we cannot tell what needs attention,” “this process lives in a spreadsheet,” or “we need a reliable way to use AI here,” the underlying system pattern may already be familiar.</p>
-            <Link className="text-link" href="/contact">Tell us about it →</Link>
+            <p>If your problem sounds like “this gets copied by hand,” “these systems do not talk,” “no one can tell what needs attention,” “this process lives in a spreadsheet,” or “this needs a reliable automation layer,” the underlying system pattern may already be familiar.</p>
+            <Link className="text-link" href="/contact">Tell me about it →</Link>
           </div>
         </div>
       </section>

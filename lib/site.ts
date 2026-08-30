@@ -11,7 +11,7 @@ export const nav = [
   { href: "/solutions", label: "Solutions" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/industries", label: "Industries" },
-  { href: "/how-we-work", label: "How We Work" },
+  { href: "/approach", label: "Approach" },
   { href: "/about", label: "About" },
 ];
 
@@ -50,7 +50,7 @@ export const solutions = [
     title: "AI-Assisted Operations & Quality",
     short: "Use AI inside controlled workflows instead of bolting a chatbot onto the business.",
     description:
-      "We design AI-assisted systems with structured outputs, deterministic rules, review points, retries, monitoring, and clear ownership so automation can support real operational decisions without becoming a black box.",
+      "I design AI-assisted systems with structured outputs, deterministic rules, review points, retries, monitoring, and clear ownership so automation can support real operational decisions without becoming a black box.",
     signs: [
       "High-volume work needs review, classification, or summarization.",
       "Managers cannot manually inspect enough interactions or records.",
@@ -106,7 +106,7 @@ export const processSteps = [
   {
     number: "01",
     title: "Diagnose",
-    copy: "Start with the business problem, not a technology wish list. We identify the bottleneck, users, decisions, constraints, and what a successful outcome would change.",
+    copy: "Start with the business problem, not a technology wish list. I identify the bottleneck, users, decisions, constraints, and what a successful outcome would change.",
   },
   {
     number: "02",
@@ -165,7 +165,7 @@ export const industries = [
 
 export const faqs = [
   {
-    q: "Do we need to replace the software we already use?",
+    q: "Does my business need to replace the software it already uses?",
     a: "Usually not. Cwlwm Systems starts by understanding what already works. The goal is often to connect, extend, or create an operational layer around your existing tools rather than force a rip-and-replace project.",
   },
   {
@@ -173,19 +173,15 @@ export const faqs = [
     a: "The strongest fit is a business with a real operational bottleneck that crosses people, data, or multiple tools: repetitive work, unreliable handoffs, fragmented reporting, manual coordination, or a process that no off-the-shelf product handles cleanly.",
   },
   {
-    q: "Can you work with our existing APIs, databases, CRM, or website?",
+    q: "Can Cwlwm Systems work with existing APIs, databases, CRM platforms, or websites?",
     a: "Yes. Integration is central to the work. A project can connect APIs, databases, web applications, cloud services, forms, content systems, analytics tools, and other platforms as long as the necessary access is available.",
   },
   {
-    q: "Do you build with AI?",
-    a: "Yes, when AI materially improves the workflow. We favor structured, controlled uses such as classification, quality review, summarization, extraction, prioritization, and assisted decision support with validation and human control points.",
-  },
-  {
-    q: "What if an existing product already solves our problem?",
+    q: "What if an existing product already solves the problem?",
     a: "Then custom software may not be the right answer. The point is to solve the operating problem, not to manufacture a development project. A good discovery process should make that clear early.",
   },
   {
     q: "How does a project start?",
-    a: "Start by describing what is not working, who is affected, what tools are involved, and what you wish happened instead. From there we can determine whether the next step should be a focused diagnostic, an integration, a prototype, or a scoped build.",
+    a: "Start by describing what is not working, who is affected, what tools are involved, and what you wish happened instead. From there, I can determine whether the next step should be a focused diagnostic, an integration, a prototype, or a scoped build.",
   },
 ];

@@ -34,7 +34,7 @@ A prospect can describe a manual process, disconnected tools, data problem, work
 - Solutions: ${site.url}/solutions
 - Case studies: ${site.url}/case-studies
 - Industries: ${site.url}/industries
-- How we work: ${site.url}/how-we-work
+- Approach: ${site.url}/approach
 - About: ${site.url}/about
 - Contact: ${site.url}/contact
 

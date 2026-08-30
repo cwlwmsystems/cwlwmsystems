@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { CTA } from "@/components/CTA";
 import { CaseStudyCard } from "@/components/CaseStudyCard";
 import { SectionIntro } from "@/components/SectionIntro";
@@ -25,8 +24,8 @@ export default function HomePage() {
             <h1>Make your business systems <span>work together.</span></h1>
             <p className="hero-lede">Cwlwm Systems builds the operating layer between your people, processes, data, and software — so work moves cleanly from one step to the next.</p>
             <div className="hero-actions">
-              <Link className="button button-light" href="/contact">Tell us what is not working <span>↗</span></Link>
-              <Link className="button button-ghost-light" href="/solutions">See what we build</Link>
+              <Link className="button button-light" href="/contact">Tell me what is not working <span>↗</span></Link>
+              <Link className="button button-ghost-light" href="/solutions">See what I build</Link>
             </div>
             <div className="hero-proof">
               <span>Built around your existing stack</span>
@@ -35,7 +34,6 @@ export default function HomePage() {
             </div>
           </div>
           <div className="hero-visual">
-            <div className="hero-logo-mark"><Image src="/cwlwm-knot.png" alt="" width={514} height={505} priority /></div>
             <SystemMap />
           </div>
         </div>
@@ -44,7 +42,7 @@ export default function HomePage() {
       <section className="problem-strip">
         <div className="container problem-grid">
           <div>
-            <p className="eyebrow">The problem we solve</p>
+            <p className="eyebrow">The problem I solve</p>
             <h2>Your business may not need another app. It may need the apps you already have to behave like one system.</h2>
           </div>
           <div className="friction-list">
@@ -56,7 +54,7 @@ export default function HomePage() {
       <section className="section">
         <div className="container">
           <SectionIntro
-            eyebrow="What we build"
+            eyebrow="What I build"
             title="Systems for the work that does not fit neatly inside one product."
             copy="Cwlwm Systems combines software engineering, systems thinking, automation, data, and growth operations to solve cross-functional business problems end to end."
             action={<Link className="text-link" href="/solutions">All solutions →</Link>}
@@ -93,7 +91,7 @@ export default function HomePage() {
           <SectionIntro
             eyebrow="Where it applies"
             title="Built around workflows, not industry labels."
-            copy="The same operating problem appears in different industries under different names. We look for the underlying pattern and build around your actual process."
+            copy="The same operating problem appears in different industries under different names. I look for the underlying pattern and build around your actual process."
           />
           <div className="industry-list">
             {industries.map((industry) => (
@@ -111,10 +109,10 @@ export default function HomePage() {
       <section className="section process-home">
         <div className="container">
           <SectionIntro
-            eyebrow="How we work"
+            eyebrow="My approach"
             title="Start with the operating problem. Build only what the business needs."
             copy="A clear workflow and source of truth matter more than a long feature list."
-            action={<Link className="text-link light-link" href="/how-we-work">Our approach →</Link>}
+            action={<Link className="text-link light-link" href="/approach">See the approach →</Link>}
           />
           <div className="process-line">
             {processSteps.map((step) => (

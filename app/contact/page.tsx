@@ -22,7 +22,7 @@ export default function ContactPage() {
       <section className="page-hero contact-hero">
         <div className="container narrow-left">
           <p className="eyebrow light">Start a project</p>
-          <h1>Tell us what is not working.</h1>
+          <h1>Tell me what is not working.</h1>
           <p>You do not need to know what software should be built. Describe the process, the tools involved, where work gets stuck, and what you wish happened instead.</p>
         </div>
       </section>

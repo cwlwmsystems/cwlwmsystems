@@ -143,7 +143,7 @@ export function ContactForm() {
         </button>
         <p>By submitting, you agree that Cwlwm Systems may use these details to respond to your inquiry.</p>
       </div>
-      {status === "sent" ? <div className="form-message success">Thanks — your inquiry was sent. We will respond by email.</div> : null}
+      {status === "sent" ? <div className="form-message success">Thanks — your inquiry was sent. I will respond by email.</div> : null}
       {status === "fallback" ? (
         <div className="form-message warning">
           The website form is not connected to email yet. Your information is still here — <a href={fallbackHref}>open a pre-filled email instead</a>.

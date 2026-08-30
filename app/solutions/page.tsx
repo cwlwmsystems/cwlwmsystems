@@ -37,7 +37,7 @@ export default function SolutionsPage() {
                   <ul className="check-list">{solution.signs.map((item) => <li key={item}>{item}</li>)}</ul>
                 </div>
                 <div>
-                  <h3>What we can build</h3>
+                  <h3>What I can build</h3>
                   <div className="pill-cloud">{solution.examples.map((item) => <span key={item}>{item}</span>)}</div>
                 </div>
               </div>
@@ -55,7 +55,7 @@ export default function SolutionsPage() {
           </div>
           <div className="principle-copy">
             <p>The first assumption is not that your current tools are wrong. Often the real problem is the space between them: missing context, duplicated data, unowned handoffs, inconsistent rules, or no common operating view.</p>
-            <p>A focused integration or operational layer can create more value than replacing an entire stack. When an existing product clearly solves the problem better, we will say so.</p>
+            <p>A focused integration or operational layer can create more value than replacing an entire stack. When an existing product clearly solves the problem better, I will say so.</p>
           </div>
         </div>
       </section>
