@@ -38,7 +38,7 @@ export default function PrivacyPage() {
       <p>Service providers are expected to process information only for the purpose of providing their services and according to their own contractual and legal obligations.</p>
 
       <h2>6. Website service providers</h2>
-      <p>This website is designed to run on Vercel infrastructure. If server-side contact-form delivery is enabled, email delivery may be handled through Resend. Additional tools may be added over time; this policy and the <a href="/cookies">Cookie Policy</a> will be updated if the site's data practices materially change.</p>
+      <p>This website is designed to run on Vercel infrastructure. If server-side contact-form delivery is enabled, email delivery may be handled through Resend. Appointment scheduling is provided through Calendly when a visitor uses the booking page; Calendly may receive the contact details and scheduling information the visitor submits in order to create and manage the appointment. Additional tools may be added over time; this policy and the <a href="/cookies">Cookie Policy</a> will be updated if the site's data practices materially change.</p>
 
       <h2>7. Cookies and analytics</h2>
       <p>The current site does not intentionally set advertising cookies. Necessary technical storage or request data may be used by hosting infrastructure for delivery, security, and reliability. If optional analytics or similar technologies are enabled later, Cwlwm Systems will describe them in the <a href="/cookies">Cookie Policy</a> and provide controls where required.</p>

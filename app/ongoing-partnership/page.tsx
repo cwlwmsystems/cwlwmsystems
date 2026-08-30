@@ -125,7 +125,7 @@ export default function OngoingPartnershipPage() {
           </div>
           <div className="review-band-price partnership-actions">
             <Link className="button button-light" href="/contact?interest=ongoing-partnership">Discuss a retainer</Link>
-            <Link className="text-link light-link" href="/book">Request a 20-minute fit call →</Link>
+            <Link className="text-link light-link" href="/book">Book a 30-minute fit call →</Link>
           </div>
         </div>
       </section>

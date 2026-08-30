@@ -83,7 +83,7 @@ export default function ApproachPage() {
           <div className="principle-rows">
             {principles.map(([title, copy], index) => <div key={title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><p>{copy}</p></div>)}
           </div>
-          <div className="inline-cta"><p>Not sure whether the next step is a systems review, integration, custom build, or ongoing systems partnership?</p><div className="inline-cta-links"><Link className="text-link" href="/book">Request a 20-minute fit call →</Link><Link className="text-link" href="/pricing">See engagement pricing →</Link></div></div>
+          <div className="inline-cta"><p>Not sure whether the next step is a systems review, integration, custom build, or ongoing systems partnership?</p><div className="inline-cta-links"><Link className="text-link" href="/book">Book a 30-minute fit call →</Link><Link className="text-link" href="/pricing">See engagement pricing →</Link></div></div>
         </div>
       </section>
       <CTA />

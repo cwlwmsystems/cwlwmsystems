@@ -94,7 +94,7 @@ export function ContactForm({ initialInterest = "" }: { initialInterest?: string
     setValues((current) => ({ ...current, [key]: value }));
   }
 
-  const requestingCall = values.interest === "20-minute project fit call";
+  const requestingCall = values.interest === "30-minute project fit call";
   const requestingOngoing = values.interest === "Ongoing Systems Partnership / Retainer";
 
   return (
@@ -123,7 +123,7 @@ export function ContactForm({ initialInterest = "" }: { initialInterest?: string
         <span>How would you like to start?</span>
         <select value={values.interest} onChange={(e) => field("interest", e.target.value)}>
           <option value="">General project inquiry</option>
-          <option value="20-minute project fit call">20-minute project fit call</option>
+          <option value="30-minute project fit call">30-minute project fit call</option>
           <option value="Systems & Workflow Review">Systems &amp; Workflow Review — $750</option>
           <option value="Automation & Integration">Automation &amp; Integration</option>
           <option value="Custom Internal Tool">Custom Internal Tool</option>

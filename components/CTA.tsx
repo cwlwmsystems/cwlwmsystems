@@ -11,7 +11,7 @@ export function CTA({ compact = false }: { compact?: boolean }) {
         </div>
         <div className="cta-actions">
           <Link className="button button-light" href="/contact">Start a project <span>↗</span></Link>
-          {!compact ? <Link className="button button-ghost-light" href="/book">Request a 20-minute fit call</Link> : null}
+          {!compact ? <Link className="button button-ghost-light" href="/book">Book a 30-minute fit call</Link> : null}
         </div>
       </div>
     </section>

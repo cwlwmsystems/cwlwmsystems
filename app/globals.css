@@ -841,3 +841,90 @@ p { line-height: 1.68; }
   .partnership-capability-grid, .phase-grid { grid-template-columns: 1fr; }
   .phase-grid article { min-height: auto; }
 }
+
+/* Calendly booking flow */
+.booking-section {
+  --booking-forest: #02592D;
+  --booking-red: #C80014;
+  --booking-emerald: #0B4834;
+  --booking-sage: #9EAF9D;
+  --booking-cream: #F4F0E7;
+  --booking-charcoal: #252825;
+  background: #faf8f2;
+}
+.booking-layout-calendar { grid-template-columns: .72fr 1.28fr; gap: 64px; }
+.booking-intro { color: var(--muted); font-size: 1rem; margin: 18px 0 0; }
+.booking-expectation { margin-top: 34px; padding-top: 27px; border-top: 1px solid var(--line); }
+.booking-expectation h3 { color: var(--booking-charcoal); font-size: 1.08rem; }
+.booking-calendar-card {
+  min-width: 0;
+  border: 1px solid #d8d5cc;
+  border-radius: 24px;
+  background: var(--booking-cream);
+  overflow: hidden;
+  box-shadow: 0 20px 54px rgba(37,40,37,.08);
+}
+.booking-calendar-heading { padding: 30px 32px 22px; border-bottom: 1px solid rgba(37,40,37,.12); }
+.booking-calendar-heading h2 { color: var(--booking-emerald); font-size: clamp(2rem, 3.4vw, 3.35rem); }
+.booking-calendar-heading > p:last-child { max-width: 680px; margin: 14px 0 0; color: #56625a; }
+.calendly-frame { min-width: 0; background: var(--booking-cream); }
+.calendly-inline-widget { width: 100%; min-width: 320px; }
+.booking-privacy-note { margin: 0; padding: 18px 32px 24px; border-top: 1px solid rgba(37,40,37,.1); color: #69736d; font-size: .76rem; line-height: 1.55; }
+.booking-privacy-note a { color: var(--booking-forest); text-decoration: underline; text-underline-offset: 2px; }
+
+.booking-confirmed-page {
+  --booking-forest: #02592D;
+  --booking-red: #C80014;
+  --booking-emerald: #0B4834;
+  --booking-sage: #9EAF9D;
+  --booking-cream: #F4F0E7;
+  --booking-charcoal: #252825;
+  min-height: 72vh;
+  padding: 110px 20px;
+  background: linear-gradient(180deg, #faf8f2 0%, var(--booking-cream) 100%);
+}
+.booking-confirmed-wrap { width: min(100%, 800px); margin: 0 auto; text-align: center; }
+.booking-confirmed-mark {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--booking-forest);
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+.booking-confirmed-wrap h1 { color: var(--booking-emerald); font-size: clamp(3.2rem, 7vw, 6.2rem); }
+.booking-confirmed-lead { max-width: 690px; margin: 26px auto 0; color: #526058; font-size: 1.08rem; }
+.booking-confirmed-panel {
+  margin: 48px 0 0;
+  padding: 30px;
+  border: 1px solid #d5d3ca;
+  border-left: 4px solid var(--booking-red);
+  background: white;
+  text-align: left;
+}
+.booking-confirmed-panel h2 { color: var(--booking-charcoal); font-size: 1.75rem; }
+.booking-confirmed-panel p { margin: 14px 0 0; color: #56625b; }
+.booking-confirmed-signoff { display: flex; flex-direction: column; gap: 4px; margin-top: 34px; }
+.booking-confirmed-signoff strong { font-family: var(--font-display); color: var(--booking-emerald); font-size: 1.2rem; }
+.booking-confirmed-signoff span { color: #6c766f; font-size: .85rem; }
+.booking-confirmed-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 34px; }
+.booking-confirmed-actions .button.primary { background: var(--booking-forest); }
+.booking-confirmed-actions .button.primary:hover { background: var(--booking-emerald); }
+
+@media (max-width: 980px) {
+  .booking-layout-calendar { grid-template-columns: 1fr; gap: 42px; }
+  .booking-layout-calendar .booking-side { position: static; }
+}
+@media (max-width: 620px) {
+  .booking-calendar-card { border-radius: 16px; }
+  .booking-calendar-heading { padding: 24px 20px 18px; }
+  .booking-privacy-note { padding: 16px 20px 22px; }
+  .calendly-inline-widget { height: 820px !important; }
+  .booking-confirmed-page { padding: 78px 20px; }
+  .booking-confirmed-panel { padding: 24px 20px; }
+  .booking-confirmed-actions .button { width: 100%; }
+}

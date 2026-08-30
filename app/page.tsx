@@ -26,7 +26,7 @@ export default function HomePage() {
             <h1>Make your business systems <span>work together.</span></h1>
             <p className="hero-lede">Cwlwm Systems builds the operating layer between your people, processes, data, and software — so work moves cleanly from one step to the next.</p>
             <div className="hero-actions">
-              <Link className="button button-light" href="/book">Request a 20-minute fit call <span>↗</span></Link>
+              <Link className="button button-light" href="/book">Book a 30-minute fit call <span>↗</span></Link>
               <Link className="button button-ghost-light" href="/pricing">See pricing & engagements</Link>
             </div>
             <div className="hero-proof">

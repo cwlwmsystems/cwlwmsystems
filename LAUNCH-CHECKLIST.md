@@ -36,7 +36,10 @@
 - [ ] Add a verified `CONTACT_FROM_EMAIL`.
 - [ ] Submit a standard project inquiry from desktop.
 - [ ] Submit a project inquiry from mobile.
-- [ ] Submit a `/book` 20-minute fit-call request.
+- [ ] Submit a `/book` 30-minute fit-call booking.
+- [ ] Confirm the Calendly widget loads with the Cwlwm brand colors.
+- [ ] Complete a real/test Calendly booking and confirm the site redirects to `/booking-confirmed`.
+- [ ] Confirm Calendly sends the expected confirmation/calendar invitation to the invitee.
 - [ ] Submit a Systems Review inquiry.
 - [ ] Submit an Ongoing Systems Partnership / Retainer inquiry.
 - [ ] Confirm the retainer form switches to monthly budget ranges.
@@ -91,9 +94,10 @@
 - [ ] Add measurable outcomes to case studies only when they are accurate and publishable.
 - [ ] Prefer concrete proof such as time saved, steps removed, error reduction, capacity improved, or reporting automated over generic praise.
 
-## Scheduling later
-- [ ] The current `/book` page collects preferred times by form.
-- [ ] If lead volume grows, connect a live scheduling platform such as Calendly or Cal.com and update `/book` to show live availability.
+## Scheduling
+- [ ] Keep the public Calendly event availability aligned with the hours you actually want to offer prospects.
+- [ ] Confirm the `/book` embed and `/booking-confirmed` redirect after any Calendly event or account changes.
+- [ ] Review buffers, minimum notice, reminders, and maximum bookings per day in Calendly.
 
 ## Legal / contracting
 - [ ] Read every page under `/legal` and confirm it matches how you plan to sell and deliver services.

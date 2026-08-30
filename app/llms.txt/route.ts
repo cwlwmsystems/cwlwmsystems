@@ -56,7 +56,7 @@ A prospect can describe a manual process, disconnected tools, data problem, work
 - Engagements & pricing: ${site.url}/pricing
 - Systems & Workflow Review: ${site.url}/systems-review
 - Ongoing Systems Partnership: ${site.url}/ongoing-partnership
-- Request a project-fit call: ${site.url}/book
+- Book a project-fit call: ${site.url}/book
 - Industries: ${site.url}/industries
 - Approach: ${site.url}/approach
 - Trust & ownership: ${site.url}/trust

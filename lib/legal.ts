@@ -1,5 +1,5 @@
 export const legal = {
-  effectiveDate: "August 29, 2026",
+  effectiveDate: "August 30, 2026",
   company: "Cwlwm Systems",
   contactEmail: "cwlwmsystems@gmail.com",
 };

@@ -15,7 +15,7 @@ A production-ready Next.js customer-facing website for Cwlwm Systems, built to s
 - Monthly retainer / fractional systems partner positioning
 - Phased-development model for larger builds
 - Implementation, onboarding, documentation, and training positioning
-- 20-minute project-fit call request flow
+- Embedded 30-minute Calendly project-fit booking flow with branded confirmation redirect
 - Industries page
 - Approach page showing what happens from inquiry through launch, adoption, ongoing support, or handoff
 - Trust & Ownership page covering access, handoff, lock-in, security, and project ownership in plain language
@@ -27,7 +27,7 @@ A production-ready Next.js customer-facing website for Cwlwm Systems, built to s
 ### Lead capture
 The inquiry form supports:
 - General project inquiries
-- 20-minute project-fit call requests
+- 30-minute project-fit call bookings
 - Systems & Workflow Review requests
 - Automation & Integration
 - Custom Internal Tool
@@ -73,7 +73,8 @@ The inquiry form supports:
 - `/pricing` — project engagements, retainers, phased development, and starting prices
 - `/systems-review` — fixed-price Systems & Workflow Review
 - `/ongoing-partnership` — maintenance, retainers, training, onboarding, phased development, and fractional systems partnership
-- `/book` — request a 20-minute project-fit call
+- `/book` — embedded Calendly 30-minute project-fit call scheduler
+- `/booking-confirmed` — branded post-booking confirmation page (noindex)
 - `/industries` — where the system patterns apply
 - `/approach` — delivery process, implementation, adoption, and operating principles
 - `/trust` — ownership, access, security, handoff, and continuity principles
@@ -107,6 +108,19 @@ The site now presents Cwlwm Systems as capable of supporting the full lifecycle:
 **Systems Review → Build → Launch & Implement → Onboard & Train → Maintain → Improve → Expand**
 
 A client can choose a documented handoff after launch or retain Cwlwm Systems for ongoing continuity. Retainers reserve defined recurring capacity and are not unlimited-work arrangements.
+
+
+## Calendly booking flow
+
+The `/book` page embeds the Cwlwm Systems Calendly event at `https://calendly.com/cwlwmsystems/30min`. The embed uses the Cwlwm brand palette:
+
+- Forest Green `#02592D`
+- Warm Cream `#F4F0E7`
+- Charcoal `#252825`
+
+When Calendly emits its `calendly.event_scheduled` event after a successful booking, the site redirects the visitor to `/booking-confirmed`. This redirect is handled by the website embed and does not require configuring a separate Calendly confirmation redirect.
+
+If the Calendly event URL changes, update `components/CalendlyBooking.tsx`.
 
 ## Local development
 
@@ -193,7 +207,7 @@ Brand line:
 - Define response-time expectations carefully; do not promise 24/7 or emergency support unless priced and operationally feasible.
 - Replace the fallback Vercel URL with the final domain.
 - Enable and test the contact form.
-- If you later connect Calendly, Cal.com, SavvyCal, or another scheduling platform, `/book` can be changed from a call-request form to live availability.
+- Keep the Calendly event URL in `components/CalendlyBooking.tsx` current if the booking event changes.
 - Review privacy/cookie policies whenever analytics, CRM tracking, session replay, advertising pixels, or embedded scheduling tools are added.
 - Add customer-specific proof only with permission.
 - Keep case studies generalized when the underlying implementation contains employer or client confidential information.

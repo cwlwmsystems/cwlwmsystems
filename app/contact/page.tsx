@@ -24,7 +24,7 @@ const interestMap: Record<string, string> = {
   automation: "Automation & Integration",
   "internal-tool": "Custom Internal Tool",
   platform: "Operational Platform",
-  call: "20-minute project fit call",
+  call: "30-minute project fit call",
 };
 
 export default async function ContactPage({ searchParams }: { searchParams: Promise<{ interest?: string }> }) {
@@ -48,7 +48,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
             <h2>One real operating problem.</h2>
             <div className="contact-fit-list">{goodFit.map((item) => <p key={item}>{item}</p>)}</div>
             <div className="contact-choice-links">
-              <Link className="text-link" href="/book">Prefer a 20-minute fit call? →</Link>
+              <Link className="text-link" href="/book">Prefer a 30-minute fit call? →</Link>
               <Link className="text-link" href="/pricing">See engagement pricing →</Link>
               <Link className="text-link" href="/ongoing-partnership">Explore ongoing systems partnership →</Link>
             </div>

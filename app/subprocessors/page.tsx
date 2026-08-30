@@ -22,6 +22,7 @@ export default function SubprocessorsPage() {
           <tbody>
             <tr><td>Vercel</td><td>Website hosting, edge delivery, request processing, and platform security.</td><td>Used to host the public Cwlwm Systems website.</td></tr>
             <tr><td>Resend</td><td>Server-side delivery of project inquiry emails.</td><td>Used only when the contact-form email integration is enabled.</td></tr>
+            <tr><td>Calendly</td><td>Appointment scheduling, booking forms, calendar coordination, and scheduling communications.</td><td>Used when a visitor books a project fit call or other scheduled meeting through the website.</td></tr>
           </tbody>
         </table>
       </div>

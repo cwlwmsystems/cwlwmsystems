@@ -130,7 +130,7 @@ export default function PricingPage() {
             <p>I do not expect a client to arrive with a technical specification. If you can explain what is slow, manual, disconnected, hard to measure, or unnecessarily complicated — or what needs ongoing ownership after launch — that is enough to start a useful conversation.</p>
           </div>
           <div className="fit-budget-actions">
-            <Link className="button primary" href="/book">Request a 20-minute fit call</Link>
+            <Link className="button primary" href="/book">Book a 30-minute fit call</Link>
             <Link className="button secondary" href="/ongoing-partnership">Explore ongoing partnership</Link>
             <Link className="button secondary" href="/systems-review">See the Systems Review</Link>
           </div>
