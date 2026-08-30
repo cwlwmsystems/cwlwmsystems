@@ -3,7 +3,7 @@ import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Request a 20-Minute Project Fit Call",
-  description: "Request a short project-fit conversation with Cwlwm Systems to determine whether your workflow, integration, automation, or custom software problem is a good fit.",
+  description: "Request a short project-fit conversation with Cwlwm Systems to determine whether a workflow, integration, custom software project, phased build, or ongoing systems partnership is a good fit.",
   alternates: { canonical: "/book" },
 };
 
@@ -28,6 +28,7 @@ export default function BookPage() {
               <li>Could an existing product solve it more simply?</li>
               <li>Would an integration, automation, or custom system be appropriate?</li>
               <li>Does it need a paid Systems Review before it can be scoped responsibly?</li>
+              <li>Would phased delivery or an ongoing systems partnership make sense after launch?</li>
               <li>Is the likely investment range aligned with your expectations?</li>
             </ul>
             <p className="booking-note">If I do not think custom work is the right answer, I will say so.</p>

@@ -13,7 +13,7 @@ const deliverables = [
   ["Systems & data inventory", "The applications, spreadsheets, databases, forms, APIs, and sources of truth involved in the workflow."],
   ["Bottlenecks & risk points", "Where time is lost, data diverges, ownership is unclear, work waits, or errors are likely to appear."],
   ["Automation opportunities", "Specific places where integration, automation, validation, or a purpose-built tool could reduce friction."],
-  ["Recommended roadmap", "A prioritized set of next steps, including where not to build custom software if a simpler answer is available."],
+  ["Recommended roadmap", "A prioritized set of next steps, including what should happen first, whether phased delivery makes sense, what implementation will require, and where not to build custom software if a simpler answer is available."],
 ];
 
 const bestFor = [
@@ -47,7 +47,7 @@ export default function SystemsReviewPage() {
           <div>
             <p className="eyebrow">What you receive</p>
             <h2>Clarity you can use even if I never build the project.</h2>
-            <p className="section-copy">The review is a standalone deliverable. The goal is to make the operating problem understandable enough to decide whether the next step should be a process change, product configuration, integration, automation, internal tool, or larger custom platform.</p>
+            <p className="section-copy">The review is a standalone deliverable. The goal is to make the operating problem understandable enough to decide whether the next step should be a process change, product configuration, integration, automation, internal tool, larger custom platform, phased roadmap, or ongoing systems partnership.</p>
           </div>
           <div className="review-deliverables">
             {deliverables.map(([title, copy], index) => (

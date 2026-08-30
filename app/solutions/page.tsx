@@ -5,7 +5,7 @@ import { solutions } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Solutions",
-  description: "Custom operational platforms, integrations, workflow automation, AI-assisted operations, data intelligence, field systems, and growth systems from Cwlwm Systems.",
+  description: "Custom operational platforms, integrations, workflow automation, AI-assisted operations, data intelligence, implementation, training, and ongoing systems partnership from Cwlwm Systems.",
   alternates: { canonical: "/solutions" },
 };
 
@@ -16,7 +16,7 @@ export default function SolutionsPage() {
         <div className="container narrow-left">
           <p className="eyebrow light">Solutions</p>
           <h1>Build the missing layer in your business.</h1>
-          <p>Cwlwm Systems creates custom software and integrations for workflows that cross teams, data, and tools — especially where off-the-shelf software stops short.</p>
+          <p>Cwlwm Systems creates custom software and integrations for workflows that cross teams, data, and tools — then can help launch, train, maintain, and expand those systems as the business changes.</p>
         </div>
       </section>
 
@@ -56,6 +56,17 @@ export default function SolutionsPage() {
           <div className="principle-copy">
             <p>The first assumption is not that your current tools are wrong. Often the real problem is the space between them: missing context, duplicated data, unowned handoffs, inconsistent rules, or no common operating view.</p>
             <p>A focused integration or operational layer can create more value than replacing an entire stack. When an existing product clearly solves the problem better, I will say so.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section partnership-solution-band">
+        <div className="container founder-grid">
+          <div><p className="eyebrow">After the build</p><h2>The same person can stay with the system.</h2></div>
+          <div>
+            <p>For clients that want continuity, I can remain involved through monthly maintenance, future phases, onboarding, training, documentation, troubleshooting, integrations, and fractional systems ownership.</p>
+            <div className="founder-points"><span>Maintenance & troubleshooting</span><span>Onboarding & team training</span><span>Future phases & new workflows</span><span>Fractional systems partnership</span></div>
+            <Link className="text-link" href="/ongoing-partnership">Explore ongoing systems partnership →</Link>
           </div>
         </div>
       </section>

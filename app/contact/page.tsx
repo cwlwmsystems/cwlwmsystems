@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Start a Project",
-  description: "Tell Cwlwm Systems about a workflow, integration, automation, data, or operational software problem in your business.",
+  description: "Tell Cwlwm Systems about a workflow, integration, automation, operational software project, phased build, or ongoing systems support need in your business.",
   alternates: { canonical: "/contact" },
 };
 
@@ -15,10 +15,12 @@ const goodFit = [
   "You need an internal system that fits your workflow better than generic software.",
   "You want automation or AI inside a controlled, measurable process.",
   "Your data exists, but it is difficult to turn into clear operational action.",
+  "A live system needs maintenance, training, future phases, or a clear ongoing owner.",
 ];
 
 const interestMap: Record<string, string> = {
   "systems-review": "Systems & Workflow Review",
+  "ongoing-partnership": "Ongoing Systems Partnership / Retainer",
   automation: "Automation & Integration",
   "internal-tool": "Custom Internal Tool",
   platform: "Operational Platform",
@@ -48,6 +50,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
             <div className="contact-choice-links">
               <Link className="text-link" href="/book">Prefer a 20-minute fit call? →</Link>
               <Link className="text-link" href="/pricing">See engagement pricing →</Link>
+              <Link className="text-link" href="/ongoing-partnership">Explore ongoing systems partnership →</Link>
             </div>
             <div className="direct-email">
               <span>Prefer email?</span>

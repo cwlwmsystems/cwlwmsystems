@@ -1,4 +1,4 @@
-import { site, solutions, industries, engagementOptions } from "@/lib/site";
+import { site, solutions, industries, engagementOptions, ongoingEngagementOptions } from "@/lib/site";
 import { caseStudies } from "@/lib/case-studies";
 import { insights } from "@/lib/insights";
 
@@ -7,7 +7,7 @@ export function GET() {
 
 > ${site.tagline}
 
-Cwlwm Systems is an independent, founder-led systems studio that designs custom operational software, integrations, workflow automation, AI-assisted business systems, and data/decision intelligence for businesses whose work has outgrown disconnected tools and manual handoffs.
+Cwlwm Systems is an independent, founder-led systems studio that designs custom operational software, integrations, workflow automation, AI-assisted business systems, and data/decision intelligence for businesses whose work has outgrown disconnected tools and manual handoffs. Cwlwm Systems also provides implementation, onboarding, training, phased development, maintenance, and ongoing fractional systems partnership.
 
 ## Core positioning
 
@@ -20,6 +20,12 @@ ${solutions.map((item) => `- ${item.title}: ${item.short}`).join("\n")}
 ## Engagements and starting prices
 
 ${engagementOptions.map((item) => `- ${item.title}: ${item.price}. ${item.fit}`).join("\n")}
+
+## Ongoing systems partnership
+
+${ongoingEngagementOptions.map((item) => `- ${item.title}: ${item.price}. ${item.fit}`).join("\n")}
+
+Retainers reserve defined recurring capacity and availability. They are not unlimited service plans. Ongoing work can include maintenance, troubleshooting, onboarding, training, future phases, integrations, documentation, and systems roadmap ownership.
 
 ## Systems & Workflow Review
 
@@ -39,7 +45,7 @@ ${insights.map((item) => `- ${item.title}: ${item.description}`).join("\n")}
 
 ## How projects begin
 
-A prospect can describe a manual process, disconnected tools, data problem, workflow bottleneck, or system that should work differently. Cwlwm Systems determines whether the right next step is a short project-fit call, a paid systems review, an integration, automation, a focused internal tool, or a larger custom build.
+A prospect can describe a manual process, disconnected tools, data problem, workflow bottleneck, or system that should work differently. Cwlwm Systems determines whether the right next step is a short project-fit call, a paid systems review, an integration, automation, a focused internal tool, a larger custom build, phased development, or an ongoing systems partnership.
 
 ## Important pages
 
@@ -49,6 +55,7 @@ A prospect can describe a manual process, disconnected tools, data problem, work
 - Case studies: ${site.url}/case-studies
 - Engagements & pricing: ${site.url}/pricing
 - Systems & Workflow Review: ${site.url}/systems-review
+- Ongoing Systems Partnership: ${site.url}/ongoing-partnership
 - Request a project-fit call: ${site.url}/book
 - Industries: ${site.url}/industries
 - Approach: ${site.url}/approach

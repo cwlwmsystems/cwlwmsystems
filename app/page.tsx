@@ -6,7 +6,7 @@ import { SystemMap } from "@/components/SystemMap";
 import { Testimonials } from "@/components/Testimonials";
 import { caseStudies } from "@/lib/case-studies";
 import { insights } from "@/lib/insights";
-import { engagementOptions, faqs, industries, nextSteps, problemSignals, solutions, trustPoints } from "@/lib/site";
+import { engagementOptions, faqs, industries, nextSteps, ongoingEngagementOptions, problemSignals, solutions, trustPoints } from "@/lib/site";
 
 const friction = [
   "Critical workflows live in spreadsheets, inboxes, and tribal knowledge.",
@@ -22,7 +22,7 @@ export default function HomePage() {
         <div className="hero-pattern" aria-hidden="true" />
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow light">Custom operational software · Integrations · Automation · Data</p>
+            <p className="eyebrow light">Custom systems · Integrations · Automation · Implementation · Ongoing partnership</p>
             <h1>Make your business systems <span>work together.</span></h1>
             <p className="hero-lede">Cwlwm Systems builds the operating layer between your people, processes, data, and software — so work moves cleanly from one step to the next.</p>
             <div className="hero-actions">
@@ -32,7 +32,7 @@ export default function HomePage() {
             <div className="hero-proof">
               <span>Work directly with the builder</span>
               <span>Built around your existing stack</span>
-              <span>No forced ongoing contract</span>
+              <span>Ongoing support without forced lock-in</span>
             </div>
           </div>
           <div className="hero-visual"><SystemMap /></div>
@@ -145,6 +145,31 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section ongoing-home-section">
+        <div className="container">
+          <SectionIntro
+            eyebrow="After launch"
+            title="Build the system, help the team adopt it, then keep improving it."
+            copy="A project can end with a documented handoff, or I can stay involved through maintenance, onboarding, training, troubleshooting, future phases, new integrations, and ongoing systems ownership."
+            action={<Link className="text-link" href="/ongoing-partnership">Ongoing partnership details →</Link>}
+          />
+          <div className="ongoing-preview-grid">
+            {ongoingEngagementOptions.slice(0, 3).map((item) => (
+              <article key={item.title}>
+                <span>{item.title}</span>
+                <strong>{item.price}</strong>
+                <p>{item.fit}</p>
+                <Link className="text-link" href={item.href}>See what is included →</Link>
+              </article>
+            ))}
+          </div>
+          <div className="ongoing-home-note">
+            <div><p className="eyebrow">Retainers reserve capacity</p><h3>Ongoing does not mean unlimited.</h3></div>
+            <p>Monthly partnerships are scoped around expected availability, planned development, support needs, and system complexity. The agreement defines recurring capacity, response expectations, additional work, and any rollover terms.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="section">
         <div className="container industries-preview">
           <SectionIntro
@@ -218,7 +243,7 @@ export default function HomePage() {
             <Link className="text-link" href="/book">Request a fit call →</Link>
           </div>
           <div className="faq-list">
-            {faqs.slice(0, 5).map((faq) => (
+            {faqs.slice(0, 6).map((faq) => (
               <details key={faq.q}><summary>{faq.q}<span>+</span></summary><p>{faq.a}</p></details>
             ))}
           </div>

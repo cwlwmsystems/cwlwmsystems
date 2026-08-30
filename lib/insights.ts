@@ -288,6 +288,98 @@ export const insights: Insight[] = [
       },
     ],
   },
+  {
+    slug: "who-owns-a-system-after-launch",
+    title: "Who owns a business system after launch?",
+    description: "Why maintenance, onboarding, training, documentation, and roadmap ownership matter after custom software goes live.",
+    category: "Operations",
+    readTime: "7 min read",
+    published: "August 2026",
+    takeaway: "A production system needs an operating owner after launch. That ownership can sit internally, transfer through a documented handoff, or remain with a fractional systems partner — but it should never be ambiguous.",
+    sections: [
+      {
+        heading: "Deployment is not the finish line",
+        paragraphs: [
+          "A system can be technically complete and still fail operationally. Users need access, administrators need to understand the controls, data needs to stay clean, integrations change, vendors update APIs, and the business discovers edge cases that were difficult to predict before launch.",
+          "The most important post-launch question is therefore not simply who can fix a bug. It is who owns the responsibility for keeping the system aligned with the operating process it supports.",
+        ],
+      },
+      {
+        heading: "There are several valid ownership models",
+        paragraphs: [
+          "Some businesses have an internal engineering or IT team that can take full ownership after a documented handoff. Others have capable administrators but need occasional specialist help. Smaller organizations may need the original builder to remain involved because there is no full-time systems role internally.",
+          "None of those models is automatically better. The risk comes from leaving ownership undefined and assuming someone will notice when documentation, permissions, integrations, or workflow rules drift out of date.",
+        ],
+        bullets: [
+          "Who handles production incidents and unexpected failures?",
+          "Who updates dependencies, integrations, and vendor API changes?",
+          "Who onboards new administrators and users?",
+          "Who decides whether a request is a bug, configuration issue, or new feature?",
+          "Who maintains documentation and operating procedures?",
+          "Who prioritizes the next phase of improvements?",
+        ],
+      },
+      {
+        heading: "A retainer should reserve capacity, not promise infinity",
+        paragraphs: [
+          "An ongoing systems relationship works best when the business knows what level of availability it is buying. A monthly retainer can reserve maintenance, improvement, training, or development capacity without pretending every possible request is included.",
+          "The agreement should define recurring priorities, response expectations, what is included, how additional work is approved, and whether unused capacity rolls forward. That makes the relationship predictable for both sides.",
+        ],
+      },
+      {
+        heading: "Continuity has value when the context is expensive to relearn",
+        paragraphs: [
+          "The deeper a system becomes tied to business rules, integrations, exception handling, and operational history, the more expensive it is for a new person to rediscover that context. Keeping the original systems partner involved can reduce that repeated discovery cost while preserving the option for a future handoff.",
+          "The goal is not lock-in. It is continuity with documentation, client access, and a clear exit path if the business eventually brings ownership in-house.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-phase-custom-software-project",
+    title: "How to phase a custom software project without building half a product",
+    description: "A practical way to divide a larger systems roadmap into useful releases that create value before the entire platform is finished.",
+    category: "Delivery",
+    readTime: "7 min read",
+    published: "August 2026",
+    takeaway: "A good phase is not an arbitrary slice of features. It is the smallest complete operating capability that can be used, measured, and learned from before the next investment decision.",
+    sections: [
+      {
+        heading: "Phasing should reduce risk, not just spread invoices out",
+        paragraphs: [
+          "Large custom systems often contain several workflows, roles, integrations, reports, and future ideas. Trying to design and build everything at once increases the number of assumptions that must remain correct until launch.",
+          "Phasing lowers that risk when each release creates a usable operating capability. The business can begin working in the system, discover real edge cases, and adjust the roadmap before later phases become expensive to change.",
+        ],
+      },
+      {
+        heading: "Start with the dependency chain",
+        paragraphs: [
+          "The first phase should establish the data and workflow that later capabilities depend on. That may mean a source-of-truth record, user roles, a core intake process, or the first reliable state transition between systems.",
+          "Reporting, advanced automation, and AI are usually more useful after the underlying operating data is trustworthy. Building intelligence on top of unstable workflow state simply makes uncertainty more sophisticated.",
+        ],
+        bullets: [
+          "Foundation: core records, roles, source of truth, and first useful workflow",
+          "Operations: integrations, automation, validation, notifications, and exception handling",
+          "Intelligence: reporting, prioritization, quality controls, and management visibility",
+          "Expansion: additional teams, locations, workflows, or advanced capabilities",
+        ],
+      },
+      {
+        heading: "Each phase should be useful on its own",
+        paragraphs: [
+          "A phase that cannot be used until three more phases are complete is often just a milestone inside one large project. A useful phase should have a real user, a defined workflow, acceptance criteria, and an outcome the business can observe.",
+          "That does not mean every phase needs to be independently profitable. It means the business should be able to validate that the architecture and operating assumptions are moving in the right direction.",
+        ],
+      },
+      {
+        heading: "Let production teach the roadmap",
+        paragraphs: [
+          "Once the first release is in use, the business will learn which edge cases matter, which reports are actually requested, which automation opportunities repeat, and which planned features are less important than expected.",
+          "A phased roadmap should be strong enough to provide direction and flexible enough to absorb that evidence. The point is not to abandon planning. It is to make later planning better because the system is producing real information instead of relying only on assumptions.",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getInsight(slug: string) {

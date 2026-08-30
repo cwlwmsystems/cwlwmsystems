@@ -2,7 +2,7 @@ export const site = {
   name: "Cwlwm Systems",
   tagline: "Connected systems. Clearer operations.",
   description:
-    "Founder-led custom operational software, integrations, automation, internal tools, and decision systems for businesses that have outgrown disconnected tools, spreadsheets, and manual handoffs.",
+    "Founder-led custom operational software, integrations, automation, internal tools, implementation, training, and ongoing systems partnership for businesses that have outgrown disconnected tools, spreadsheets, and manual handoffs.",
   email: "cwlwmsystems@gmail.com",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://cwlwm-systems.vercel.app",
 };
@@ -11,6 +11,7 @@ export const nav = [
   { href: "/solutions", label: "Solutions" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/pricing", label: "Pricing" },
+  { href: "/ongoing-partnership", label: "Ongoing" },
   { href: "/insights", label: "Insights" },
   { href: "/about", label: "About" },
 ];
@@ -100,6 +101,20 @@ export const solutions = [
     ],
     examples: ["Search intelligence", "RevOps workflows", "Lifecycle automation", "Content systems", "Attribution support"],
   },
+  {
+    slug: "ongoing-partnership",
+    number: "07",
+    title: "Implementation & Ongoing Systems Partnership",
+    short: "Launch, train, maintain, and expand the systems your business depends on.",
+    description:
+      "A system does not create value simply because it is deployed. I can stay involved through implementation, onboarding, administrator and user training, documentation, maintenance, troubleshooting, phased development, and ongoing improvement as the business changes.",
+    signs: [
+      "The system needs a clear owner after launch, but you do not need a full-time internal systems role.",
+      "New users, locations, workflows, or phases will need continued onboarding and refinement.",
+      "You want the person who understands the architecture to remain available as the system evolves.",
+    ],
+    examples: ["Launch support", "User onboarding", "Administrator training", "Documentation", "Maintenance & updates", "Phased development", "Fractional systems partnership"],
+  },
 ];
 
 export const processSteps = [
@@ -125,8 +140,13 @@ export const processSteps = [
   },
   {
     number: "05",
-    title: "Measure & Improve",
-    copy: "Verify adoption and outcomes, watch for edge cases, and refine the system based on how the business actually uses it.",
+    title: "Launch & Adopt",
+    copy: "Deploy the system with the documentation, onboarding, administrator setup, user training, and launch support needed to make it part of the real operating process.",
+  },
+  {
+    number: "06",
+    title: "Maintain, Improve or Hand Off",
+    copy: "Choose a clean documented handoff or keep me involved through maintenance, training, future phases, monitoring, and ongoing systems improvement.",
   },
 ];
 
@@ -181,6 +201,10 @@ export const faqs = [
     a: "Then custom software may not be the right answer. The point is to solve the operating problem, not to manufacture a development project. A good discovery process should make that clear early.",
   },
   {
+    q: "Can Cwlwm Systems stay involved after launch?",
+    a: "Yes. A project can end with a documented handoff, or I can stay involved through a monthly retainer for maintenance, troubleshooting, onboarding, training, future phases, new integrations, and ongoing improvement. Retainers reserve defined recurring capacity; they are not unlimited service plans.",
+  },
+  {
     q: "How does a project start?",
     a: "Start by describing what is not working, who is affected, what tools are involved, and what you wish happened instead. From there, I can determine whether the next step should be a focused diagnostic, an integration, a prototype, or a scoped build.",
   },
@@ -229,21 +253,79 @@ export const engagementOptions = [
   },
 ];
 
+export const ongoingEngagementOptions = [
+  {
+    title: "System Care",
+    price: "From $750/month",
+    fit: "A live system that needs dependable maintenance, small changes, documentation updates, and a known person who already understands how it works.",
+    includes: ["Routine maintenance and updates", "Troubleshooting and bug fixes", "Small workflow or configuration changes", "Documentation updates", "Periodic system review"],
+    href: "/ongoing-partnership#system-care",
+  },
+  {
+    title: "Ongoing Improvement",
+    price: "From $1,500/month",
+    fit: "A business with an active improvement roadmap that needs recurring development capacity in addition to maintenance and support.",
+    includes: ["Reserved monthly improvement capacity", "New automations and workflow changes", "Reporting and dashboard improvements", "Maintenance and troubleshooting", "User onboarding and training support"],
+    href: "/ongoing-partnership#ongoing-improvement",
+  },
+  {
+    title: "Fractional Systems Partner",
+    price: "From $2,500/month",
+    fit: "A business that needs ongoing systems ownership, planning, development, and operational support without adding a full-time internal systems role.",
+    includes: ["Systems roadmap and prioritization", "Active phased development", "Implementation, onboarding, and training", "Integration and vendor coordination", "Ongoing operational and technical ownership"],
+    href: "/ongoing-partnership#fractional-systems-partner",
+  },
+  {
+    title: "Embedded Partnership",
+    price: "Custom",
+    fit: "A higher-touch relationship across several systems, locations, departments, or active initiatives where recurring capacity and continuity matter.",
+    includes: ["Dedicated recurring capacity", "Multi-system backlog and roadmap", "Launch and change-management support", "Cross-functional systems work", "Custom response and availability expectations"],
+    href: "/contact?interest=ongoing-partnership",
+  },
+];
+
+export const partnershipCapabilities = [
+  "Monthly maintenance and updates",
+  "Bug fixes and troubleshooting",
+  "Infrastructure and deployment oversight",
+  "Integration monitoring and vendor/API changes",
+  "Database and workflow changes",
+  "New features and future development phases",
+  "Dashboards and reporting improvements",
+  "User and administrator onboarding",
+  "Team training and launch support",
+  "Documentation and SOP updates",
+  "Permissions and role changes",
+  "Automation and process-improvement opportunities",
+  "Security and dependency updates",
+  "Performance improvements",
+  "Recurring systems review and roadmap planning",
+];
+
+export const phaseModel = [
+  { number: "01", title: "Foundation", copy: "Establish the core data model, users, source of truth, and highest-value workflow so the business gets a usable first release instead of waiting for the entire roadmap." },
+  { number: "02", title: "Operations", copy: "Add integrations, automation, permissions, operational states, notifications, and the day-to-day workflows required to make the system dependable." },
+  { number: "03", title: "Intelligence", copy: "Layer in reporting, prioritization, management visibility, quality controls, and decision support once the operating data is trustworthy." },
+  { number: "04", title: "Expansion", copy: "Extend the system to additional teams, locations, workflows, automations, or AI-assisted capabilities based on what the business has learned in production." },
+];
+
 export const nextSteps = [
   { number: "01", title: "Tell me what is happening", copy: "Describe the process, people, tools, and where work gets stuck. You do not need to know what software should be built." },
   { number: "02", title: "Project-fit conversation", copy: "A short conversation determines whether the problem is a fit, whether an existing product may solve it, and what the most sensible next step is." },
   { number: "03", title: "Discovery or systems review", copy: "For work that needs deeper understanding, I map the current workflow, data, rules, constraints, risks, and desired operating state." },
-  { number: "04", title: "Clear scope and price", copy: "Before development begins, you receive a written scope describing deliverables, assumptions, timeline, responsibilities, and cost." },
+  { number: "04", title: "Clear scope, phases and price", copy: "Before development begins, you receive a written scope describing deliverables, assumptions, phases, timeline, responsibilities, and cost." },
   { number: "05", title: "Build with visibility", copy: "The system is built in understandable stages. You see working progress and can validate the workflow before launch." },
-  { number: "06", title: "Launch, document, hand off", copy: "The finished system is tested, documented, deployed, and transferred according to the project agreement. Ongoing support is optional, not forced." },
+  { number: "06", title: "Launch, onboard and train", copy: "Deployment can include administrator setup, user onboarding, documentation, training, data migration, and launch support so the system becomes part of the real operation." },
+  { number: "07", title: "Continue or hand off", copy: "Choose a documented handoff, a later project phase, or an ongoing systems partnership for maintenance, improvement, onboarding, training, and continued ownership." },
 ];
 
 export const trustPoints = [
   { title: "You work directly with the builder", copy: "There is no sales-to-delivery handoff. I am the person learning the process, designing the solution, building it, and refining it with you." },
-  { title: "No forced platform lock-in", copy: "Where practical, systems can be deployed into client-controlled infrastructure and accounts. Ongoing hosting or support is only included when you choose it." },
+  { title: "Continuity without forced lock-in", copy: "I can stay involved for maintenance, training, future phases, and ongoing systems ownership, but the relationship is defined by the agreement rather than by technical dependence." },
   { title: "Project-specific work transfers", copy: "Ownership of project-specific deliverables is handled in the service agreement and statement of work, with transfer after the agreed payment terms are satisfied." },
   { title: "Existing software comes first", copy: "I do not recommend custom development just to create a development project. If an existing product solves the problem cleanly, that should be considered first." },
   { title: "Security is part of the design", copy: "Authentication, permissions, validation, auditability, data handling, backups, and failure recovery are considered as operating requirements, not afterthoughts." },
+  { title: "Documentation supports continuity", copy: "Implementation, admin procedures, operating rules, and important dependencies can be documented so the business is not dependent on memory or one conversation." },
   { title: "No invented proof", copy: "Client names, testimonials, screenshots, and metrics are only published with permission. Case studies focus on real system patterns without fabricating customer claims." },
 ];
 

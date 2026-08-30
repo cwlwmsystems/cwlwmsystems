@@ -3,7 +3,7 @@ import { LegalPage } from "@/components/LegalPage";
 
 export const metadata: Metadata = {
   title: "Billing & Cancellation Policy",
-  description: "Default billing, payment, cancellation, and refund policies for Cwlwm Systems business engagements.",
+  description: "Default billing, payment, retainer, recurring-service, cancellation, and refund policies for Cwlwm Systems business engagements.",
   alternates: { canonical: "/billing-cancellation" },
 };
 
@@ -20,12 +20,14 @@ export default function BillingCancellationPage() {
 
       <h2>2. Deposits and milestone payments</h2>
       <p>If a project requires a deposit, reservation payment, or milestone payment, the proposal or SOW will identify the amount and when it becomes due. A deposit may be applied against project fees. Any non-refundable portion must be stated expressly in the project document.</p>
+      <p>For phased development, each phase may be priced and authorized separately or included within one larger SOW with defined milestones. A later phase is not automatically billable unless it has been authorized under the applicable project terms.</p>
 
       <h2>3. Invoice terms</h2>
       <p>Unless the applicable project document states otherwise, invoices are due within fourteen (14) calendar days of the invoice date. If an undisputed invoice becomes materially overdue, Cwlwm Systems may pause affected work after reasonable notice until the account is brought current.</p>
 
-      <h2>4. Recurring services</h2>
-      <p>Cwlwm Systems does not assume that every build creates an ongoing subscription. Hosting administration, monitoring, support retainers, maintenance, managed services, or other recurring fees apply only when the Client expressly agrees to them. Renewal and cancellation timing for a recurring arrangement will be stated in the applicable SOW or order form.</p>
+      <h2>4. Recurring services and retainers</h2>
+      <p>Cwlwm Systems does not assume that every build creates an ongoing subscription. Hosting administration, monitoring, support retainers, maintenance, phased development, onboarding, training, fractional systems services, or other recurring fees apply only when the Client expressly agrees to them.</p>
+      <p>A retainer reserves the recurring capacity and availability described in the applicable SOW. It is not an unlimited-hours plan unless the SOW expressly says so. The SOW will define the billing cadence, included services or capacity, priority rules, response expectations, rates for additional work, renewal or cancellation timing, and whether any unused capacity rolls forward.</p>
 
       <h2>5. Third-party charges</h2>
       <p>Cloud usage, software subscriptions, domains, email delivery, mapping, AI usage, database plans, external APIs, and other third-party costs are the Client's responsibility unless the project document says they are included. Material pass-through costs will be disclosed or approved before they are incurred when reasonably practicable.</p>

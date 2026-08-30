@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
     ["Phone", phone || "—"],
     ["Interest", interest || "General project inquiry"],
     ["Timeline", timeline || "—"],
-    ["Budget", budget || "—"],
+    [interest === "Ongoing Systems Partnership / Retainer" ? "Monthly budget" : "Budget", budget || "—"],
     ["Preferred call times", preferredTimes || "—"],
   ];
 

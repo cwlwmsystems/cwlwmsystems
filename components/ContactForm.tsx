@@ -49,7 +49,7 @@ export function ContactForm({ initialInterest = "" }: { initialInterest?: string
       `Phone: ${values.phone}`,
       `Interest: ${values.interest}`,
       `Timeline: ${values.timeline}`,
-      `Budget range: ${values.budget}`,
+      `${values.interest === "Ongoing Systems Partnership / Retainer" ? "Monthly budget range" : "Budget range"}: ${values.budget}`,
       `Preferred call times: ${values.preferredTimes}`,
       "",
       "What is not working:",
@@ -95,6 +95,7 @@ export function ContactForm({ initialInterest = "" }: { initialInterest?: string
   }
 
   const requestingCall = values.interest === "20-minute project fit call";
+  const requestingOngoing = values.interest === "Ongoing Systems Partnership / Retainer";
 
   return (
     <form className="contact-form" onSubmit={submit}>
@@ -127,6 +128,7 @@ export function ContactForm({ initialInterest = "" }: { initialInterest?: string
           <option value="Automation & Integration">Automation &amp; Integration</option>
           <option value="Custom Internal Tool">Custom Internal Tool</option>
           <option value="Operational Platform">Operational Platform</option>
+          <option value="Ongoing Systems Partnership / Retainer">Ongoing Systems Partnership / Retainer</option>
           <option value="Not sure yet">Not sure yet</option>
         </select>
       </label>
@@ -154,14 +156,26 @@ export function ContactForm({ initialInterest = "" }: { initialInterest?: string
           </select>
         </label>
         <label>
-          <span>Estimated project budget</span>
+          <span>{requestingOngoing ? "Estimated monthly budget" : "Estimated project budget"}</span>
           <select value={values.budget} onChange={(e) => field("budget", e.target.value)}>
             <option value="">Not sure yet</option>
-            <option>Under $2,500</option>
-            <option>$2,500–$5,000</option>
-            <option>$5,000–$15,000</option>
-            <option>$15,000–$50,000</option>
-            <option>$50,000+</option>
+            {requestingOngoing ? (
+              <>
+                <option>Under $750/month</option>
+                <option>$750–$1,500/month</option>
+                <option>$1,500–$2,500/month</option>
+                <option>$2,500–$5,000/month</option>
+                <option>$5,000+/month</option>
+              </>
+            ) : (
+              <>
+                <option>Under $2,500</option>
+                <option>$2,500–$5,000</option>
+                <option>$5,000–$15,000</option>
+                <option>$15,000–$50,000</option>
+                <option>$50,000+</option>
+              </>
+            )}
           </select>
         </label>
       </div>

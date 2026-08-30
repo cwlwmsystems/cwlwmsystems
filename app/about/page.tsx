@@ -6,7 +6,7 @@ import { fitReasons, notFitReasons } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About Cwlwm Systems, an independent systems studio focused on connecting business workflows, data, software, automation, and AI.",
+  description: "About Cwlwm Systems, an independent systems studio for custom business systems, integrations, implementation, training, and ongoing systems partnership.",
   alternates: { canonical: "/about" },
 };
 
@@ -75,6 +75,17 @@ export default function AboutPage() {
             <p className="eyebrow">Probably not the right fit</p>
             <h2>Not every development request should become a Cwlwm project.</h2>
             <ul>{notFitReasons.map((reason) => <li key={reason}>{reason}</li>)}</ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="section continuity-section">
+        <div className="container founder-detail-grid">
+          <div><p className="eyebrow">Continuity after launch</p><h2>I can build the system and stay responsible for helping it evolve.</h2></div>
+          <div>
+            <p>Some clients need a clean project handoff. Others need someone who already understands the architecture, workflows, integrations, and business rules to remain involved as new employees, phases, locations, and requirements appear.</p>
+            <p>Cwlwm Systems can continue through a monthly retainer for maintenance, training, onboarding, future development, system improvements, and fractional systems ownership — without pretending that ongoing means unlimited work.</p>
+            <Link className="text-link" href="/ongoing-partnership">How ongoing partnership works →</Link>
           </div>
         </div>
       </section>

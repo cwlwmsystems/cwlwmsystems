@@ -13,6 +13,7 @@ const exploreLinks = [
 const workLinks = [
   { href: "/pricing", label: "Engagements & Pricing" },
   { href: "/systems-review", label: "Systems Review" },
+  { href: "/ongoing-partnership", label: "Ongoing Systems Partnership" },
   { href: "/book", label: "20-Minute Fit Call" },
   { href: "/approach", label: "Approach" },
   { href: "/trust", label: "Trust & Ownership" },

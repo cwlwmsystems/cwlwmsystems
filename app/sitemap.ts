@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/case-studies",
     "/pricing",
     "/systems-review",
+    "/ongoing-partnership",
     "/industries",
     "/approach",
     "/trust",
@@ -36,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${site.url}${route}`,
       lastModified: new Date(),
       changeFrequency: route === "" || route === "/insights" ? "weekly" as const : "monthly" as const,
-      priority: route === "" ? 1 : ["/solutions", "/case-studies", "/pricing", "/contact"].includes(route) ? 0.85 : 0.7,
+      priority: route === "" ? 1 : ["/solutions", "/case-studies", "/pricing", "/ongoing-partnership", "/contact"].includes(route) ? 0.85 : 0.7,
     })),
     ...caseStudies.map((study) => ({
       url: `${site.url}/case-studies/${study.slug}`,

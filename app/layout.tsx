@@ -23,6 +23,10 @@ export const metadata: Metadata = {
     "data intelligence",
     "field operations software",
     "RevOps systems",
+    "fractional systems partner",
+    "software maintenance retainer",
+    "business systems training",
+    "phased software development",
   ],
   authors: [{ name: "Cwlwm Systems" }],
   creator: "Cwlwm Systems",
@@ -63,6 +67,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       "Workflow automation",
       "AI-assisted business systems",
       "Data and decision intelligence",
+      "Implementation and user training",
+      "Software maintenance and ongoing systems partnership",
+      "Fractional systems services",
     ],
   };
 
