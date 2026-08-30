@@ -91,6 +91,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             gtag('config', 'G-7Y9QPDV3CF', { send_page_view: false });
           `}
         </Script>
+        <Script
+          id="hs-script-loader"
+          src="https://js.hs-scripts.com/247226891.js"
+          strategy="afterInteractive"
+        />
         <GoogleAnalyticsEvents />
         <a className="skip-link" href="#main">Skip to content</a>
         <Header />
