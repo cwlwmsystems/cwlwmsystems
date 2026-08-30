@@ -1,18 +1,34 @@
 "use client";
 
 import Script from "next/script";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { sendGAEvent } from "@/lib/analytics";
 
 const calendlyUrl =
   "https://calendly.com/cwlwmsystems/30min?background_color=f4f0e7&text_color=252825&primary_color=02592d";
 
 export function CalendlyBooking() {
+  const scheduledTracked = useRef(false);
+
   useEffect(() => {
     const handleCalendlyMessage = (event: MessageEvent) => {
       if (event.origin !== "https://calendly.com") return;
 
       const data = event.data as { event?: string } | null;
       if (data?.event === "calendly.event_scheduled") {
+        if (!scheduledTracked.current) {
+          scheduledTracked.current = true;
+          sendGAEvent("generate_lead", {
+            method: "Calendly",
+            lead_type: "project_fit_call",
+            source_page: window.location.pathname,
+          });
+          sendGAEvent("calendly_booking_completed", {
+            booking_type: "30_minute_project_fit_call",
+            source_page: window.location.pathname,
+          });
+        }
+
         window.setTimeout(() => {
           window.location.assign("/booking-confirmed");
         }, 250);
