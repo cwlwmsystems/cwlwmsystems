@@ -41,3 +41,14 @@
 - [ ] Add privacy-friendly analytics or Vercel Analytics if desired.
 - [ ] Add CRM integration once lead volume justifies it.
 - [ ] Add new case studies as Cwlwm Systems completes client work.
+
+## Legal / contracting
+- [ ] Read every page under `/legal` and confirm it matches how you plan to sell and deliver services.
+- [ ] Have a licensed attorney review the Standard Service Agreement before relying on it for the first paid client engagement.
+- [ ] Decide whether your contracts need a specific governing-law, venue, or arbitration clause.
+- [ ] Confirm the default 14-day invoice term matches how you want to bill clients.
+- [ ] Confirm the default IP model: client owns project-specific paid deliverables; Cwlwm Systems retains reusable background technology and know-how.
+- [ ] Use a project-specific proposal or SOW for scope, fees, milestones, acceptance criteria, third-party costs, support, data types, and special compliance requirements.
+- [ ] Update `/privacy` and `/cookies` before enabling new analytics, advertising pixels, session replay, CRM tracking, or other non-essential tracking.
+- [ ] Identify project-specific subprocessors in the SOW when they will materially process client personal data.
+- [ ] Do not claim SOC 2, ISO 27001, HIPAA compliance, PCI compliance, or another certification unless it is actually applicable and documented.

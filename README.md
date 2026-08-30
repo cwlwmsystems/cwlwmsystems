@@ -122,3 +122,27 @@ Brand line:
 - Review the privacy policy against the exact analytics, CRM, scheduling, or tracking tools you add later.
 - If you add analytics, advertising pixels, a CRM form, a scheduling widget, or cookies, update the privacy policy accordingly.
 - Do not publish client/employer names, proprietary screenshots, credentials, internal data, or private implementation details unless you have permission.
+
+## Legal and policy pages
+
+The site now includes a complete public legal/policy section:
+
+- `/legal` — legal and policy hub
+- `/terms` — website Terms of Service
+- `/service-agreement` — standard client Service Agreement
+- `/privacy` — Privacy Policy
+- `/cookies` — Cookie Policy
+- `/acceptable-use` — Acceptable Use Policy for hosted/managed systems
+- `/data-processing` — standard Data Processing Terms
+- `/security` — Security Practices
+- `/accessibility` — Accessibility Statement
+
+The footer links directly to the core legal pages, and all legal routes are included in the sitemap and `llms.txt` file.
+
+### Important legal review before the first signed client
+
+These pages are written as a practical launch-ready baseline for a small custom-software and systems consultancy, but they are not a substitute for advice from a licensed attorney who can review the business structure, jurisdiction, insurance, tax treatment, and the exact services you sell. Before relying on the Standard Service Agreement for a paid engagement, have counsel review it and decide whether you want to add a governing-law clause, venue, arbitration, insurance requirements, different liability caps, or industry-specific terms.
+
+For each client, the proposal/SOW should still define the exact scope, price, milestones, acceptance criteria, third-party costs, support period, hosting responsibilities, data types, compliance requirements, and any project-specific ownership terms.
+- `/subprocessors` — current website providers and project subprocessor approach
+- `/billing-cancellation` — default billing, cancellation, and refund policy

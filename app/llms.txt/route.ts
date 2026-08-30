@@ -37,6 +37,15 @@ A prospect can describe a manual process, disconnected tools, data problem, work
 - Approach: ${site.url}/approach
 - About: ${site.url}/about
 - Contact: ${site.url}/contact
+- Legal & policies: ${site.url}/legal
+- Terms of Service: ${site.url}/terms
+- Standard Service Agreement: ${site.url}/service-agreement
+- Privacy Policy: ${site.url}/privacy
+- Data Processing Terms: ${site.url}/data-processing
+- Subprocessors: ${site.url}/subprocessors
+- Billing & Cancellation: ${site.url}/billing-cancellation
+- Security Practices: ${site.url}/security
+- Accessibility: ${site.url}/accessibility
 
 ## Contact
 
