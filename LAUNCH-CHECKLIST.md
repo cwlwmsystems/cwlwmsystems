@@ -23,34 +23,30 @@
 ## Vercel
 - [ ] Push the final project to GitHub.
 - [ ] Create/update the dedicated Vercel project.
-- [ ] Set `NEXT_PUBLIC_SITE_URL` to the final production domain.
+- [ ] Set `NEXT_PUBLIC_SITE_URL=https://cwlwmsystems.com`.
 - [ ] Confirm Production deployment is green.
 - [ ] Test `/sitemap.xml`, `/robots.txt`, and `/llms.txt`.
 - [ ] Test the mobile menu and all major CTA buttons.
 - [ ] Test `/ongoing-partnership` on desktop and mobile.
+- [ ] Remove any obsolete `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, or `CONTACT_FROM_EMAIL` environment variables if they are still present.
 
-## Lead capture
-- [ ] Verify the Cwlwm domain with Resend.
-- [ ] Add `RESEND_API_KEY`.
-- [ ] Add `CONTACT_TO_EMAIL=kasey@cwlwmsystems.com`.
-- [ ] Add a verified `CONTACT_FROM_EMAIL`.
-- [ ] Submit a standard project inquiry from desktop.
-- [ ] Submit a project inquiry from mobile.
-- [ ] Submit a `/book` 30-minute fit-call booking.
+## Lead capture and scheduling
+- [ ] Confirm the `/contact` page loads the embedded Calendly scheduler.
+- [ ] Confirm the `/book` page loads the embedded Calendly scheduler.
+- [ ] Confirm the direct email link on `/contact` opens `kasey@cwlwmsystems.com`.
 - [ ] Confirm the Calendly widget loads with the Cwlwm brand colors.
 - [ ] Complete a real/test Calendly booking and confirm the site redirects to `/booking-confirmed`.
 - [ ] Confirm Calendly sends the expected confirmation/calendar invitation to the invitee.
-- [ ] Submit a Systems Review inquiry.
-- [ ] Submit an Ongoing Systems Partnership / Retainer inquiry.
-- [ ] Confirm the retainer form switches to monthly budget ranges.
-- [ ] Confirm Reply-To goes to the prospect.
-- [ ] Confirm the budget, interest, timeline, and preferred-call-time fields appear in the received email.
+- [ ] Confirm the booking appears on the connected Cwlwm Systems Google Calendar.
+- [ ] Confirm Calendly is connected to the intended HubSpot account/workflow.
+- [ ] Review the Calendly questions that prospects complete before booking.
 
 ## Domain and email
 - [ ] Connect the custom domain in Vercel.
 - [ ] Confirm HTTPS is active.
-- [ ] Consider replacing the Gmail address publicly with `hello@yourdomain.com` or `projects@yourdomain.com` once domain email is ready.
-- [ ] Configure SPF, DKIM, and DMARC for any domain-based email.
+- [ ] Confirm `kasey@cwlwmsystems.com` is the public business email.
+- [ ] Configure and verify SPF, DKIM, and DMARC for domain-based email.
+- [ ] Confirm Google Workspace mail delivery works in both directions.
 
 ## Search and discoverability
 - [ ] Add the domain to Google Search Console.
@@ -76,6 +72,13 @@
 - [ ] Test the Trust & Ownership links.
 - [ ] Confirm no public section implies a larger team or uses first-person plural company language.
 
+## Payments
+- [ ] Confirm the Systems & Workflow Review Stripe Payment Link is active.
+- [ ] Confirm successful Stripe checkout redirects to `https://cwlwmsystems.com/systems-review-confirmed?session_id={CHECKOUT_SESSION_ID}`.
+- [ ] Confirm Stripe public business/support email uses the Cwlwm Systems domain email.
+- [ ] Confirm the checkout and receipt business details are accurate.
+- [ ] Decide whether explicit Terms of Service acceptance should be enabled for the Systems Review checkout.
+
 ## Delivery model
 - [ ] Create a reusable proposal/SOW template for fixed-price projects.
 - [ ] Create a reusable phased-development SOW template.
@@ -96,7 +99,7 @@
 
 ## Scheduling
 - [ ] Keep the public Calendly event availability aligned with the hours you actually want to offer prospects.
-- [ ] Confirm the `/book` embed and `/booking-confirmed` redirect after any Calendly event or account changes.
+- [ ] Confirm the `/contact` and `/book` embeds and `/booking-confirmed` redirect after any Calendly event or account changes.
 - [ ] Review buffers, minimum notice, reminders, and maximum bookings per day in Calendly.
 
 ## Legal / contracting
