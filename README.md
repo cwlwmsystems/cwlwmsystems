@@ -20,23 +20,17 @@ A production-ready Next.js customer-facing website for Cwlwm Systems, built to s
 - Approach page showing what happens from inquiry through launch, adoption, ongoing support, or handoff
 - Trust & Ownership page covering access, handoff, lock-in, security, and project ownership in plain language
 - About page with direct founder-led delivery positioning and good-fit / poor-fit qualification
-- Project inquiry page with direct-email fallback
+- Contact page with embedded Calendly booking and direct-email fallback
 - Eight original Insights articles for search visibility and buyer education
 - Testimonial component that remains hidden until real approved testimonials are added
 
 ### Lead capture
-The inquiry form supports:
-- General project inquiries
-- 30-minute project-fit call bookings
-- Systems & Workflow Review requests
-- Automation & Integration
-- Custom Internal Tool
-- Operational Platform
-- Ongoing Systems Partnership / Retainer
-- Project or monthly budget qualification depending on the selected engagement
-- Timeline qualification
-- Optional preferred call times
-- Native delivery through Resend with a pre-filled email fallback
+Lead capture is intentionally simple:
+- `/contact` embeds the 30-minute Calendly project-fit scheduler and also provides a direct email link
+- `/book` embeds the same Calendly project-fit scheduler
+- Calendly collects the booking details and creates the meeting
+- Successful bookings redirect to the branded `/booking-confirmed` page
+- No separate website inquiry form or transactional-email provider is required for the current flow
 
 ### Legal and trust
 - `/legal` — legal and policy hub
@@ -81,7 +75,7 @@ The inquiry form supports:
 - `/insights` — buyer education and thought leadership
 - `/insights/[slug]` — individual articles
 - `/about` — company and founder-led delivery positioning
-- `/contact` — project or retainer inquiry
+- `/contact` — embedded Calendly booking plus direct email contact
 - `/legal` — legal and policy hub
 
 ## Current published pricing
@@ -103,16 +97,15 @@ These are public starting points, not promises that every project or retainer fi
 
 ## Ongoing engagement model
 
-The site now presents Cwlwm Systems as capable of supporting the full lifecycle:
+The site presents Cwlwm Systems as capable of supporting the full lifecycle:
 
 **Systems Review → Build → Launch & Implement → Onboard & Train → Maintain → Improve → Expand**
 
 A client can choose a documented handoff after launch or retain Cwlwm Systems for ongoing continuity. Retainers reserve defined recurring capacity and are not unlimited-work arrangements.
 
-
 ## Calendly booking flow
 
-The `/book` page embeds the Cwlwm Systems Calendly event at `https://calendly.com/cwlwmsystems/30min`. The embed uses the Cwlwm brand palette:
+The `/contact` and `/book` pages embed the Cwlwm Systems Calendly event at `https://calendly.com/cwlwmsystems/30min`. The embed uses the Cwlwm brand palette:
 
 - Forest Green `#02592D`
 - Warm Cream `#F4F0E7`
@@ -156,27 +149,13 @@ NEXT_PUBLIC_SITE_URL=https://cwlwmsystems.com
 
 If that variable is not set, the project uses `https://cwlwmsystems.com` as its metadata fallback.
 
-## Contact form setup
+## Contact and booking setup
 
-The public email remains `kasey@cwlwmsystems.com`.
+The public email is `kasey@cwlwmsystems.com`.
 
-The site can send inquiries directly through Resend. Without Resend configured, the form preserves the entered information and offers a pre-filled email fallback.
+The current site does not use a standalone contact form. Both `/contact` and `/book` use the embedded Calendly booking experience, while `/contact` also exposes the public email as a direct `mailto:` fallback.
 
-### Enable native form delivery
-
-1. Create a Resend account.
-2. Verify the domain used for Cwlwm Systems.
-3. Create an API key.
-4. Add these Vercel environment variables:
-
-```text
-RESEND_API_KEY=re_xxxxxxxxx
-CONTACT_TO_EMAIL=kasey@cwlwmsystems.com
-CONTACT_FROM_EMAIL=Cwlwm Systems <website@yourdomain.com>
-```
-
-5. Redeploy.
-6. Test a normal inquiry, a `/book` fit-call request, and an ongoing-partnership inquiry.
+No Resend API key, contact-form API route, `CONTACT_TO_EMAIL`, or `CONTACT_FROM_EMAIL` environment variable is required for the current site flow.
 
 ## Testimonials
 
@@ -205,8 +184,8 @@ Brand line:
 - Confirm that all published project and retainer starting prices are the prices you actually want to honor before promoting the site.
 - Decide how much monthly capacity each retainer level typically reserves before quoting the first retainer client.
 - Define response-time expectations carefully; do not promise 24/7 or emergency support unless priced and operationally feasible.
-- Replace the fallback Vercel URL with the final domain.
-- Enable and test the contact form.
+- Keep `NEXT_PUBLIC_SITE_URL` set to `https://cwlwmsystems.com` in production.
+- Test the `/contact` and `/book` Calendly embeds after any Calendly account or event changes.
 - Keep the Calendly event URL in `components/CalendlyBooking.tsx` current if the booking event changes.
 - Review privacy/cookie policies whenever analytics, CRM tracking, session replay, advertising pixels, or embedded scheduling tools are added.
 - Add customer-specific proof only with permission.
