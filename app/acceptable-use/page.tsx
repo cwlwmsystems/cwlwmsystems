@@ -15,7 +15,7 @@ export default function AcceptableUsePage() {
       note="This policy applies only to a service or system that Cwlwm Systems hosts, manages, or makes available for use. Client-owned deployments may be governed primarily by the client's own policies and the applicable project agreement."
     >
       <h2>1. Lawful and authorized use</h2>
-      <p>Users may use a covered service only for lawful business purposes and within the permissions granted by the applicable Client or project agreement. Users must not use a covered service to violate law, regulation, contractual rights, privacy rights, intellectual property rights, or another person's rights.</p>
+      <p>Users may use a covered service only for lawful business purposes and within the permissions granted by the applicable Client or project agreement. Users must not use a covered service to violate law, regulation, contractual rights, privacy rights, intellectual property rights, or another person&apos;s rights.</p>
 
       <h2>2. Account and access security</h2>
       <p>Users must protect credentials, use individual accounts when required, follow authentication controls, and promptly report suspected compromise. Access must not be shared, sold, transferred, or used to impersonate another user unless the system expressly supports delegated access.</p>

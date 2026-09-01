@@ -23,7 +23,7 @@ export default function CookiesPage() {
       <p>The contact form may use browser and server functionality necessary to submit an inquiry and prevent automated abuse. If future site features store a user preference locally, that storage will be limited to supporting the requested feature.</p>
 
       <h2>4. Embedded scheduling</h2>
-      <p>The booking page embeds a Calendly scheduling interface. When that page is loaded or used, Calendly may process technical information and may use cookies, local storage, or similar technologies needed to provide scheduling, security, preferences, and related functionality under Calendly's own policies. Visitors who prefer not to use the embedded scheduler may contact Cwlwm Systems directly by email.</p>
+      <p>The booking page embeds a Calendly scheduling interface. When that page is loaded or used, Calendly may process technical information and may use cookies, local storage, or similar technologies needed to provide scheduling, security, preferences, and related functionality under Calendly&apos;s own policies. Visitors who prefer not to use the embedded scheduler may contact Cwlwm Systems directly by email.</p>
 
       <h2>5. Analytics and CRM tracking</h2>
       <p>The website uses Google Analytics 4 to understand aggregate website usage and measure events such as page views, lead actions, bookings, checkout activity, and purchase confirmations. Google Analytics may use cookies or similar identifiers subject to its configuration and policies.</p>

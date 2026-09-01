@@ -36,7 +36,7 @@ export default function TermsPage() {
       <p>Submitting a contact form or email does not create a client relationship, confidentiality obligation beyond applicable law, or commitment to perform services. Do not send passwords, private keys, regulated data, highly sensitive personal information, or proprietary production data through the public inquiry form. Confidential project information can be handled through an appropriate channel after an engagement is established.</p>
 
       <h2>8. Third-party services and links</h2>
-      <p>The site may depend on or link to third-party services. Cwlwm Systems does not control third-party websites, platforms, availability, security practices, or terms. Your use of a third-party service is governed by that provider's own terms.</p>
+      <p>The site may depend on or link to third-party services. Cwlwm Systems does not control third-party websites, platforms, availability, security practices, or terms. Your use of a third-party service is governed by that provider&apos;s own terms.</p>
 
       <h2>9. Availability and changes</h2>
       <p>The website may be changed, suspended, or unavailable from time to time. Content may be updated without notice. Cwlwm Systems does not guarantee uninterrupted access or that every page will always be current, complete, or error-free.</p>

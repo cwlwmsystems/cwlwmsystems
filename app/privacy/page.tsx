@@ -47,7 +47,7 @@ export default function PrivacyPage() {
       <p>Google Analytics 4 and HubSpot may use cookies or similar identifiers to measure site usage, understand traffic sources and engagement, and support analytics or CRM attribution. Calendly may also use cookies or similar technologies when its embedded scheduler is loaded. More information is provided in the <a href="/cookies">Cookie Policy</a>. Where applicable law requires consent for non-essential technologies, related consent settings should be honored.</p>
 
       <h2>8. CRM records and lead activity</h2>
-      <p>When a person contacts Cwlwm Systems, schedules a meeting, or otherwise becomes a business prospect or client, relevant information may be maintained in HubSpot, including contact details, company information, communications, meeting history, deal status, lead source, and related activity. Website activity may be associated with a known contact when supported by HubSpot's identification and integration features.</p>
+      <p>When a person contacts Cwlwm Systems, schedules a meeting, or otherwise becomes a business prospect or client, relevant information may be maintained in HubSpot, including contact details, company information, communications, meeting history, deal status, lead source, and related activity. Website activity may be associated with a known contact when supported by HubSpot&apos;s identification and integration features.</p>
 
       <h2>9. Data retention</h2>
       <p>Inquiry, analytics, CRM, and business communication records may be retained for as long as reasonably necessary to respond, pursue or manage a business relationship, maintain records, measure business performance, resolve disputes, prevent abuse, or satisfy legal obligations. Technical logs and analytics data are generally retained according to the settings and practices of the applicable service provider.</p>
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
       <p>Requests can be sent to the contact address below. Cwlwm Systems may need to verify your identity and may retain information where required or permitted for legal, security, contractual, or legitimate business reasons.</p>
 
       <h2>12. Children</h2>
-      <p>This website and Cwlwm Systems' services are directed to businesses and are not intended for children. Cwlwm Systems does not knowingly solicit personal information from children under 13 through this website.</p>
+      <p>This website and Cwlwm Systems&apos; services are directed to businesses and are not intended for children. Cwlwm Systems does not knowingly solicit personal information from children under 13 through this website.</p>
 
       <h2>13. International visitors</h2>
       <p>Cwlwm Systems operates from the United States, and website infrastructure or service providers may process information in the United States or other countries. Where a client engagement requires specific international transfer terms, those requirements should be addressed in the project agreement or data-processing terms.</p>

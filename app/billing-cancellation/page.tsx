@@ -30,10 +30,10 @@ export default function BillingCancellationPage() {
       <p>A retainer reserves the recurring capacity and availability described in the applicable SOW. It is not an unlimited-hours plan unless the SOW expressly says so. The SOW will define the billing cadence, included services or capacity, priority rules, response expectations, rates for additional work, renewal or cancellation timing, and whether any unused capacity rolls forward.</p>
 
       <h2>5. Third-party charges</h2>
-      <p>Cloud usage, software subscriptions, domains, email delivery, mapping, AI usage, database plans, external APIs, and other third-party costs are the Client's responsibility unless the project document says they are included. Material pass-through costs will be disclosed or approved before they are incurred when reasonably practicable.</p>
+      <p>Cloud usage, software subscriptions, domains, email delivery, mapping, AI usage, database plans, external APIs, and other third-party costs are the Client&apos;s responsibility unless the project document says they are included. Material pass-through costs will be disclosed or approved before they are incurred when reasonably practicable.</p>
 
       <h2>6. Taxes</h2>
-      <p>Client is responsible for applicable sales, use, or similar transaction taxes that must legally be collected in connection with the services, excluding taxes based on Cwlwm Systems' net income.</p>
+      <p>Client is responsible for applicable sales, use, or similar transaction taxes that must legally be collected in connection with the services, excluding taxes based on Cwlwm Systems&apos; net income.</p>
 
       <h2>7. Client cancellation</h2>
       <p>Unless the project document provides a different cancellation rule, Client may stop a project by written notice. Client remains responsible for work performed through the effective cancellation date, approved non-cancelable commitments, and any other cancellation amount expressly stated in the SOW.</p>

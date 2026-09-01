@@ -24,10 +24,10 @@ export default function ServiceAgreementPage() {
 
       <h2>3. Client responsibilities</h2>
       <p>Client will provide timely access to appropriate personnel, systems, documentation, credentials, test data, APIs, licenses, decisions, and approvals reasonably needed for the work. Client is responsible for the accuracy and legality of materials and instructions it provides and for obtaining permissions necessary for Cwlwm Systems to access Client-controlled systems and data.</p>
-      <p>Delays in required Client input may affect delivery dates. Cwlwm Systems is not responsible for delay caused by missing access, unavailable Client personnel, third-party approval, or dependencies outside Cwlwm Systems' reasonable control.</p>
+      <p>Delays in required Client input may affect delivery dates. Cwlwm Systems is not responsible for delay caused by missing access, unavailable Client personnel, third-party approval, or dependencies outside Cwlwm Systems&apos; reasonable control.</p>
 
       <h2>4. Fees, invoices, and expenses</h2>
-      <p>Fees and payment milestones are stated in the SOW. Unless the SOW states otherwise, invoices are due within fourteen (14) calendar days of the invoice date. Client is responsible for applicable sales, use, or similar transaction taxes other than taxes based on Cwlwm Systems' net income.</p>
+      <p>Fees and payment milestones are stated in the SOW. Unless the SOW states otherwise, invoices are due within fourteen (14) calendar days of the invoice date. Client is responsible for applicable sales, use, or similar transaction taxes other than taxes based on Cwlwm Systems&apos; net income.</p>
       <p>Material third-party costs or reimbursable expenses will be included only when stated in the SOW or approved by Client. If an undisputed invoice becomes materially overdue, Cwlwm Systems may pause affected work after reasonable notice until the account is brought current.</p>
 
       <h2>5. Changes to scope</h2>
@@ -43,16 +43,16 @@ export default function ServiceAgreementPage() {
       <h3>Background technology</h3>
       <p>Cwlwm Systems retains ownership of pre-existing materials and reusable know-how, methods, architecture patterns, utilities, libraries, templates, generic components, development techniques, and tools that were not created exclusively for Client (“Background Technology”).</p>
       <h3>Project-specific deliverables</h3>
-      <p>Unless the SOW states otherwise, after full payment of all amounts due for the applicable project, Client owns the project-specific source code, configurations, documentation, designs, and other deliverables created expressly for Client, excluding Background Technology and third-party materials. To the extent Background Technology is embedded in a paid deliverable, Client receives a perpetual, non-exclusive, worldwide license to use that Background Technology as part of the deliverable for Client's internal business purposes and operation of the delivered system.</p>
+      <p>Unless the SOW states otherwise, after full payment of all amounts due for the applicable project, Client owns the project-specific source code, configurations, documentation, designs, and other deliverables created expressly for Client, excluding Background Technology and third-party materials. To the extent Background Technology is embedded in a paid deliverable, Client receives a perpetual, non-exclusive, worldwide license to use that Background Technology as part of the deliverable for Client&apos;s internal business purposes and operation of the delivered system.</p>
       <h3>Third-party and open-source materials</h3>
       <p>Third-party software, APIs, libraries, platforms, and open-source components remain subject to their own licenses and terms. Cwlwm Systems does not transfer ownership of third-party materials.</p>
 
       <h2>8. Confidentiality</h2>
       <p>Each party may receive non-public business, technical, financial, customer, security, or operational information from the other (“Confidential Information”). The receiving party will use Confidential Information only for the engagement, protect it using reasonable care, and disclose it only to people or service providers who need it for the engagement and are subject to appropriate confidentiality obligations.</p>
-      <p>Confidential Information does not include information that is public through no breach of this Agreement, was lawfully known without restriction before disclosure, is received lawfully from another source without confidentiality duty, or is independently developed without use of the other party's Confidential Information. A legally required disclosure is permitted if the receiving party gives notice when legally allowed and reasonably cooperates in seeking protective treatment.</p>
+      <p>Confidential Information does not include information that is public through no breach of this Agreement, was lawfully known without restriction before disclosure, is received lawfully from another source without confidentiality duty, or is independently developed without use of the other party&apos;s Confidential Information. A legally required disclosure is permitted if the receiving party gives notice when legally allowed and reasonably cooperates in seeking protective treatment.</p>
 
       <h2>9. Data protection and security</h2>
-      <p>Each party will comply with privacy and security obligations that legally apply to its role. When Cwlwm Systems processes personal data on Client's behalf in a manner that requires processor or service-provider terms, the <a href="/data-processing">Data Processing Terms</a> apply unless the parties sign a separate data-processing agreement.</p>
+      <p>Each party will comply with privacy and security obligations that legally apply to its role. When Cwlwm Systems processes personal data on Client&apos;s behalf in a manner that requires processor or service-provider terms, the <a href="/data-processing">Data Processing Terms</a> apply unless the parties sign a separate data-processing agreement.</p>
       <p>Cwlwm Systems will use reasonable security practices appropriate to the services and described generally on the <a href="/security">Security page</a>. Client is responsible for identifying special regulatory, contractual, retention, residency, encryption, audit, or security requirements before work begins so they can be expressly included in the SOW. Cwlwm Systems does not represent that a project is compliant with a specific legal or industry framework unless that obligation is expressly included in the SOW.</p>
 
       <h2>10. Third-party services</h2>
@@ -82,7 +82,7 @@ export default function ServiceAgreementPage() {
 
       <h2>16. Limitation of liability</h2>
       <p>To the extent permitted by law, neither party will be liable to the other for indirect, incidental, special, exemplary, punitive, or consequential damages, or for lost profits, lost revenue, lost business opportunity, or loss of goodwill arising from the engagement, even if the possibility was known.</p>
-      <p>To the extent permitted by law, Cwlwm Systems' aggregate liability arising from an applicable SOW will not exceed the fees actually paid to Cwlwm Systems under that SOW during the six (6) months preceding the event giving rise to the claim, or the total fees paid under that SOW if the engagement has existed for less than six months. This limitation does not reduce Client's obligation to pay undisputed fees and does not apply to liability that cannot legally be limited.</p>
+      <p>To the extent permitted by law, Cwlwm Systems&apos; aggregate liability arising from an applicable SOW will not exceed the fees actually paid to Cwlwm Systems under that SOW during the six (6) months preceding the event giving rise to the claim, or the total fees paid under that SOW if the engagement has existed for less than six months. This limitation does not reduce Client&apos;s obligation to pay undisputed fees and does not apply to liability that cannot legally be limited.</p>
 
       <h2>17. Independent contractor</h2>
       <p>Cwlwm Systems is an independent contractor. Nothing in the Agreement creates an employment relationship, partnership, joint venture, fiduciary relationship, franchise, or agency authority between the parties.</p>
@@ -100,7 +100,7 @@ export default function ServiceAgreementPage() {
       <p>The applicable SOW, this Agreement, any signed data-processing terms, and documents expressly incorporated by reference form the entire agreement for the covered services and replace prior discussions about the same scope. If documents conflict, the order of precedence is: (1) a signed amendment or SOW provision that expressly overrides another term, (2) the SOW, (3) a signed data-processing addendum for data-protection matters, and (4) this Standard Service Agreement.</p>
 
       <h2>22. Assignment and severability</h2>
-      <p>Neither party may assign a project agreement to an unrelated third party without the other party's reasonable consent, except in connection with a merger, acquisition, reorganization, or sale of substantially all relevant business assets. If a provision is unenforceable, it will be limited to the minimum extent necessary and the remaining provisions will continue in effect.</p>
+      <p>Neither party may assign a project agreement to an unrelated third party without the other party&apos;s reasonable consent, except in connection with a merger, acquisition, reorganization, or sale of substantially all relevant business assets. If a provision is unenforceable, it will be limited to the minimum extent necessary and the remaining provisions will continue in effect.</p>
     </LegalPage>
   );
 }

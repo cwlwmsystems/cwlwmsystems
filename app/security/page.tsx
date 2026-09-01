@@ -30,13 +30,13 @@ export default function SecurityPage() {
       <p>The preferred design is to collect and retain only the data required for the business workflow. Sensitive data should not be copied into additional systems merely because it is available. When a workflow can operate with a stable identifier or limited field set instead of a full source record, that narrower approach is preferred.</p>
 
       <h2>Third-party platforms</h2>
-      <p>Security also depends on the cloud providers, databases, APIs, identity systems, and other third-party services selected for a project. Cwlwm Systems evaluates those dependencies in the context of project requirements, but does not control a third party's infrastructure, security program, availability, or product changes.</p>
+      <p>Security also depends on the cloud providers, databases, APIs, identity systems, and other third-party services selected for a project. Cwlwm Systems evaluates those dependencies in the context of project requirements, but does not control a third party&apos;s infrastructure, security program, availability, or product changes.</p>
 
       <h2>Dependencies and maintenance</h2>
       <p>For maintained systems, reasonable efforts are made to keep critical runtime dependencies current, address known material vulnerabilities, and avoid unsupported software where practical. Responsibility for ongoing patching and maintenance after handoff depends on the support arrangement stated in the SOW.</p>
 
       <h2>Backups and recovery</h2>
-      <p>Backup, recovery-point, recovery-time, retention, and disaster-recovery requirements vary significantly by system. They are included only when they are part of the agreed architecture or hosting responsibility. Client-owned systems remain subject to the Client's own backup and recovery practices unless the SOW assigns those responsibilities to Cwlwm Systems.</p>
+      <p>Backup, recovery-point, recovery-time, retention, and disaster-recovery requirements vary significantly by system. They are included only when they are part of the agreed architecture or hosting responsibility. Client-owned systems remain subject to the Client&apos;s own backup and recovery practices unless the SOW assigns those responsibilities to Cwlwm Systems.</p>
 
       <h2>Incident response</h2>
       <p>If Cwlwm Systems is operating a covered system and confirms a security incident within its responsibility, the response priority is to contain the issue, preserve useful evidence, protect data and access, understand scope, restore safe operation, and communicate with the affected Client according to the applicable agreement.</p>

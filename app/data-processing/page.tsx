@@ -16,7 +16,7 @@ export default function DataProcessingPage() {
       note="These terms are intended to supplement the applicable Service Agreement or SOW when Cwlwm Systems acts as a processor or service provider for Client personal data. If a Client requires a separate signed DPA, industry-specific addendum, or jurisdiction-specific transfer mechanism, that should be agreed before the relevant processing begins."
     >
       <h2>1. Roles and scope</h2>
-      <p>For personal data that Cwlwm Systems processes on Client's behalf to provide contracted services (“Client Personal Data”), Client determines the business purpose and permitted use of the data, and Cwlwm Systems processes the data only as reasonably necessary to provide the contracted services and follow Client's documented instructions.</p>
+      <p>For personal data that Cwlwm Systems processes on Client&apos;s behalf to provide contracted services (“Client Personal Data”), Client determines the business purpose and permitted use of the data, and Cwlwm Systems processes the data only as reasonably necessary to provide the contracted services and follow Client&apos;s documented instructions.</p>
       <p>These terms do not apply to ordinary business contact information that Cwlwm Systems processes for its own account-management, invoicing, security, or legal purposes; that information is handled under the <a href="/privacy">Privacy Policy</a>.</p>
 
       <h2>2. Processing instructions</h2>
@@ -39,11 +39,11 @@ export default function DataProcessingPage() {
       <p>Taking into account the nature of the processing, Cwlwm Systems will provide reasonable assistance when Client needs information or technical action to respond to a valid request from an individual concerning Client Personal Data. Client remains responsible for evaluating and responding to the request unless applicable law assigns a different responsibility.</p>
 
       <h2>8. Security incidents</h2>
-      <p>If Cwlwm Systems confirms unauthorized access to or acquisition, alteration, loss, or disclosure of Client Personal Data within Cwlwm Systems' responsibility that reasonably constitutes a reportable personal-data incident, Cwlwm Systems will notify Client without undue delay and provide reasonably available information needed to understand the nature and scope of the incident.</p>
+      <p>If Cwlwm Systems confirms unauthorized access to or acquisition, alteration, loss, or disclosure of Client Personal Data within Cwlwm Systems&apos; responsibility that reasonably constitutes a reportable personal-data incident, Cwlwm Systems will notify Client without undue delay and provide reasonably available information needed to understand the nature and scope of the incident.</p>
       <p>Notice of an incident is not an admission of fault or liability. Client is responsible for determining any notification obligations that apply to Client unless the parties agree otherwise.</p>
 
       <h2>9. Deletion and return</h2>
-      <p>At the end of the applicable services, Cwlwm Systems will, upon reasonable request and subject to the technical design of the project, return or delete Client Personal Data within Cwlwm Systems' control unless retention is required by law, necessary for legitimate dispute or security records, or temporarily present in protected backups that are not reasonably accessible for ordinary use and will expire under normal retention cycles.</p>
+      <p>At the end of the applicable services, Cwlwm Systems will, upon reasonable request and subject to the technical design of the project, return or delete Client Personal Data within Cwlwm Systems&apos; control unless retention is required by law, necessary for legitimate dispute or security records, or temporarily present in protected backups that are not reasonably accessible for ordinary use and will expire under normal retention cycles.</p>
 
       <h2>10. Audits and information requests</h2>
       <p>Cwlwm Systems will provide information reasonably necessary to demonstrate compliance with these terms. If a Client has a legal requirement for additional assessment, the parties will first try to satisfy it through existing documentation, architecture information, or written responses. Any on-site or intrusive audit must be reasonably scoped, protect other clients and confidential systems, occur no more than once annually absent a verified incident or legal requirement, and be scheduled with reasonable advance notice.</p>
