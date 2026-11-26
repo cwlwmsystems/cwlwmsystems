@@ -1,101 +1,126 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { KnotExperience } from "@/components/KnotExperience";
 import { ParallaxExperience } from "@/components/ParallaxExperience";
-import { StudioFlow } from "@/components/StudioFlow";
 import { portfolioProjects } from "@/lib/portfolio";
 
 export const metadata: Metadata = {
-  title: "Cwlwm Systems — Custom Software, Digital Experiences & Automation",
-  description: "Independently built custom software, websites and operational systems. Explore the work and the engineering behind it.",
+  title: "Cwlwm Systems | Connected by Design",
+  description: "Cwlwm Systems builds thoughtful digital experiences, custom software and connected operating systems. Explore real client work and independent software.",
   alternates: { canonical: "/" },
 };
 
-const services = [
-  { n: "01", name: "Software & platforms", desc: "Custom applications and the operating systems behind growing businesses.", href: "/solutions/operational-platforms" },
-  { n: "02", name: "Digital experiences", desc: "Beautiful websites, storefronts and thoughtfully designed customer journeys.", href: "/solutions" },
-  { n: "03", name: "Automation & integration", desc: "Connect disconnected systems, data, teams and business rules.", href: "/solutions/integrations-automation" },
-  { n: "04", name: "Data & RevOps", desc: "Make information useful through CRM, reporting and reliable processes.", href: "/expertise" },
+const [petals, field, olson] = portfolioProjects;
+const offerings = [
+  { index:"01", title:"Digital experiences", subtitle:"Websites and ecommerce with substance.", link:"/solutions", tags:"WEB / COMMERCE / EXPERIENCE" },
+  { index:"02", title:"Custom applications", subtitle:"Software built for the way teams work.", link:"/solutions/operational-platforms", tags:"APPLICATIONS / PLATFORMS / TOOLS" },
+  { index:"03", title:"Connected operations", subtitle:"Automation, data and systems that talk.", link:"/solutions/integrations-automation", tags:"APIS / DATA / AUTOMATION" },
 ];
-
-const work = portfolioProjects.slice(0, 3);
 
 export default function HomePage() {
   return (
-    <div className="cinema-home">
+    <div className="v4-home">
       <ParallaxExperience />
-
-      <section className="cinema-hero" aria-labelledby="cinema-title">
-        <div className="cinema-hero-noise" aria-hidden="true" />
-        <div className="cinema-hero-ambient cinema-hero-ambient-one" data-depth="0.14" aria-hidden="true" />
-        <div className="cinema-hero-ambient cinema-hero-ambient-two" data-depth="-0.1" aria-hidden="true" />
-        <div className="cinema-orbit cinema-orbit-a" data-depth="0.19" aria-hidden="true" />
-        <div className="cinema-orbit cinema-orbit-b" data-depth="-0.08" aria-hidden="true" />
-        <div className="cinema-hero-grid" aria-hidden="true" />
-        <div className="container cinema-hero-inner">
-          <div className="cinema-hero-eyebrow"><span className="cinema-signal" /> INDEPENDENT SOFTWARE STUDIO <span className="cinema-hero-eyebrow-end">EST. 2026 / PENNSYLVANIA</span></div>
-          <h1 id="cinema-title"><span className="cinema-hero-line">We build</span><span className="cinema-hero-line cinema-hero-line-two">what <em>connects.</em></span></h1>
-          <div className="cinema-hero-midline"><span className="cinema-hero-rule" /><span>SOFTWARE / SYSTEMS / DIGITAL EXPERIENCES</span></div>
-          <div className="cinema-hero-bottom">
-            <p>Considered design. Serious engineering. Custom software, websites, automation and the systems that move a business forward.</p>
-            <div className="cinema-hero-links"><Link href="/work" className="cinema-button-primary">See selected work <span aria-hidden="true">↗</span></Link><Link href="/contact" className="cinema-link-light">Start a conversation <span aria-hidden="true">↗</span></Link></div>
+      <section className="v4-hero-shell" aria-labelledby="v4-hero-title">
+        <div className="v4-hero-sticky">
+          <div className="v4-hero-light v4-hero-light-red" data-depth="0.12" aria-hidden="true"/>
+          <div className="v4-hero-light v4-hero-light-green" data-depth="-0.08" aria-hidden="true"/>
+          <div className="v4-hero-rule v4-hero-rule-top" aria-hidden="true"/>
+          <div className="container v4-hero-grid">
+            <div className="v4-hero-copy">
+              <div className="v4-micro v4-hero-topline"><span className="v4-live-dot"/> INDEPENDENT DIGITAL & SYSTEMS STUDIO <span className="v4-hero-est">EST. 2026</span></div>
+              <h1 id="v4-hero-title">Made to <em>connect.</em></h1>
+              <p className="v4-hero-lede">A digital experience should be beautiful on the surface—and brilliantly connected underneath.</p>
+              <div className="v4-hero-links"><Link href="/work" className="v4-button">Explore the work <span aria-hidden="true">↗</span></Link><Link href="/contact" className="v4-text-link v4-text-link-light">Start a project <span aria-hidden="true">↗</span></Link></div>
+              <div className="v4-hero-scroll-note">SCROLL TO SEE WHAT CONNECTS <span aria-hidden="true">↓</span></div>
+            </div>
+            <KnotExperience />
           </div>
-          <div className="cinema-hero-index"><span>SCROLL TO EXPLORE</span><span className="cinema-scroll-indicator" aria-hidden="true" /><span>01 — 06</span></div>
+          <div className="v4-hero-bottom-index" aria-hidden="true"><span>CWLWM / THE STUDIO</span><span>01 / 05</span></div>
         </div>
       </section>
 
-      <section className="cinema-statement" aria-labelledby="cinema-statement-title">
-        <div className="container cinema-statement-inner">
-          <div className="cinema-kicker">01 / AN IDEA, FULLY REALIZED</div>
-          <h2 id="cinema-statement-title" data-entrance>Technology is only powerful when <em>everything works together.</em></h2>
-          <div className="cinema-statement-bottom" data-entrance><p>Cwlwm Systems creates connected digital experiences—from the first interaction to the complicated systems working behind the scenes.</p><Link href="/about" className="cinema-underlined">Meet the studio <span aria-hidden="true">↗</span></Link></div>
-        </div>
-      </section>
-
-      <section className="cinema-work" id="selected-work" aria-labelledby="cinema-work-title">
-        <div className="container cinema-work-heading"><div className="cinema-kicker">02 / WORK, NOT JUST WORDS</div><h2 id="cinema-work-title" data-entrance>Made to <em>matter.</em></h2><div className="cinema-work-heading-bottom"><p>Real client platforms, independent software products and digital experiences. Every build has a purpose beyond the screen.</p><Link href="/work" className="cinema-underlined">Explore all projects <span aria-hidden="true">↗</span></Link></div></div>
-        <div className="cinema-work-rail">
-          {work.map((project, index) => (
-            <article className={`cinema-work-chapter cinema-work-chapter-${index+1}`} key={project.slug}>
-              <div className="cinema-work-scene">
-                <div className="cinema-scene-backdrop" data-depth={index%2===0?"0.13":"-0.1"} aria-hidden="true"><div className="cinema-scene-rings" /><div className="cinema-scene-accent" /></div>
-                <div className="cinema-scene-content">
-                  <div className="cinema-scene-meta"><span>FEATURED PROJECT / 0{index+1}</span><span>{project.type}</span></div>
-                  <div className="cinema-scene-visual" aria-hidden="true">
-                    <div className="cinema-device-frame"><div className="cinema-device-top"><span /><span /><span /><b>{index===0?"portpetals.com":index===1?"Cwlwm / Field Operations":"Olson & Tenglund"}</b></div><div className="cinema-device-screen"><div className="cinema-device-menu"/><div className="cinema-device-headline">{index===0?"A little joy, delivered.":index===1?"One operation. Clear visibility.":"Your local auto parts partner."}</div><div className="cinema-device-lines"><i/><i/><i/></div><div className="cinema-device-panels"><i/><i/><i/></div></div></div>
-                  </div>
-                  <div className="cinema-scene-title"><span>0{index+1} / 03</span><h3>{project.name}</h3></div>
-                </div>
-              </div>
-              <div className="container cinema-work-caption"><div><span className="cinema-kicker">{project.status}</span><p>{project.summary}</p></div><Link href={`/work/${project.slug}`} className="cinema-underlined">View case study <span aria-hidden="true">↗</span></Link></div>
-            </article>
-          ))}
-        </div>
-        <div className="container cinema-project-disclaimer">Project visuals are original conceptual interface illustrations—not screenshots of deployed software. Detailed project pages link to verified repositories and client-approved case studies where available.</div>
-      </section>
-
-      <section className="cinema-capabilities" aria-labelledby="cinema-capabilities-title">
+      <section className="v4-manifesto" aria-labelledby="v4-manifesto-title">
         <div className="container">
-          <div className="cinema-kicker">03 / WHAT WE CREATE</div>
-          <div className="cinema-capabilities-intro"><h2 id="cinema-capabilities-title" data-entrance>From first sketch to <em>final integration.</em></h2><p>Exceptional digital work happens when design, data and engineering are considered together.</p></div>
-          <div className="cinema-capabilities-list">
-            {services.map(s=><Link href={s.href} key={s.n} className="cinema-capability"><span>{s.n}</span><strong>{s.name}</strong><p>{s.desc}</p><b aria-hidden="true">↗</b></Link>)}
+          <span className="v4-micro">THE THINKING BEHIND THE WORK / 01</span>
+          <h2 id="v4-manifesto-title" data-entrance>Less friction.<br/><em>More possibility.</em></h2>
+          <div className="v4-manifesto-footer" data-entrance><span className="v4-manifesto-mark" aria-hidden="true">C / S</span><p>We bring design, engineering and operations together to create experiences that feel effortless—and systems that stand up to real work.</p></div>
+        </div>
+      </section>
+
+      <section className="v4-selected" aria-labelledby="v4-work-title">
+        <div className="v4-selected-head container"><span className="v4-micro">SELECTED PROJECTS / 02</span><div className="v4-selected-heading"><h2 id="v4-work-title">Work that <em>speaks.</em></h2><Link href="/work" className="v4-text-link">All work <span aria-hidden="true">↗</span></Link></div></div>
+        <article className="v4-feature v4-feature-petals">
+          <div className="v4-feature-scene">
+            <div className="v4-feature-glow" data-depth="0.13" aria-hidden="true"/>
+            <div className="v4-feature-giant" data-depth="-0.09" aria-hidden="true">P</div>
+            <div className="container v4-feature-stage">
+              <div className="v4-feature-index"><span>01 / CLIENT COMMERCE PLATFORM</span><span>DESIGN × ENGINEERING</span></div>
+              <div className="v4-feature-display" aria-label="Conceptual visual representation of a floral ecommerce interface">
+                <div className="v4-interface-browser"><span/><span/><span/><div>PORT PETALS</div></div>
+                <div className="v4-interface-floral"><span>EVERYDAY OCCASIONS</span><strong>Thoughtfully<br/>arranged.</strong><i>Flowers • Gifts • Delivery</i></div>
+                <div className="v4-interface-side"><span>SHOP THE COLLECTION</span><b>01 — 03</b></div>
+              </div>
+              <div className="v4-feature-name"><h3>Port<br/><em>Petals.</em></h3><span>CONNECTED COMMERCE</span></div>
+            </div>
+          </div>
+          <div className="container v4-feature-foot"><div><p className="v4-feature-status">{petals.status}</p><p>{petals.summary}</p></div><Link href="/work/port-petals" className="v4-text-link v4-text-link-light">Explore project <span aria-hidden="true">↗</span></Link></div>
+        </article>
+
+        <article className="v4-feature v4-feature-field">
+          <div className="v4-feature-scene">
+            <div className="v4-feature-glow" data-depth="0.16" aria-hidden="true"/>
+            <div className="v4-feature-giant" data-depth="-0.1" aria-hidden="true">F</div>
+            <div className="container v4-feature-stage">
+              <div className="v4-feature-index"><span>02 / INDEPENDENT SOFTWARE PRODUCT</span><span>DATA × FIELD OPERATIONS</span></div>
+              <div className="v4-feature-display v4-interface-operations" aria-label="Conceptual illustration of a field operations dashboard">
+                <div className="v4-interface-browser"><span/><span/><span/><div>CWLWM / FIELD OPERATIONS</div></div>
+                <div className="v4-ops-content"><div className="v4-ops-rail"><span>OVERVIEW</span><span>ACTIVITY</span><span>TERRITORIES</span><span>SCHEDULING</span></div><div className="v4-ops-main"><span>OPERATIONS AT A GLANCE</span><strong>One clear picture.</strong><div className="v4-ops-metrics"><i/><i/><i/></div><div className="v4-ops-chart"><i/><i/><i/><i/><i/><i/><i/><i/></div></div></div>
+              </div>
+              <div className="v4-feature-name"><h3>Field<br/><em>Operations.</em></h3><span>CONNECTED WORKFLOWS</span></div>
+            </div>
+          </div>
+          <div className="container v4-feature-foot"><div><p className="v4-feature-status">{field.status}</p><p>{field.summary}</p></div><Link href="/work/cwlwm-field-operations" className="v4-text-link v4-text-link-light">Explore product <span aria-hidden="true">↗</span></Link></div>
+        </article>
+
+        <article className="v4-feature v4-feature-olson">
+          <div className="v4-feature-scene">
+            <div className="v4-feature-glow" data-depth="0.15" aria-hidden="true"/>
+            <div className="v4-feature-giant" data-depth="-0.1" aria-hidden="true">&amp;</div>
+            <div className="container v4-feature-stage">
+              <div className="v4-feature-index"><span>03 / RETAIL WEB PRESENCE</span><span>WEB × DISCOVERABILITY</span></div>
+              <div className="v4-feature-display v4-interface-parts" aria-label="Conceptual illustration of an automotive parts retail website">
+                <div className="v4-interface-browser"><span/><span/><span/><div>OLSON & TENGLUND, INC.</div></div>
+                <div className="v4-parts-content"><span>THREE STORES. ONE TRUSTED NAME.</span><strong>Built for<br/>the road ahead.</strong><small>LOCAL EXPERTISE / AUTO PARTS / SERVICE</small></div>
+              </div>
+              <div className="v4-feature-name"><h3>Olson &amp;<br/><em>Tenglund.</em></h3><span>LOCAL DIGITAL PRESENCE</span></div>
+            </div>
+          </div>
+          <div className="container v4-feature-foot"><div><p className="v4-feature-status">{olson.status}</p><p>{olson.summary}</p></div><Link href="/work/olson-tenglund" className="v4-text-link v4-text-link-light">Explore project <span aria-hidden="true">↗</span></Link></div>
+        </article>
+        <div className="container v4-visual-disclosure">Visuals are conceptual brand compositions, not screenshots of deployed interfaces. Technical details and verified status are available on each project page.</div>
+      </section>
+
+      <section className="v4-capabilities" aria-labelledby="v4-capabilities-title">
+        <div className="container">
+          <div className="v4-capabilities-heading"><span className="v4-micro">WHAT WE CREATE / 03</span><h2 id="v4-capabilities-title" data-entrance>Thoughtful outside.<br/><em>Powerful inside.</em></h2></div>
+          <div className="v4-capabilities-lines">
+            {offerings.map(item=><Link key={item.index} href={item.link} className="v4-capability-row"><span>{item.index}</span><strong>{item.title}</strong><div><p>{item.subtitle}</p><small>{item.tags}</small></div><b aria-hidden="true">↗</b></Link>)}
           </div>
         </div>
       </section>
 
-      <section className="cinema-process" aria-labelledby="cinema-process-title">
-        <div className="cinema-process-halo" data-depth="0.1" aria-hidden="true" />
-        <div className="container cinema-process-inner"><div className="cinema-process-intro"><div className="cinema-kicker">04 / HOW IT ALL CONNECTS</div><h2 id="cinema-process-title" data-entrance>Nothing is <em>isolated.</em></h2><p>Business requirements, the data model, the interface and its integrations are all parts of one system. Explore how we turn them into a working whole.</p><Link href="/approach" className="cinema-underlined">Our approach <span aria-hidden="true">↗</span></Link></div><StudioFlow /></div>
-      </section>
-
-      <section className="cinema-founder" aria-labelledby="cinema-founder-title">
-        <div className="container cinema-founder-inner">
-          <div className="cinema-founder-monogram" data-depth="0.08" aria-hidden="true">C<span>×</span>S</div>
-          <div className="cinema-founder-content"><div className="cinema-kicker">05 / THE PERSON BEHIND THE BUILD</div><h2 id="cinema-founder-title" data-entrance>Small studio.<br/><em>Big-picture thinking.</em></h2><p>Founded by Kasey Pelchy in 2026, Cwlwm Systems brings software development, systems architecture, data, automation, business operations and RevOps into one cohesive practice. You work directly with the person doing the work.</p><div className="cinema-founder-links"><Link href="/about" className="cinema-underlined">Meet Kasey <span aria-hidden="true">↗</span></Link><Link href="/expertise" className="cinema-underlined">Explore expertise <span aria-hidden="true">↗</span></Link></div></div>
+      <section className="v4-about" aria-labelledby="v4-about-title">
+        <div className="v4-about-emblem" data-depth="0.1" aria-hidden="true">C</div>
+        <div className="container v4-about-layout">
+          <span className="v4-micro">THE STUDIO / 04</span>
+          <div><h2 id="v4-about-title" data-entrance>Direct collaboration.<br/><em>Uncompromising care.</em></h2><p>Cwlwm Systems is an independent software studio founded by Kasey Pelchy. The work is personal: from understanding your operations to building, integrating and supporting the systems behind them.</p><Link href="/about" className="v4-text-link v4-text-link-light">Get to know the studio <span aria-hidden="true">↗</span></Link></div>
         </div>
       </section>
 
-      <section className="cinema-outro" aria-labelledby="cinema-outro-title"><div className="cinema-outro-orb" data-depth="0.15" aria-hidden="true" /><div className="container cinema-outro-content"><div className="cinema-kicker">06 / YOUR TURN</div><h2 id="cinema-outro-title" data-entrance>Let&apos;s build <em>what&apos;s next.</em></h2><p>An idea, a challenge or a system that needs connecting. We start with the problem and build toward the right solution.</p><Link href="/contact" className="cinema-outro-button">Start a project <span aria-hidden="true">↗</span></Link></div></section>
+      <section className="v4-finale" aria-labelledby="v4-finale-title">
+        <div className="container"><span className="v4-micro">THE NEXT CONNECTION / 05</span><h2 id="v4-finale-title" data-entrance>Make something<br/><em>matter.</em></h2><div className="v4-finale-bottom"><p>Have a project, a challenge, or a disconnected system? Tell us what you want to change.</p><Link href="/contact" className="v4-button">Start a conversation <span aria-hidden="true">↗</span></Link></div></div>
+      </section>
     </div>
   );
 }
