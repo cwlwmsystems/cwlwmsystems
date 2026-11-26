@@ -2,7 +2,7 @@ export const site = {
   name: "Cwlwm Systems",
   tagline: "Connected systems. Clearer operations.",
   description:
-    "Founder-led custom operational software, integrations, automation, internal tools, implementation, training, and ongoing systems partnership for businesses that have outgrown disconnected tools, spreadsheets, and manual handoffs.",
+    "Founder-led websites, ecommerce, custom business applications, automation, CRM integrations and ongoing digital and technical support for growing businesses.",
   email: "kasey@cwlwmsystems.com",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://cwlwmsystems.com",
 };

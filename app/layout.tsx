@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
 import "./company.css";
+import "./connected-experience.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { GoogleAnalyticsEvents } from "@/components/GoogleAnalyticsEvents";
@@ -10,15 +11,19 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Cwlwm Systems | Custom Operational Software & Automation",
+    default: "Cwlwm Systems | Digital Experiences & Connected Business Technology",
     template: "%s | Cwlwm Systems",
   },
   description: site.description,
   applicationName: site.name,
   keywords: [
+    "business website development",
+    "ecommerce development",
     "custom operational software",
     "business process automation",
     "systems integration",
+    "custom business applications",
+    "brand identity and digital presence",
     "workflow automation",
     "internal business systems",
     "systems and workflow review",
@@ -39,7 +44,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: site.url,
-    title: "Cwlwm Systems | Connected systems. Clearer operations.",
+    title: "Cwlwm Systems | Websites, Software & Connected Systems",
     description: site.description,
     siteName: site.name,
   },
@@ -65,6 +70,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     email: site.email,
     description: site.description,
     serviceType: [
+      "Business websites and ecommerce",
+      "Brand identity and digital presence",
       "Custom operational software",
       "Systems integration",
       "Workflow automation",
