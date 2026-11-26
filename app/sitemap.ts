@@ -2,11 +2,14 @@ import type { MetadataRoute } from "next";
 import { caseStudies } from "@/lib/case-studies";
 import { insights } from "@/lib/insights";
 import { site } from "@/lib/site";
+import { portfolioProjects } from "@/lib/portfolio";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "",
     "/solutions",
+    "/work",
+    "/expertise",
     "/problems",
     "/case-studies",
     "/pricing",
@@ -38,6 +41,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: route === "" || route === "/insights" ? "weekly" as const : "monthly" as const,
       priority: route === "" ? 1 : ["/solutions", "/case-studies", "/pricing", "/ongoing-partnership", "/contact"].includes(route) ? 0.85 : 0.7,
+    })),
+    ...portfolioProjects.map((project) => ({
+      url: `${site.url}/work/${project.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
     })),
     ...caseStudies.map((study) => ({
       url: `${site.url}/case-studies/${study.slug}`,
