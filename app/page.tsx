@@ -1,125 +1,93 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { KnotExperience } from "@/components/KnotExperience";
-import { ParallaxExperience } from "@/components/ParallaxExperience";
+import Image from "next/image";
+import { companyServices, companyPrinciples } from "@/lib/company";
 import { portfolioProjects } from "@/lib/portfolio";
 
 export const metadata: Metadata = {
-  title: "Cwlwm Systems | Connected by Design",
-  description: "Cwlwm Systems builds thoughtful digital experiences, custom software and connected operating systems. Explore real client work and independent software.",
+  title: "Cwlwm Systems | Digital Experiences, Software & Connected Systems",
+  description: "Cwlwm Systems designs websites, ecommerce, custom software, integrations and reliable business systems. Independent, founder-led digital and technical work.",
   alternates: { canonical: "/" },
 };
 
-const [petals, field, olson] = portfolioProjects;
-const offerings = [
-  { index:"01", title:"Digital experiences", subtitle:"Websites and ecommerce with substance.", link:"/solutions", tags:"WEB / COMMERCE / EXPERIENCE" },
-  { index:"02", title:"Custom applications", subtitle:"Software built for the way teams work.", link:"/solutions/operational-platforms", tags:"APPLICATIONS / PLATFORMS / TOOLS" },
-  { index:"03", title:"Connected operations", subtitle:"Automation, data and systems that talk.", link:"/solutions/integrations-automation", tags:"APIS / DATA / AUTOMATION" },
-];
+const featured = portfolioProjects.slice(0, 3);
 
 export default function HomePage() {
   return (
-    <div className="v4-home">
-      <ParallaxExperience />
-      <section className="v4-hero-shell" aria-labelledby="v4-hero-title">
-        <div className="v4-hero-sticky">
-          <div className="v4-hero-light v4-hero-light-red" data-depth="0.12" aria-hidden="true"/>
-          <div className="v4-hero-light v4-hero-light-green" data-depth="-0.08" aria-hidden="true"/>
-          <div className="v4-hero-rule v4-hero-rule-top" aria-hidden="true"/>
-          <div className="container v4-hero-grid">
-            <div className="v4-hero-copy">
-              <div className="v4-micro v4-hero-topline"><span className="v4-live-dot"/> INDEPENDENT DIGITAL & SYSTEMS STUDIO <span className="v4-hero-est">EST. 2026</span></div>
-              <h1 id="v4-hero-title">Made to <em>connect.</em></h1>
-              <p className="v4-hero-lede">A digital experience should be beautiful on the surface—and brilliantly connected underneath.</p>
-              <div className="v4-hero-links"><Link href="/work" className="v4-button">Explore the work <span aria-hidden="true">↗</span></Link><Link href="/contact" className="v4-text-link v4-text-link-light">Start a project <span aria-hidden="true">↗</span></Link></div>
-              <div className="v4-hero-scroll-note">SCROLL TO SEE WHAT CONNECTS <span aria-hidden="true">↓</span></div>
+    <div className="company-site company-home">
+      <section className="company-hero" aria-labelledby="company-hero-title">
+        <div className="company-wrap company-hero-content">
+          <div className="company-hero-copy">
+            <p className="company-eyebrow"><span className="company-eyebrow-line" /> INDEPENDENT DIGITAL & SYSTEMS STUDIO</p>
+            <h1 id="company-hero-title">Good design.<br/>Smart technology.<br/><em>Better business.</em></h1>
+            <p className="company-hero-subtitle">Websites, software, automation and connected business systems—thoughtfully designed, carefully built and supported for the long run.</p>
+            <div className="company-actions">
+              <Link href="/work" className="company-button company-button-cream">Explore our work <span aria-hidden="true">↗</span></Link>
+              <Link href="/contact" className="company-inline company-inline-light">Start a project <span aria-hidden="true">↗</span></Link>
             </div>
-            <KnotExperience />
           </div>
-          <div className="v4-hero-bottom-index" aria-hidden="true"><span>CWLWM / THE STUDIO</span><span>01 / 05</span></div>
+          <div className="company-hero-art" aria-hidden="true">
+            <div className="company-hero-art-circle company-hero-art-circle-one"/>
+            <div className="company-hero-art-circle company-hero-art-circle-two"/>
+            <div className="company-hero-art-frame">
+              <span className="company-art-caption">CWLWM / CONNECTION BY DESIGN</span>
+              <Image src="/cwlwm-knot.png" alt="" width={514} height={505} className="company-hero-knot" priority />
+              <span className="company-art-subline">DESIGN — BUILD — CONNECT</span>
+            </div>
+          </div>
         </div>
+        <div className="company-wrap company-hero-baseline"><span>INDEPENDENTLY OWNED. DIRECTLY DELIVERED.</span><span>ESTABLISHED 2026</span></div>
       </section>
 
-      <section className="v4-manifesto" aria-labelledby="v4-manifesto-title">
-        <div className="container">
-          <span className="v4-micro">THE THINKING BEHIND THE WORK / 01</span>
-          <h2 id="v4-manifesto-title" data-entrance>Less friction.<br/><em>More possibility.</em></h2>
-          <div className="v4-manifesto-footer" data-entrance><span className="v4-manifesto-mark" aria-hidden="true">C / S</span><p>We bring design, engineering and operations together to create experiences that feel effortless—and systems that stand up to real work.</p></div>
-        </div>
-      </section>
-
-      <section className="v4-selected" aria-labelledby="v4-work-title">
-        <div className="v4-selected-head container"><span className="v4-micro">SELECTED PROJECTS / 02</span><div className="v4-selected-heading"><h2 id="v4-work-title">Work that <em>speaks.</em></h2><Link href="/work" className="v4-text-link">All work <span aria-hidden="true">↗</span></Link></div></div>
-        <article className="v4-feature v4-feature-petals">
-          <div className="v4-feature-scene">
-            <div className="v4-feature-glow" data-depth="0.13" aria-hidden="true"/>
-            <div className="v4-feature-giant" data-depth="-0.09" aria-hidden="true">P</div>
-            <div className="container v4-feature-stage">
-              <div className="v4-feature-index"><span>01 / CLIENT COMMERCE PLATFORM</span><span>DESIGN × ENGINEERING</span></div>
-              <div className="v4-feature-display" aria-label="Conceptual visual representation of a floral ecommerce interface">
-                <div className="v4-interface-browser"><span/><span/><span/><div>PORT PETALS</div></div>
-                <div className="v4-interface-floral"><span>EVERYDAY OCCASIONS</span><strong>Thoughtfully<br/>arranged.</strong><i>Flowers • Gifts • Delivery</i></div>
-                <div className="v4-interface-side"><span>SHOP THE COLLECTION</span><b>01 — 03</b></div>
-              </div>
-              <div className="v4-feature-name"><h3>Port<br/><em>Petals.</em></h3><span>CONNECTED COMMERCE</span></div>
+      <section className="company-intro company-section" aria-labelledby="company-intro-title">
+        <div className="company-wrap company-intro-layout">
+          <p className="company-eyebrow company-eyebrow-dark">THE COMPANY <span>01 / 05</span></p>
+          <div>
+            <h2 id="company-intro-title" className="company-display">Technology should make business <em>easier, not harder.</em></h2>
+            <div className="company-intro-tail">
+              <p>Cwlwm Systems is a founder-led digital and systems studio. We design the customer-facing experience and build the technology behind it—connecting websites, operations, data and business processes into something that works.</p>
+              <Link className="company-inline" href="/about">Discover Cwlwm Systems <span aria-hidden="true">↗</span></Link>
             </div>
-          </div>
-          <div className="container v4-feature-foot"><div><p className="v4-feature-status">{petals.status}</p><p>{petals.summary}</p></div><Link href="/work/port-petals" className="v4-text-link v4-text-link-light">Explore project <span aria-hidden="true">↗</span></Link></div>
-        </article>
-
-        <article className="v4-feature v4-feature-field">
-          <div className="v4-feature-scene">
-            <div className="v4-feature-glow" data-depth="0.16" aria-hidden="true"/>
-            <div className="v4-feature-giant" data-depth="-0.1" aria-hidden="true">F</div>
-            <div className="container v4-feature-stage">
-              <div className="v4-feature-index"><span>02 / INDEPENDENT SOFTWARE PRODUCT</span><span>DATA × FIELD OPERATIONS</span></div>
-              <div className="v4-feature-display v4-interface-operations" aria-label="Conceptual illustration of a field operations dashboard">
-                <div className="v4-interface-browser"><span/><span/><span/><div>CWLWM / FIELD OPERATIONS</div></div>
-                <div className="v4-ops-content"><div className="v4-ops-rail"><span>OVERVIEW</span><span>ACTIVITY</span><span>TERRITORIES</span><span>SCHEDULING</span></div><div className="v4-ops-main"><span>OPERATIONS AT A GLANCE</span><strong>One clear picture.</strong><div className="v4-ops-metrics"><i/><i/><i/></div><div className="v4-ops-chart"><i/><i/><i/><i/><i/><i/><i/><i/></div></div></div>
-              </div>
-              <div className="v4-feature-name"><h3>Field<br/><em>Operations.</em></h3><span>CONNECTED WORKFLOWS</span></div>
-            </div>
-          </div>
-          <div className="container v4-feature-foot"><div><p className="v4-feature-status">{field.status}</p><p>{field.summary}</p></div><Link href="/work/cwlwm-field-operations" className="v4-text-link v4-text-link-light">Explore product <span aria-hidden="true">↗</span></Link></div>
-        </article>
-
-        <article className="v4-feature v4-feature-olson">
-          <div className="v4-feature-scene">
-            <div className="v4-feature-glow" data-depth="0.15" aria-hidden="true"/>
-            <div className="v4-feature-giant" data-depth="-0.1" aria-hidden="true">&amp;</div>
-            <div className="container v4-feature-stage">
-              <div className="v4-feature-index"><span>03 / RETAIL WEB PRESENCE</span><span>WEB × DISCOVERABILITY</span></div>
-              <div className="v4-feature-display v4-interface-parts" aria-label="Conceptual illustration of an automotive parts retail website">
-                <div className="v4-interface-browser"><span/><span/><span/><div>OLSON & TENGLUND, INC.</div></div>
-                <div className="v4-parts-content"><span>THREE STORES. ONE TRUSTED NAME.</span><strong>Built for<br/>the road ahead.</strong><small>LOCAL EXPERTISE / AUTO PARTS / SERVICE</small></div>
-              </div>
-              <div className="v4-feature-name"><h3>Olson &amp;<br/><em>Tenglund.</em></h3><span>LOCAL DIGITAL PRESENCE</span></div>
-            </div>
-          </div>
-          <div className="container v4-feature-foot"><div><p className="v4-feature-status">{olson.status}</p><p>{olson.summary}</p></div><Link href="/work/olson-tenglund" className="v4-text-link v4-text-link-light">Explore project <span aria-hidden="true">↗</span></Link></div>
-        </article>
-        <div className="container v4-visual-disclosure">Visuals are conceptual brand compositions, not screenshots of deployed interfaces. Technical details and verified status are available on each project page.</div>
-      </section>
-
-      <section className="v4-capabilities" aria-labelledby="v4-capabilities-title">
-        <div className="container">
-          <div className="v4-capabilities-heading"><span className="v4-micro">WHAT WE CREATE / 03</span><h2 id="v4-capabilities-title" data-entrance>Thoughtful outside.<br/><em>Powerful inside.</em></h2></div>
-          <div className="v4-capabilities-lines">
-            {offerings.map(item=><Link key={item.index} href={item.link} className="v4-capability-row"><span>{item.index}</span><strong>{item.title}</strong><div><p>{item.subtitle}</p><small>{item.tags}</small></div><b aria-hidden="true">↗</b></Link>)}
           </div>
         </div>
       </section>
 
-      <section className="v4-about" aria-labelledby="v4-about-title">
-        <div className="v4-about-emblem" data-depth="0.1" aria-hidden="true">C</div>
-        <div className="container v4-about-layout">
-          <span className="v4-micro">THE STUDIO / 04</span>
-          <div><h2 id="v4-about-title" data-entrance>Direct collaboration.<br/><em>Uncompromising care.</em></h2><p>Cwlwm Systems is an independent software studio founded by Kasey Pelchy. The work is personal: from understanding your operations to building, integrating and supporting the systems behind them.</p><Link href="/about" className="v4-text-link v4-text-link-light">Get to know the studio <span aria-hidden="true">↗</span></Link></div>
+      <section className="company-services-home company-section" aria-labelledby="company-services-title">
+        <div className="company-wrap">
+          <div className="company-heading-pair"><div><p className="company-eyebrow company-eyebrow-dark">WHAT WE DO <span>02 / 05</span></p><h2 id="company-services-title" className="company-display">One partner.<br/><em>Many capabilities.</em></h2></div><p>From the first impression to the systems behind the scenes, we bring business requirements and technical execution into the same conversation.</p></div>
+          <div className="company-service-list">{companyServices.map(s=><Link href={`/services#${s.slug}`} key={s.slug} className="company-service-item"><span className="company-service-index">{s.number}</span><div><h3>{s.title}</h3><p>{s.description}</p></div><span className="company-service-arrow" aria-hidden="true">↗</span></Link>)}</div>
+          <div className="company-section-end"><Link href="/services" className="company-inline">Explore all services <span aria-hidden="true">↗</span></Link></div>
         </div>
       </section>
 
-      <section className="v4-finale" aria-labelledby="v4-finale-title">
-        <div className="container"><span className="v4-micro">THE NEXT CONNECTION / 05</span><h2 id="v4-finale-title" data-entrance>Make something<br/><em>matter.</em></h2><div className="v4-finale-bottom"><p>Have a project, a challenge, or a disconnected system? Tell us what you want to change.</p><Link href="/contact" className="v4-button">Start a conversation <span aria-hidden="true">↗</span></Link></div></div>
+      <section className="company-work-home company-section" aria-labelledby="company-work-title">
+        <div className="company-wrap">
+          <div className="company-heading-pair company-heading-pair-light"><div><p className="company-eyebrow">SELECTED WORK <span>03 / 05</span></p><h2 id="company-work-title" className="company-display">Experience you can <em>explore.</em></h2></div><p>Real projects, real decisions, and clear distinctions between work in production and products still evolving.</p></div>
+          <div className="company-feature-list">{featured.map((p,i)=><article className="company-feature" key={p.slug}>
+            <Link href={`/work/${p.slug}`} className={`company-feature-visual company-feature-visual-${i+1}`} aria-label={`Explore ${p.name}`}><span className="company-feature-visual-top">CWLWM / PROJECT 0{i+1}</span><span className="company-feature-letter" aria-hidden="true">{i===0?"P":i===1?"F":"O"}</span><strong>{p.name}</strong><span className="company-feature-visual-bottom">EXPLORE PROJECT <span aria-hidden="true">↗</span></span></Link>
+            <div className="company-feature-content"><p className="company-feature-type">{p.type}</p><h3>{p.name}</h3><p>{p.summary}</p><span className="company-feature-status">{p.status}</span><Link href={`/work/${p.slug}`} className="company-inline company-inline-light">View the project <span aria-hidden="true">↗</span></Link></div>
+          </article>)}</div>
+          <div className="company-section-end"><Link href="/work" className="company-inline company-inline-light">View the portfolio <span aria-hidden="true">↗</span></Link></div>
+        </div>
+      </section>
+
+      <section className="company-process company-section" aria-labelledby="company-process-title">
+        <div className="company-wrap">
+          <div className="company-heading-pair"><div><p className="company-eyebrow company-eyebrow-dark">HOW WE WORK <span>04 / 05</span></p><h2 id="company-process-title" className="company-display">Clear thinking.<br/><em>Considered execution.</em></h2></div><p>Every engagement is different, but the fundamentals stay consistent: understand the requirement, build responsibly, and keep the outcome useful.</p></div>
+          <div className="company-process-grid">{companyPrinciples.map(item=><div key={item.number} className="company-process-step"><span>{item.number}</span><h3>{item.name}</h3><p>{item.description}</p></div>)}</div>
+          <div className="company-section-end"><Link href="/approach" className="company-inline">See our approach <span aria-hidden="true">↗</span></Link></div>
+        </div>
+      </section>
+
+      <section className="company-home-founder company-section" aria-labelledby="company-founder-title">
+        <div className="company-wrap company-founder-layout">
+          <div><p className="company-eyebrow company-eyebrow-dark">THE FOUNDER</p><h2 id="company-founder-title" className="company-display">Built with <em>personal accountability.</em></h2></div>
+          <div><p>Cwlwm Systems was founded by Kasey Pelchy, bringing experience across software development, technical operations, automation, data, marketing and revenue systems into an independent business.</p><p>Clients work directly with the person responsible for discovery, architecture, implementation and delivery. Employer work is distinct from independently owned Cwlwm projects.</p><Link href="/about" className="company-inline">Meet the founder <span aria-hidden="true">↗</span></Link></div>
+        </div>
+      </section>
+
+      <section className="company-cta" aria-labelledby="company-cta-title">
+        <div className="company-wrap company-cta-layout"><div><p className="company-eyebrow">LET US TALK <span>05 / 05</span></p><h2 id="company-cta-title" className="company-display">Build something <em>worth building.</em></h2><p>A new website, a custom application, disconnected tools, or an idea still taking shape. Start with the problem—then we can find the right solution.</p></div><Link href="/contact" className="company-button company-button-cream">Start a conversation <span aria-hidden="true">↗</span></Link></div>
       </section>
     </div>
   );
