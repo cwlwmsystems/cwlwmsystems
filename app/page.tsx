@@ -48,7 +48,7 @@ export default function HomePage() {
             <h1 id="cx-hero-title">Make your business <em>work better.</em></h1>
             <p className="cx-hero-description">Professional websites. Purpose-built software. Connected systems. Cwlwm Systems helps growing businesses create better customer experiences and smoother operations.</p>
             <div className="cx-hero-actions">
-              <Link href="/contact" className="cx-primary-button">Let's discuss your project <span aria-hidden="true">↗</span></Link>
+              <Link href="/contact" className="cx-primary-button">Let&apos;s discuss your project <span aria-hidden="true">↗</span></Link>
               <Link href="/work" className="cx-quiet-link cx-quiet-link-light">See what we build <span aria-hidden="true">↗</span></Link>
             </div>
             <div className="cx-hero-credentials"><span>FOUNDER-LED DELIVERY</span><span>SOFTWARE + DIGITAL EXPERIENCE</span><span>BUILT FOR REAL OPERATIONS</span></div>
@@ -189,9 +189,9 @@ export default function HomePage() {
       <section className="cx-contact" aria-labelledby="cx-contact-title">
         <div className="company-wrap cx-contact-layout">
           <div>
-            <p className="cx-overline">LET'S TALK / 07</p>
-            <h2 id="cx-contact-title">What's holding your <em>business back?</em></h2>
-            <p>Bring the problem, the idea, or the process that isn't working. We'll discuss practical next steps—whether that's a better website, a focused integration or a custom application.</p>
+            <p className="cx-overline">LET&apos;S TALK / 07</p>
+            <h2 id="cx-contact-title">What&apos;s holding your <em>business back?</em></h2>
+            <p>Bring the problem, the idea, or the process that isn&apos;t working. We&apos;ll discuss practical next steps—whether that&apos;s a better website, a focused integration or a custom application.</p>
           </div>
           <Link href="/contact" className="cx-primary-button">Start a conversation <span aria-hidden="true">↗</span></Link>
         </div>
