@@ -1,8 +1,8 @@
 export const companyServices = [
   {
-    number: "01", slug: "digital-experiences", title: "Digital experiences",
-    description: "Websites, online stores and digital identities that make a strong first impression and work as well as they look.",
-    services: ["Business websites", "Ecommerce experiences", "Visual identity & content", "Local search & discoverability", "Measurement & optimization"],
+    number: "01", slug: "digital-experiences", title: "Websites & ecommerce",
+    description: "Professional websites and online stores that make a strong first impression and work as well as they look.",
+    services: ["Business websites", "Ecommerce experiences", "Customer portals and digital journeys", "Responsive development", "Performance & analytics"],
     outcome: "A credible digital presence designed around customers and maintained for growth.",
     relatedProject: "olson-tenglund",
   },
@@ -21,7 +21,14 @@ export const companyServices = [
     relatedProject: "port-petals",
   },
   {
-    number: "04", slug: "ongoing-partnership", title: "Ongoing partnership",
+    number: "04", slug: "brand-growth", title: "Brand & digital growth",
+    description: "A consistent digital identity and the marketing foundations that help customers find, understand and trust the business.",
+    services: ["Brand identity and creative assets", "SEO, local search, AEO & GEO", "Content and social media foundations", "Digital advertising creative", "Measurement and marketing automation"],
+    outcome: "A recognizable brand, credible digital presence and measurable paths to customer engagement.",
+    relatedProject: "olson-tenglund",
+  },
+  {
+    number: "05", slug: "ongoing-partnership", title: "Ongoing partnership",
     description: "Dependable technical ownership after launch, whether the next step is maintenance, training or another development phase.",
     services: ["Website & application care", "Implementation & onboarding", "Technical support & troubleshooting", "Documentation & training", "Phased enhancement & systems guidance"],
     outcome: "One technical partner who understands the systems and keeps them moving.",
