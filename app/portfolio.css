@@ -1,0 +1,13 @@
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.portfolio-card{background:var(--paper,#fff);border:1px solid var(--line,#d8dfd7);border-top:4px solid #688e72;border-radius:18px;padding:32px;display:flex;flex-direction:column;gap:14px;min-height:330px}.portfolio-card h2{font-size:clamp(1.55rem,2.7vw,2.4rem);margin:0}.portfolio-card p{margin:0}.portfolio-card .text-link{margin-top:auto}.portfolio-tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.portfolio-tags span{border-radius:8px;padding:8px 11px;background:#e9efe8;color:#2b5140;font-size:.8rem;font-weight:650}.portfolio-detail{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:60px}.portfolio-detail main>div{margin-bottom:56px}.portfolio-detail main ul{padding-left:22px;line-height:1.9}.portfolio-detail h2{margin:10px 0 22px}.portfolio-aside{border:1px solid var(--line,#d8dfd7);border-radius:18px;padding:28px;position:sticky;top:100px}.portfolio-aside h3{margin-top:0}.portfolio-links{display:grid;gap:12px;padding:12px 0}.portfolio-evidence{border-top:1px solid var(--line,#d8dfd7);padding-top:18px;margin-top:auto!important}.portfolio-credentials{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.portfolio-featured{margin-top:35px}.portfolio-intro{max-width:750px;margin-bottom:35px}.portfolio-founder{padding:36px;border-radius:18px;border:1px solid var(--line,#d8dfd7);background:var(--paper,#fff);margin-top:32px}@media(max-width:850px){.portfolio-grid,.portfolio-detail,.portfolio-credentials{grid-template-columns:1fr}.portfolio-aside{position:static}}
+/* Homepage design components */
+.portfolio-hero-panel{border:1px solid rgba(255,255,255,.2);border-radius:22px;padding:26px;background:linear-gradient(155deg,rgba(255,255,255,.11),rgba(255,255,255,.025));box-shadow:0 25px 70px rgba(0,0,0,.15);color:#f6fff8}
+.portfolio-hero-panel>p{color:#b1d5bc;font-size:.76rem;letter-spacing:.12em;font-weight:800;margin:0 0 16px}
+.portfolio-hero-panel>div{display:flex;align-items:center;gap:20px;border-top:1px solid rgba(255,255,255,.13);padding:16px 0}
+.portfolio-hero-panel>div span{font-weight:800;font-size:.78rem;color:#a9d3b6}
+.portfolio-hero-panel>div strong{font-size:1rem;color:#f5fff8}
+.portfolio-founder{max-width:920px}
+.portfolio-featured .button{display:inline-flex}
+.portfolio-content>div{margin-bottom:50px}
+.portfolio-content ul{padding-left:22px;line-height:1.85}
+.portfolio-aside p{line-height:1.65}
+@media(max-width:850px){.portfolio-hero-panel{margin-top:20px}.portfolio-card{min-height:0}.portfolio-detail{gap:24px}}

@@ -3,7 +3,9 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 
 const exploreLinks = [
-  { href: "/solutions", label: "Solutions" },
+  { href: "/solutions", label: "Services" },
+  { href: "/work", label: "Our Work" },
+  { href: "/expertise", label: "Expertise" },
   { href: "/problems", label: "Problems I Solve" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/industries", label: "Industries" },

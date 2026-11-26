@@ -8,12 +8,11 @@ export const site = {
 };
 
 export const nav = [
-  { href: "/solutions", label: "Solutions" },
-  { href: "/case-studies", label: "Case Studies" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/ongoing-partnership", label: "Ongoing" },
-  { href: "/insights", label: "Insights" },
+  { href: "/solutions", label: "Services" },
+  { href: "/work", label: "Our Work" },
+  { href: "/expertise", label: "Expertise" },
   { href: "/about", label: "About" },
+  { href: "/insights", label: "Insights" },
 ];
 
 export const solutions = [

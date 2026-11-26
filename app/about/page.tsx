@@ -103,6 +103,16 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <section className="section section-tint">
+        <div className="container portfolio-founder">
+          <p className="eyebrow">Founder · Cwlwm Systems</p>
+          <h2>Kasey Pelchy</h2>
+          <p>Cwlwm Systems was founded in August 2026 as an independent software and business systems studio. My background spans marketing operations, full-stack applications, relational databases, integrations, technical troubleshooting, analytics, and HubSpot/RevOps.</p>
+          <p>My independent product, Cwlwm Field Operations, is company-agnostic software I developed under Cwlwm Systems. It is separate from FieldOS, the system I built for and which was used by Zito Media. Work performed for employers is not represented as Cwlwm client work.</p>
+          <p>I hold ten HubSpot Academy certifications across Marketing, Sales, Service, Reporting, Revenue Operations, CRM Data Migration, Data Integrations, Salesforce Integration, Implementation for Partners, and Inbound, plus a separate PSO qualification.</p>
+          <div className="about-actions"><Link className="text-link" href="/expertise">Technical expertise →</Link><Link className="text-link" href="/work">Real projects →</Link></div>
+        </div>
+      </section>
       <CTA />
     </>
   );
