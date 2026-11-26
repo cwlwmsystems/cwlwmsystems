@@ -4,6 +4,7 @@ import "./globals.css";
 import "./portfolio.css";
 import "./studio.css";
 import "./cinema.css";
+import "./brand-experience.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TechnologyStrip } from "@/components/TechnologyStrip";
