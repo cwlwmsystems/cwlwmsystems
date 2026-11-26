@@ -12,13 +12,14 @@ This working playbook translates the public website into a company that can cons
 
 **Avoid:** claims of a large agency team; unsupported revenue outcomes; vague "AI transformation"; promises of 24/7 support; presenting employment projects as Cwlwm clients.
 
-## Four services
+## Five service disciplines
 
 | Pillar | What is sold | Typical discovery | Deliverables / acceptance |
 | --- | --- | --- | --- |
-| Digital experiences | Brand-aligned websites, ecommerce, digital presence, local search and tracking | Audience, pages, product catalog, conversion, content ownership | Signed page list, responsive review, analytics checks, launch checklist, access handoff |
+| Websites & ecommerce | Brand-aligned websites, ecommerce and user journeys | Audience, pages, product catalog, conversion, content ownership | Signed page list, responsive review, analytics checks, launch checklist, access handoff |
 | Software & applications | Custom platforms, portals, internal tools, database-backed apps | Workflow, users, roles, objects, exceptions, integrations | Approved workflow map, tested scenarios, secure role model, release notes, documentation |
 | Connected systems | API integration, CRM/HubSpot, automation, data migration and reporting | Source of truth, mapping, volume, triggers, sync direction, errors | Data map, monitoring, error strategy, UAT, ownership, admin guide |
+| Brand & growth | Brand identity, content, search discoverability, social/advertising creative and analytics | Audience, identity, assets, offer, channels, tracking, approvals | Approved creative direction, brand guidelines, search setup, tracking and campaign asset deliverables |
 | Ongoing partnership | Website/app maintenance, improvement, implementation, support and training | Existing stack, availability, expected requests, dependencies | Scope, reserved capacity, response expectations, change control, maintenance log |
 
 ## Lead qualification and intake
@@ -101,7 +102,7 @@ Use real analytics data before publishing performance claims. Keep separate comp
 
 ## Launch acceptance for website rebuild
 
-- Public site accurately represents all four pillars
+- Public site accurately represents all five disciplines
 - Navigation, footer and core routes are visually consistent
 - Real proof is prominent without fabrication
 - Content is easy to scan and accessible on mobile
