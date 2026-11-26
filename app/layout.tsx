@@ -1,11 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
-import "./portfolio.css";
-import "./studio.css";
-import "./cinema.css";
 import "./company.css";
-import "./brand-experience.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { GoogleAnalyticsEvents } from "@/components/GoogleAnalyticsEvents";
