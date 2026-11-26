@@ -8,7 +8,6 @@ import "./company.css";
 import "./brand-experience.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { TechnologyStrip } from "@/components/TechnologyStrip";
 import { GoogleAnalyticsEvents } from "@/components/GoogleAnalyticsEvents";
 import { site } from "@/lib/site";
 
@@ -105,7 +104,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <a className="skip-link" href="#main">Skip to content</a>
         <Header />
         <main id="main">{children}</main>
-        <TechnologyStrip />
         <Footer />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} />
       </body>
