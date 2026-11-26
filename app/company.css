@@ -265,3 +265,19 @@ body:has(.company-site) .nav-cta{background:#143827}
 .company-expertise-tools span{background:#e8ede5;color:#2a563b;padding:9px 12px;font-size:.75rem;font-weight:650}
 .company-expertise-evidence{font-size:.78rem!important;color:#9a454b!important}
 @media(max-width:650px){.company-expertise-item{grid-template-columns:30px 1fr;gap:18px}}
+
+/* Commercial engagement presentation */
+.company-pricing{background:#f9f8f4}
+.company-pricing-tint{background:#e9ede6}
+.company-pricing-rows{border-top:1px solid #b4c3b6}
+.company-pricing-row{display:grid;grid-template-columns:45px 1fr 210px;gap:45px;padding:46px 8px;border-bottom:1px solid #c0cdc0;align-items:start}
+.company-pricing-row>span{color:#a3444a;font-size:.7rem;font-weight:750}
+.company-pricing-row h3{font-size:clamp(2rem,3vw,3.15rem);margin:0 0 16px}
+.company-pricing-row>div:nth-child(2)>p{color:#546a5b;line-height:1.7;font-size:1.02rem;max-width:780px}
+.company-pricing-row ul{display:flex;flex-wrap:wrap;list-style:none;padding:0;gap:9px;margin:28px 0 0}
+.company-pricing-row li{font-size:.76rem;padding:8px 11px;border:1px solid #c8d4c8;color:#3c624a}
+.company-price-action{display:flex;flex-direction:column;align-items:start;gap:40px}
+.company-price-action strong{font:400 1.9rem Georgia,serif;white-space:nowrap}
+.company-pricing-note{font-size:.88rem;color:#586c5b;line-height:1.7;margin-top:32px;max-width:900px}
+@media(max-width:850px){.company-pricing-row{grid-template-columns:35px 1fr;gap:20px}.company-price-action{grid-column:2;flex-direction:row;align-items:center;flex-wrap:wrap}}
+@media(max-width:550px){.company-pricing-row{grid-template-columns:1fr}.company-price-action{grid-column:1}.company-pricing-row ul{gap:7px}}
