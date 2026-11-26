@@ -226,3 +226,30 @@ body:has(.company-site) .nav-cta{background:#143827}
 .company-contact-calendar{padding:18px}
 .company-contact-direct a{font-size:1.1rem}
 }
+
+/* Ground-up case-study layout */
+.company-case-hero{background:linear-gradient(125deg,#102f22,#40634b);color:#f6f3ea;padding:80px 0 65px}
+.company-case-hero-2{background:linear-gradient(125deg,#102b35,#2f5e61)}
+.company-case-hero-3{background:linear-gradient(125deg,#503d2c,#866b4d)}
+.company-case-hero-4{background:linear-gradient(125deg,#263f31,#787f5b)}
+.company-case-back{display:inline-block;font-size:.84rem;border-bottom:1px solid rgba(255,255,255,.6);padding-bottom:8px;margin-bottom:95px}
+.company-case-hero .company-eyebrow{color:#d6c5ab}
+.company-case-hero h1{font-size:clamp(4.4rem,8vw,9rem);margin:30px 0}
+.company-case-hero p:not(.company-eyebrow){font-size:1.2rem;max-width:780px;line-height:1.6;color:#e6efe3}
+.company-case-meta{display:flex;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.3);padding-top:25px;margin-top:95px;font-size:.69rem;letter-spacing:.12em;text-transform:uppercase}
+.company-case-overview{background:#faf9f5}
+.company-case-overview-grid,.company-case-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
+.company-case-overview-grid>p{font-size:clamp(1.3rem,2vw,1.6rem);color:#435b49;line-height:1.7;margin:24px 0}
+.company-case-detail{background:#edf0e9}
+.company-case-detail ul,.company-case-engineering ul{list-style:none;margin:0;padding:0}
+.company-case-detail li,.company-case-engineering li{border-bottom:1px solid rgba(17,55,33,.2);padding:20px 0;color:#3d5846;font-size:1.08rem;line-height:1.55}
+.company-case-engineering{background:#102e22;color:#f4f0e7}
+.company-case-engineering .company-display em{color:#d6b792}
+.company-case-engineering li{color:#dce5d9;border-color:rgba(255,255,255,.2)}
+.company-case-tech{display:flex;gap:11px;flex-wrap:wrap;margin-top:45px}
+.company-case-tech span{border:1px solid rgba(255,255,255,.28);padding:9px 13px;font-size:.76rem;color:#d9e5d9}
+.company-case-notes{background:#f8f7f3}
+.company-case-notes p{color:#526a57;font-size:1.11rem;line-height:1.8;margin-top:10px}
+.company-case-links{display:flex;gap:25px;flex-wrap:wrap;margin-top:35px}
+.company-case-links a{font-weight:700;font-size:.88rem;border-bottom:1px solid #466a52;padding-bottom:8px}
+@media(max-width:780px){.company-case-overview-grid,.company-case-detail-grid{grid-template-columns:1fr;gap:35px}.company-case-back{margin-bottom:65px}.company-case-meta{flex-direction:column}.company-case-hero h1{font-size:clamp(3.8rem,11vw,6rem)}}
