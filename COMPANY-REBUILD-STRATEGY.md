@@ -38,11 +38,12 @@ Secondary:
 - Existing URLs redirect only after routing and SEO review; retain them during the rebuild.
 
 ### Service architecture
-Four coherent disciplines:
-1. Digital experiences — websites, ecommerce, identity, digital presence.
+Five coherent disciplines:
+1. Websites & ecommerce — professional business websites, ecommerce and digital journeys.
 2. Software & products — bespoke applications, operational portals, mobile-friendly field workflows.
 3. Connected systems — APIs, automation, databases, CRM/HubSpot, data quality and reporting.
-4. Ongoing partnership — technical support, site care, implementation, documentation, training and phased development.
+4. Brand & digital growth — identity, search discoverability, content, creative and analytics.
+5. Ongoing partnership — technical support, site care, implementation, documentation, training and phased development.
 
 ### Work proof
 - Port Petals: client ecommerce platform. Client-approved public case study exists.
