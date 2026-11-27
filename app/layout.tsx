@@ -4,6 +4,7 @@ import "./globals.css";
 import "./company.css";
 import "./atelier.css";
 import "./atelier-inner.css";
+import "./compact.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { GoogleAnalyticsEvents } from "@/components/GoogleAnalyticsEvents";
