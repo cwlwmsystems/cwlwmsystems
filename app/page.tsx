@@ -60,7 +60,7 @@ export default function HomePage() {
           <div>
             <h2 id="atelier-statement-title">Good technology should feel <em>effortless.</em></h2>
             <div className="atelier-statement-bottom">
-              <p>Most businesses don't need more disconnected tools. They need better digital experiences, clearer processes and technology that supports the people using it. That's what Cwlwm Systems is here to build.</p>
+              <p>Most businesses don&apos;t need more disconnected tools. They need better digital experiences, clearer processes and technology that supports the people using it. That&apos;s what Cwlwm Systems is here to build.</p>
               <Link href="/about" className="atelier-text-link">Meet the studio <span aria-hidden="true">↗</span></Link>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function HomePage() {
         <div className="atelier-frame">
           <div className="atelier-section-heading">
             <div><span className="atelier-kicker atelier-kicker-light">04 / START HERE</span><h2 id="atelier-selector-title">Every good project<br/>starts with <em>a conversation.</em></h2></div>
-            <p>You don't need a technical specification to get started. Choose what's closest to your goal, and we'll discuss the best way forward.</p>
+            <p>You don&apos;t need a technical specification to get started. Choose what&apos;s closest to your goal, and we&apos;ll discuss the best way forward.</p>
           </div>
           <EngagementSelector />
         </div>
@@ -133,7 +133,7 @@ export default function HomePage() {
         <div className="atelier-frame atelier-method-grid">
           <div><span className="atelier-kicker atelier-kicker-muted">05 / OUR APPROACH</span><h2 id="atelier-method-title">Thoughtful from the first question to the final detail.</h2><Link href="/approach" className="atelier-text-link">Explore our approach <span aria-hidden="true">↗</span></Link></div>
           <div className="atelier-method-steps">
-            <div><span>01</span><h3>Understand</h3><p>Business requirements, users, bottlenecks and the actual outcome you're trying to achieve.</p></div>
+            <div><span>01</span><h3>Understand</h3><p>Business requirements, users, bottlenecks and the actual outcome you&apos;re trying to achieve.</p></div>
             <div><span>02</span><h3>Design & build</h3><p>Appropriate architecture, considered interfaces, clear scope and real-world testing.</p></div>
             <div><span>03</span><h3>Implement & support</h3><p>Launch, documentation, training and an accountable next step after delivery.</p></div>
           </div>
@@ -150,7 +150,7 @@ export default function HomePage() {
       <section className="atelier-finale" aria-labelledby="atelier-finale-title">
         <div className="atelier-frame atelier-finale-grid">
           <span className="atelier-kicker atelier-kicker-muted">07 / THE NEXT STEP</span>
-          <div><h2 id="atelier-finale-title">Let's make something <em>worth building.</em></h2><div className="atelier-finale-bottom"><p>Tell me where the experience falls short, the workflow breaks down, or the next idea begins.</p><Link href="/contact" className="atelier-cta atelier-cta-dark">Start a conversation <span aria-hidden="true">↗</span></Link></div></div>
+          <div><h2 id="atelier-finale-title">Let&apos;s make something <em>worth building.</em></h2><div className="atelier-finale-bottom"><p>Tell me where the experience falls short, the workflow breaks down, or the next idea begins.</p><Link href="/contact" className="atelier-cta atelier-cta-dark">Start a conversation <span aria-hidden="true">↗</span></Link></div></div>
         </div>
       </section>
     </div>
