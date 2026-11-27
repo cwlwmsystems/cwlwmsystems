@@ -52,6 +52,6 @@ export default async function ProjectPage({params}:{params:Promise<{slug:string}
       <div className="studio-container studio-case-grid"><div><span className="studio-overline">04 / STATUS & TRANSPARENCY</span><h2>The details<br/><em>matter.</em></h2></div><div className="studio-case-notes"><p>{p.note}</p><div className="studio-case-links">{p.website&&<a href={p.website} target="_blank" rel="noopener noreferrer">Live website ↗</a>}{p.study&&<a href={p.study} target="_blank" rel="noopener noreferrer">Approved case study ↗</a>}{p.repository&&<a href={p.repository} target="_blank" rel="noopener noreferrer">Technical repository ↗</a>}</div></div></div>
     </section>
     <section className="studio-next-project"><div className="studio-container"><span className="studio-overline">NEXT PROJECT</span><Link href={`/work/${next.slug}`}>{next.name} <span aria-hidden="true">↗</span></Link></div></section>
-    <section className="studio-page-cta"><div className="studio-container"><span>GOOD WORK / STARTS HERE</span><div><h2>What's your<br/><em>next move?</em></h2><Link href="/contact">Start a conversation ↗</Link></div></div></section>
+    <section className="studio-page-cta"><div className="studio-container"><span>GOOD WORK / STARTS HERE</span><div><h2>What&apos;s your<br/><em>next move?</em></h2><Link href="/contact">Start a conversation ↗</Link></div></div></section>
   </div>;
 }
