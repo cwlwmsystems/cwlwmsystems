@@ -118,19 +118,33 @@ Would a brief introduction be worthwhile?
 Kasey
 Cwlwm Systems — cwlwmsystems.com
 
-## HubSpot CRM (independent Cwlwm account only)
+## Cwlwm-owned CRM — independent custom build
 
-Use standard contact/company/deal objects. Create deals when there is an actual qualified opportunity, not simply because a prospect appears on a list.
+Cwlwm Systems will build and operate **its own CRM**, not use HubSpot to manage its sales pipeline. This CRM must use separate infrastructure, authentication and data from all current and former employers. It is planned, not yet deployed. Until its minimum viable version is operational, use a secure, access-controlled interim prospect register with the same data fields and opt-out safeguards; migrate it only with validation and deduplication.
 
-**Company:** Acquisition track (Digital/Systems/Partner); target segment; observed problem; source URL; geographic market; account priority; last researched date.
+### Minimum viable data model
 
-**Contact:** role, source, outreach status (Researching/Approached/Replied/Meeting/Nurture/Do not contact), last touch, next action, permission/suppression as required.
+- **Accounts (companies):** stable account ID, legal/display name, website, location/market, industry, acquisition track (Digital/Systems/Partner), observed business requirement, source URL, priority, research timestamp, ownership.
+- **People (contacts):** stable contact ID, account ID, name, role, verified business contact details, source/provenance, communication preferences, consent where applicable, suppression/opt-out status and date.
+- **Opportunities:** stable opportunity ID, linked account and primary contact, actual expressed requirement, service category, stage, anticipated value (if supported), expected close date, source campaign and next action. Do not create an opportunity merely because a company appears in a public directory.
+- **Interactions:** timestamped outbound emails, calls, replies, meetings, referrals, notes and outcomes; associate with the correct account, person and opportunity.
+- **Tasks:** assigned owner, due date, state, priority, related record and follow-up type. Keep a reliable next-action queue.
+- **Campaigns and attribution:** acquisition track, channel, first-touch source and optional UTM information; preserve source history instead of overwriting it.
+- **Suppressions:** permanent or policy-governed do-not-contact records and reason/date, checked before every outbound action.
 
-**Deal:** service requested, scope, estimate, decision-maker, source campaign, next action date, quoted amount, proposal status.
+### MVP operational flow
 
-Suggested stages: Qualified Opportunity → Discovery Scheduled → Discovery Completed → Scoping → Proposal Sent → Decision → Closed Won/Lost.
+Researching → Ready for outreach → Contacted → Replied / Meeting → Nurture or Do not contact. Once a specific business opportunity is qualified: Qualified Opportunity → Discovery Scheduled → Discovery Completed → Scoping → Proposal Sent → Decision → Closed Won / Closed Lost.
 
-Use task views for First Contact Due, Follow-up Due and Open Deal Next Step. Keep source attribution consistent and respect contact suppression.
+Represent prospect status and opportunity stage separately. A reply is not a deal; a website visit is not consent; a closed-lost deal is not automatically a do-not-contact instruction.
+
+### Engineering guardrails
+
+Start with account/contact/opportunity associations, structured activities, next-step tasks, deduplication rules, and suppression enforcement. Secure authentication, authorization, least-privilege access, encrypted transport, backups, and an audit trail are baseline requirements, not future extras. Keep personal data minimized and honor applicable privacy/marketing rules. Import external research with explicit provenance and verify business contact data.
+
+Only after the MVP works should Cwlwm consider controlled Gmail/Calendar integration, website form ingestion, scheduling events, analytics, dashboards, and optional outreach automation. Email delivery must include appropriate sender identification, applicable opt-out handling, throttling, and a suppression check. Do not implement indiscriminate bulk mailing.
+
+**Initial reporting:** researched accounts, personalized first contacts, replies, qualified meetings held, proposals, wins, referral introductions and founder hours invested. Segment by acquisition track and campaign, and measure from actual records rather than estimates.
 
 ### Reporting
 
