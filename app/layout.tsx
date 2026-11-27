@@ -5,6 +5,7 @@ import "./company.css";
 import "./atelier.css";
 import "./atelier-inner.css";
 import "./compact.css";
+import "./landing.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { GoogleAnalyticsEvents } from "@/components/GoogleAnalyticsEvents";
@@ -41,7 +42,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Cwlwm Systems" }],
   creator: "Cwlwm Systems",
   publisher: "Cwlwm Systems",
-  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cwlwm Systems | Connected systems. Clearer operations.",
+    title: "Cwlwm Systems | Websites, Software & Connected Business Systems",
     description: site.description,
   },
 };
@@ -66,23 +66,22 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const organization = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Organization",
+    "@id": `${site.url}/#organization`,
     name: site.name,
     url: site.url,
     email: site.email,
     description: site.description,
-    serviceType: [
-      "Business websites and ecommerce",
-      "Brand identity and digital presence",
-      "Custom operational software",
-      "Systems integration",
-      "Workflow automation",
-      "AI-assisted business systems",
-      "Data and decision intelligence",
-      "Implementation and user training",
-      "Software maintenance and ongoing systems partnership",
-      "Fractional systems services",
-    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Digital and business systems services",
+      itemListElement: [
+      { "@type": "OfferCatalog", name: "Business websites and ecommerce", url: `${site.url}/services/business-websites` },
+      { "@type": "OfferCatalog", name: "Brand identity, SEO and digital presence", url: `${site.url}/services/seo-aeo` },
+      { "@type": "OfferCatalog", name: "Custom business software", url: `${site.url}/services/custom-software` },
+      { "@type": "OfferCatalog", name: "Systems integration", url: `${site.url}/services/automation-integrations` },
+      ],
+    },
   };
 
   return (
