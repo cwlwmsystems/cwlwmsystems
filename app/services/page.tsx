@@ -1,5 +1,32 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { companyServices } from "@/lib/company";
-export const metadata:Metadata={title:"Services | Cwlwm Systems",description:"Professional websites, ecommerce, custom software, integrations, CRM, automation and ongoing technical support from Cwlwm Systems.",alternates:{canonical:"/services"}};
-export default function ServicesPage(){return <div className="company-site company-inner"><section className="company-inner-hero"><div className="company-wrap"><p className="company-eyebrow">CWLWM SYSTEMS / SERVICES</p><h1>What we <em>build.</em></h1><p>Good digital work starts with understanding the business. From websites and ecommerce to custom software and connected operations, we design solutions that fit.</p></div></section><section className="company-inner-content"><div className="company-wrap">{companyServices.map(s=><article key={s.slug} id={s.slug} className="company-inner-service"><div className="company-inner-service-title"><span>{s.number} / 05</span><h2>{s.title}</h2></div><div className="company-inner-service-main"><p className="company-inner-service-lead">{s.description}</p><div className="company-inner-service-list">{s.services.map(x=><span key={x}>{x}</span>)}</div><p className="company-inner-outcome"><strong>What it delivers</strong>{s.outcome}</p><Link href="/contact" className="company-inline">Discuss this service <span aria-hidden="true">↗</span></Link></div></article>)}</div></section><section className="company-cta"><div className="company-wrap company-cta-layout"><div><p className="company-eyebrow">START WITH YOUR REQUIREMENTS</p><h2 className="company-display">Your challenge.<br/><em>Our starting point.</em></h2></div><Link className="company-button company-button-cream" href="/contact">Start a conversation <span aria-hidden="true">↗</span></Link></div></section></div>}
+
+export const metadata:Metadata={
+  title:"Services | Websites, Software & Connected Systems",
+  description:"Websites, ecommerce, business applications, API integrations, automation, branding and ongoing support from Cwlwm Systems.",
+  alternates:{canonical:"/services"},
+};
+
+export default function ServicesPage(){
+  return <div className="company-site atelier-inner atelier-service-page">
+    <section className="studio-page-hero">
+      <div className="studio-container"><div className="studio-page-top"><span>02 / OUR CAPABILITIES</span><span>DESIGN / TECHNOLOGY / OPERATIONS</span></div>
+        <h1>One partner.<br/><em>Many possibilities.</em></h1>
+        <div className="studio-page-tail"><p>Every business needs something different. We build the digital presence, software and connected systems that make the difference.</p><Link href="/contact">START A CONVERSATION ↗</Link></div>
+      </div>
+    </section>
+    <section className="studio-services-directory">
+      <div className="studio-container">
+        {companyServices.map((s,i)=><article className="studio-service-detail" id={s.slug} key={s.slug}>
+          <div className="studio-service-heading"><span className="studio-overline">{s.number} / {String(companyServices.length).padStart(2,"0")}</span><h2>{s.title}</h2></div>
+          <div className="studio-service-body"><p className="studio-service-intro">{s.description}</p><div className="studio-service-deliverables">{s.services.map((item,j)=><div key={item}><span>{String(j+1).padStart(2,"0")}</span>{item}</div>)}</div>
+            <p className="studio-service-outcome"><strong>THE GOAL</strong>{s.outcome}</p>
+            <div className="studio-service-actions"><Link href={`/work/${s.relatedProject}`} className="studio-text-link">Relevant work <span aria-hidden="true">↗</span></Link><Link href={`/contact?interest=${s.slug}`} className="studio-solid-link">Discuss this service <span aria-hidden="true">↗</span></Link></div>
+          </div>
+        </article>)}
+      </div>
+    </section>
+    <section className="studio-page-cta"><div className="studio-container"><span>WHAT DO YOU NEED TO CHANGE?</span><div><h2>Let's find<br/><em>the right answer.</em></h2><Link href="/contact">Start with a conversation ↗</Link></div></div></section>
+  </div>;
+}
