@@ -17,7 +17,7 @@ const primaryServices = [
     description: "High-quality digital experiences that are easy to navigate, maintain and grow.",
     tags: "Web design  /  Ecommerce  /  Analytics",
     href: "/services/business-websites",
-    icon: "window",
+    icon: "/icons/website-ecommerce.svg",
   },
   {
     no: "02",
@@ -25,7 +25,7 @@ const primaryServices = [
     description: "Practical applications, portals and internal tools built around your actual workflow.",
     tags: "Applications  /  Portals  /  Data",
     href: "/services/custom-software",
-    icon: "app",
+    icon: "/icons/custom-software.svg",
   },
   {
     no: "03",
@@ -33,7 +33,7 @@ const primaryServices = [
     description: "Connect business systems, remove repetitive steps and improve data reliability.",
     tags: "APIs  /  CRM  /  Operations",
     href: "/services/automation-integrations",
-    icon: "flow",
+    icon: "/icons/automation-integrations.svg",
   },
 ] as const;
 
@@ -115,8 +115,8 @@ export default function HomePage() {
             {primaryServices.map(item => (
               <Link href={item.href} key={item.no} className="cp-service-card">
                 <div className="cp-service-top"><span>{item.no} / CAPABILITY</span><span aria-hidden="true">↗</span></div>
-                <div className={`cp-service-icon cp-service-icon-${item.icon}`} aria-hidden="true">
-                  {item.icon === "window" ? <><i/><i/><i/></> : item.icon==="app" ? <><i/><i/><i/><i/></> : <><i/><i/><i/></>}
+                <div className="cp-service-icon" aria-hidden="true">
+                  <Image src={item.icon} alt="" width={64} height={64} />
                 </div>
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
