@@ -55,8 +55,10 @@ const projects = [
     image: null,
     imageDescription: "Conceptual architecture schematic",
   },
-].map(item => ({...item, project: portfolioProjects.find(p => p.slug === item.slug)}))
-  .filter((item): item is DefinedProjectTile => item.project !== undefined);
+].map(item => {
+  const project = portfolioProjects.find(p => p.slug === item.slug);
+  return project ? { ...item, project } : null;
+}).filter((item): item is NonNullable<typeof item> => item !== null);
 
 type Project = typeof portfolioProjects[number];
 type ProjectTile = {
