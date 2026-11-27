@@ -95,12 +95,12 @@ export const serviceLandings: ServiceLanding[] = [
   },
   {
     slug: "custom-software",
-    title: "Custom software for the work that doesn't fit into a standard tool.",
-    metaTitle: "Custom Business Software & Internal Application Development",
-    metaDescription: "Cwlwm Systems designs practical internal tools, portals, field operations applications and business software with thoughtful data models, workflows, permissions and support.",
+    title: "Custom business software for the way your team actually works.",
+    metaTitle: "Custom Business Software Development in Pennsylvania",
+    metaDescription: "Pennsylvania-based Cwlwm Systems designs custom business software, internal tools, operational portals and integrations for companies across the U.S.",
     eyebrow: "Custom business applications",
-    introduction: "Sometimes the missing system is not another subscription. It is a focused application that ties users, business rules and data together. We help teams define the smallest useful system, build it around actual processes and maintain clear ownership after launch.",
-    audience: "Teams managing important work in spreadsheets, email, disconnected applications or processes that no standard platform handles comfortably.",
+    introduction: "Based in Pennsylvania, Cwlwm Systems develops custom business software for local companies and teams across the United States. When a standard tool cannot support a critical workflow, we design focused internal applications, portals and connected systems around real users, business rules and reliable data. The goal is a useful system you can maintain, not another subscription to work around.",
+    audience: "Pennsylvania businesses and U.S. teams managing critical work in spreadsheets, email, disconnected applications or processes that standard software cannot handle comfortably.",
     outcomes: ["Fewer fragile manual handoffs", "Clearer business states and user responsibilities", "A maintainable application aligned with a specific operational outcome"],
     problems: [
       { title: "A spreadsheet has become critical infrastructure", explanation: "When a spreadsheet coordinates real transactions, approvals, appointments or field activity, weak permissions and undocumented logic create operational risk." },
@@ -122,6 +122,7 @@ export const serviceLandings: ServiceLanding[] = [
       { question: "How do we know whether custom software is the right answer?", answer: "We compare the business requirement with existing platforms, configuration options and integration costs. A custom build should earn its place through measurable business value." },
       { question: "Can an application connect to the tools we already use?", answer: "Usually that is part of the discovery. We assess API availability, vendor limitations, ownership of records, security requirements and ongoing maintenance." },
       { question: "What happens after launch?", answer: "The engagement defines hosting, access, documentation, support and ownership. You can choose a planned handoff or an ongoing technical partnership." },
+      { question: "Do you only build software for businesses in Pennsylvania?", answer: "No. Cwlwm Systems is based in Pennsylvania and can work with businesses across the United States. Delivery approach, on-site needs and technical access are discussed during project discovery." },
     ],
     relatedWork: [
       { slug: "cwlwm-field-operations", label: "Cwlwm Field Operations", note: "Independently developed operations software in progress" },
