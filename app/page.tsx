@@ -1,156 +1,205 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
-import { EngagementSelector } from "@/components/EngagementSelector";
+import Link from "next/link";
 import { portfolioProjects } from "@/lib/portfolio";
 
 export const metadata: Metadata = {
-  title: "Cwlwm Systems | Websites, Custom Software & Connected Business Systems",
-  description: "An independent digital and systems studio building considered websites, ecommerce, custom applications, integrations and operational systems for ambitious businesses.",
+  title: "Websites, Software & Business Systems | Cwlwm Systems",
+  description: "Cwlwm Systems designs and builds professional websites, custom applications, integrations and connected business operations. Independent, hands-on technical delivery.",
   alternates: { canonical: "/" },
 };
 
-const services = [
-  { number: "01", heading: "Digital experiences", copy: "Websites, ecommerce, brand systems and digital presence that earn trust from the first visit.", detail: "WEB / COMMERCE / IDENTITY", href: "/services#digital-experiences" },
-  { number: "02", heading: "Software & applications", copy: "Purpose-built internal tools, customer platforms and applications designed around real work.", detail: "APPLICATIONS / PORTALS / TOOLS", href: "/services#software-products" },
-  { number: "03", heading: "Connected operations", copy: "Integrations, automation, CRM and data architecture that turn disconnected systems into useful processes.", detail: "DATA / CRM / AUTOMATION", href: "/services#connected-systems" },
-  { number: "04", heading: "Brand & growth", copy: "Identity, search visibility, analytics and creative systems that make a business easier to discover.", detail: "BRAND / SEARCH / MEASUREMENT", href: "/services#brand-growth" },
-  { number: "05", heading: "Ongoing partnership", copy: "Implementation, maintenance, technical support and structured development long after launch.", detail: "SUPPORT / IMPROVEMENT / OWNERSHIP", href: "/services#ongoing-partnership" },
-];
+const primaryServices = [
+  {
+    no: "01",
+    name: "Websites & ecommerce",
+    description: "High-quality digital experiences that are easy to navigate, maintain and grow.",
+    tags: "Web design  /  Ecommerce  /  Analytics",
+    href: "/services#digital-experiences",
+    icon: "window",
+  },
+  {
+    no: "02",
+    name: "Custom software",
+    description: "Practical applications, portals and internal tools built around your actual workflow.",
+    tags: "Applications  /  Portals  /  Data",
+    href: "/services#software-products",
+    icon: "app",
+  },
+  {
+    no: "03",
+    name: "Automation & integrations",
+    description: "Connect business systems, remove repetitive steps and improve data reliability.",
+    tags: "APIs  /  CRM  /  Operations",
+    href: "/services#connected-systems",
+    icon: "flow",
+  },
+] as const;
 
 const projects = [
-  { ...portfolioProjects[2], discipline: "WEB EXPERIENCE / BRAND / SEARCH", img: "https://raw.githubusercontent.com/kaseypelchy-ops/olson-tenglund-info/main/assets/parts-counter-scene.webp", visual: "atelier-project-olson", note: "Asset from the published Olson & Tenglund website" },
-  { ...portfolioProjects[0], discipline: "ECOMMERCE / CUSTOMER SYSTEMS", img: "https://raw.githubusercontent.com/cwlwmsystems/port-petals/main/public/heroes/flowers.jpg", visual: "atelier-project-petals", note: "Image used by the Port Petals storefront" },
-  { ...portfolioProjects[1], discipline: "INDEPENDENT SOFTWARE / OPERATIONS", img: null, visual: "atelier-project-field", note: "Architecture illustration; product remains in development" },
-];
+  {
+    slug: "olson-tenglund",
+    label: "Web presence, brand & local search",
+    image: "https://raw.githubusercontent.com/kaseypelchy-ops/olson-tenglund-info/main/assets/parts-counter-scene.webp",
+    imageDescription: "Image from the Olson & Tenglund website",
+  },
+  {
+    slug: "port-petals",
+    label: "Ecommerce & customer experience",
+    image: "https://raw.githubusercontent.com/cwlwmsystems/port-petals/main/public/heroes/flowers.jpg",
+    imageDescription: "Photography from the Port Petals storefront",
+  },
+  {
+    slug: "cwlwm-field-operations",
+    label: "Custom software in development",
+    image: null,
+    imageDescription: "Conceptual architecture schematic",
+  },
+].map(item => ({...item, project: portfolioProjects.find(p => p.slug === item.slug)}))
+  .filter((item): item is DefinedProjectTile => item.project !== undefined);
+
+type Project = typeof portfolioProjects[number];
+type ProjectTile = {
+  slug: string;
+  label: string;
+  image: string | null;
+  imageDescription: string;
+  project: Project | undefined;
+};
+type DefinedProjectTile = Omit<ProjectTile, "project"> & { project: Project };
+// Typed inference helper used to keep project references grounded to portfolio entries.
+ 
 
 export default function HomePage() {
   return (
-    <div className="company-site atelier-home">
-      <section className="atelier-hero" aria-labelledby="atelier-hero-title">
-        <div className="atelier-frame atelier-hero-content">
-          <div className="atelier-hero-overline">
-            <span className="atelier-kicker">INDEPENDENT DIGITAL & SYSTEMS STUDIO</span>
-            <span className="atelier-top-index">PENNSYLVANIA · WORKING EVERYWHERE</span>
+    <div className="company-site compact-site">
+      <section className="cp-hero" aria-labelledby="cp-hero-title">
+        <div className="cp-container cp-hero-grid">
+          <div className="cp-hero-copy">
+            <div className="cp-eyebrow"><span className="cp-status-dot" /> INDEPENDENT DIGITAL & SYSTEMS STUDIO</div>
+            <h1 id="cp-hero-title">Better websites.<br/>Smarter systems.<br/><span>Stronger businesses.</span></h1>
+            <p>We design and build the digital experiences, custom software and connected systems that help businesses operate and grow.</p>
+            <div className="cp-actions">
+              <Link href="/contact" className="cp-button cp-button-primary">Start a project <span aria-hidden="true">↗</span></Link>
+              <Link href="/work" className="cp-button cp-button-secondary">See our work <span aria-hidden="true">↗</span></Link>
+            </div>
+            <div className="cp-hero-proof"><span>Founder-led</span><span>Business-first thinking</span><span>Direct technical delivery</span></div>
           </div>
-          <div className="atelier-hero-main">
-            <div className="atelier-hero-type">
-              <h1 id="atelier-hero-title">Better experiences.<br/><em>Better systems.</em><br/>Better business.</h1>
-              <div className="atelier-hero-bottom">
-                <p>Design-led websites, custom software and connected operations for businesses ready to move beyond the ordinary.</p>
-                <div className="atelier-hero-actions">
-                  <Link href="/contact" className="atelier-cta atelier-cta-dark">Discuss a project <span aria-hidden="true">↗</span></Link>
-                  <Link href="#selected-work" className="atelier-text-link">Explore the work <span aria-hidden="true">↓</span></Link>
-                </div>
+          <div className="cp-system" aria-label="Illustrative system showing websites, business applications and data connected through Cwlwm Systems">
+            <div className="cp-system-top"><span>THE CONNECTED BUSINESS</span><span>01 / 03</span></div>
+            <div className="cp-system-inner">
+              <div className="cp-system-node cp-system-node-a"><span>01</span><strong>Digital experience</strong><small>Website / Ecommerce</small></div>
+              <div className="cp-system-spine" aria-hidden="true"><i /><i /><i /></div>
+              <div className="cp-system-core"><Image src="/cwlwm-knot.png" alt="" width={514} height={505}/><span>CWLWM SYSTEMS</span></div>
+              <div className="cp-system-spine cp-system-spine-after" aria-hidden="true"><i /><i /><i /></div>
+              <div className="cp-system-double">
+                <div className="cp-system-node"><span>02</span><strong>Business software</strong><small>Applications / CRM</small></div>
+                <div className="cp-system-node"><span>03</span><strong>Operations & data</strong><small>Automation / Reporting</small></div>
               </div>
             </div>
-            <div className="atelier-hero-identity" aria-label="Cwlwm Systems interwoven knot identity">
-              <div className="atelier-hero-identity-top"><span>THE CWLWM MARK</span><span>FIG. / 01</span></div>
-              <Image src="/cwlwm-knot.png" width={514} height={505} alt="Cwlwm Systems knot symbol" priority />
-              <div className="atelier-hero-identity-bottom"><span>DESIGNED TO CONNECT.</span><span>2026 / CWLWM</span></div>
-            </div>
-          </div>
-          <div className="atelier-hero-rule"><span>ONE PARTNER, FROM IDEA TO IMPLEMENTATION</span><span>SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span></div>
-        </div>
-      </section>
-
-      <section className="atelier-statement" aria-labelledby="atelier-statement-title">
-        <div className="atelier-frame atelier-statement-grid">
-          <span className="atelier-kicker atelier-kicker-muted">01 / WHAT WE BELIEVE</span>
-          <div>
-            <h2 id="atelier-statement-title">Good technology should feel <em>effortless.</em></h2>
-            <div className="atelier-statement-bottom">
-              <p>Most businesses don&apos;t need more disconnected tools. They need better digital experiences, clearer processes and technology that supports the people using it. That&apos;s what Cwlwm Systems is here to build.</p>
-              <Link href="/about" className="atelier-text-link">Meet the studio <span aria-hidden="true">↗</span></Link>
-            </div>
+            <div className="cp-system-bottom"><span>DESIGN</span><span>BUILD</span><span>CONNECT</span><span>SUPPORT</span></div>
           </div>
         </div>
       </section>
 
-      <section className="atelier-work" id="selected-work" aria-labelledby="atelier-work-title">
-        <div className="atelier-frame">
-          <div className="atelier-section-heading">
-            <div><span className="atelier-kicker atelier-kicker-light">02 / SELECTED WORK</span><h2 id="atelier-work-title">The work <em>speaks.</em></h2></div>
-            <p>Real client projects and independently developed products. Thoughtful design meets practical engineering, with nothing inflated or invented.</p>
+      <section className="cp-services cp-section" aria-labelledby="cp-services-title">
+        <div className="cp-container">
+          <div className="cp-section-header">
+            <div><span className="cp-overline">WHAT WE DO</span><h2 id="cp-services-title">The right solution, built properly.</h2></div>
+            <p>From the first customer interaction to the systems behind the scenes, we bring design and engineering together.</p>
           </div>
-          <div className="atelier-projects">
-            {projects.map((project, index) => (
-              <article className={`atelier-project ${project.visual}`} key={project.slug}>
-                <Link className="atelier-project-visual" href={`/work/${project.slug}`} aria-label={`Explore ${project.name}`}>
-                  {project.img ? (
-                    <div className="atelier-project-photography" style={{backgroundImage: `url("${project.img}")`}} role="img" aria-label={project.note}/>
-                  ) : (
-                    <div className="atelier-architecture" aria-label="Schematic showing the data and workflow architecture of a field operations platform">
-                      <div className="atelier-architecture-title">CWLWM / FIELD OPERATIONS <span>ARCHITECTURE STUDY</span></div>
-                      <div className="atelier-architecture-nodes"><span>FIELD USERS</span><span>APPLICATION</span><span>DATA + ACCESS</span></div>
-                      <div className="atelier-architecture-line" aria-hidden="true"/>
-                      <div className="atelier-architecture-bottom"><span>TERRITORIES</span><span>ACTIVITY</span><span>SCHEDULING</span><span>REPORTING</span></div>
-                    </div>
-                  )}
-                  <div className="atelier-project-visual-label"><span>0{index+1} / SELECTED PROJECT</span><span>VIEW THE WORK ↗</span></div>
+          <div className="cp-service-grid">
+            {primaryServices.map(item => (
+              <Link href={item.href} key={item.no} className="cp-service-card">
+                <div className="cp-service-top"><span>{item.no} / CAPABILITY</span><span aria-hidden="true">↗</span></div>
+                <div className={`cp-service-icon cp-service-icon-${item.icon}`} aria-hidden="true">
+                  {item.icon === "window" ? <><i/><i/><i/></> : item.icon==="app" ? <><i/><i/><i/><i/></> : <><i/><i/><i/></>}
+                </div>
+                <h3>{item.name}</h3>
+                <p>{item.description}</p>
+                <span className="cp-service-tags">{item.tags}</span>
+              </Link>
+            ))}
+          </div>
+          <div className="cp-services-extra"><span>Also available:</span><Link href="/services#brand-growth">Brand & digital growth ↗</Link><Link href="/services#ongoing-partnership">Ongoing technical partnership ↗</Link><Link href="/services" className="cp-services-all">View all services ↗</Link></div>
+        </div>
+      </section>
+
+      <section className="cp-work cp-section" aria-labelledby="cp-work-title">
+        <div className="cp-container">
+          <div className="cp-section-header">
+            <div><span className="cp-overline">SELECTED WORK</span><h2 id="cp-work-title">Real projects. Practical results.</h2></div>
+            <Link href="/work" className="cp-inline-link">View all projects <span aria-hidden="true">↗</span></Link>
+          </div>
+          <div className="cp-work-grid">
+            {projects.map(item => (
+              <article className="cp-work-card" key={item.slug}>
+                <Link href={`/work/${item.slug}`} className={`cp-work-image cp-work-image-${item.slug}`} aria-label={`View ${item.project.name} case study`}>
+                  {item.image ? <div className="cp-work-photo" style={{backgroundImage:`url("${item.image}")`}} role="img" aria-label={item.imageDescription}/> :
+                    <div className="cp-work-schematic">
+                      <div className="cp-work-schematic-label">FIELD OPERATIONS / SYSTEM DESIGN</div>
+                      <div className="cp-schematic-map"><span>TEAM</span><i aria-hidden="true">↔</i><span>PLATFORM</span><i aria-hidden="true">↔</i><span>DATA</span></div>
+                      <div className="cp-schematic-footer">ARCHITECTURE — NOT A SCREENSHOT</div>
+                    </div>}
+                  <span className="cp-work-view">VIEW PROJECT <span aria-hidden="true">↗</span></span>
                 </Link>
-                <div className="atelier-project-description">
-                  <span className="atelier-kicker atelier-kicker-light">{project.discipline}</span>
-                  <h3><Link href={`/work/${project.slug}`}>{project.name}</Link></h3>
-                  <p>{project.summary}</p>
-                  <div className="atelier-project-meta"><span>{project.status}</span><Link href={`/work/${project.slug}`} className="atelier-text-link atelier-text-link-light">Explore case study <span aria-hidden="true">↗</span></Link></div>
+                <div className="cp-work-description">
+                  <span>{item.label}</span>
+                  <h3><Link href={`/work/${item.slug}`}>{item.project.name}</Link></h3>
+                  <p>{item.project.summary}</p>
+                  <div className="cp-work-end"><span>{item.project.status}</span><Link href={`/work/${item.slug}`} aria-label={`View ${item.project.name}`}>↗</Link></div>
                 </div>
               </article>
             ))}
           </div>
-          <div className="atelier-work-footer"><span>PROJECT IMAGERY IS DRAWN FROM THE WORK ITSELF; FIELD OPERATIONS IS SHOWN AS A SCHEMATIC.</span><Link href="/work" className="atelier-text-link atelier-text-link-light">All selected work <span aria-hidden="true">↗</span></Link></div>
+          <p className="cp-accuracy">Project imagery originates from the respective websites. Cwlwm Field Operations is independently developed; its visual is a schematic, not a product screenshot.</p>
         </div>
       </section>
 
-      <section className="atelier-services" aria-labelledby="atelier-services-title">
-        <div className="atelier-frame">
-          <div className="atelier-section-heading atelier-section-heading-ink">
-            <div><span className="atelier-kicker atelier-kicker-muted">03 / EXPERTISE</span><h2 id="atelier-services-title">The right thinking.<br/><em>The right tools.</em></h2></div>
-            <p>From first impressions to back-office infrastructure, every part of the business deserves the same consideration.</p>
+      <section className="cp-choice cp-section" aria-labelledby="cp-choice-title">
+        <div className="cp-container">
+          <div className="cp-section-header">
+            <div><span className="cp-overline">HOW CAN WE HELP?</span><h2 id="cp-choice-title">Choose your starting point.</h2></div>
+            <p>You do not need a detailed technical brief. Tell us what needs to improve, and we can determine an appropriate first step.</p>
           </div>
-          <div className="atelier-service-list">
-            {services.map(service=><Link key={service.number} href={service.href} className="atelier-service">
-              <span className="atelier-service-number">{service.number}</span>
-              <div><h3>{service.heading}</h3><p>{service.copy}</p></div>
-              <span className="atelier-service-detail">{service.detail}</span>
-              <span className="atelier-service-arrow" aria-hidden="true">↗</span>
-            </Link>)}
-          </div>
-        </div>
-      </section>
-
-      <section className="atelier-selector-section" aria-labelledby="atelier-selector-title">
-        <div className="atelier-frame">
-          <div className="atelier-section-heading">
-            <div><span className="atelier-kicker atelier-kicker-light">04 / START HERE</span><h2 id="atelier-selector-title">Every good project<br/>starts with <em>a conversation.</em></h2></div>
-            <p>You don&apos;t need a technical specification to get started. Choose what&apos;s closest to your goal, and we&apos;ll discuss the best way forward.</p>
-          </div>
-          <EngagementSelector />
-        </div>
-      </section>
-
-      <section className="atelier-method" aria-labelledby="atelier-method-title">
-        <div className="atelier-frame atelier-method-grid">
-          <div><span className="atelier-kicker atelier-kicker-muted">05 / OUR APPROACH</span><h2 id="atelier-method-title">Thoughtful from the first question to the final detail.</h2><Link href="/approach" className="atelier-text-link">Explore our approach <span aria-hidden="true">↗</span></Link></div>
-          <div className="atelier-method-steps">
-            <div><span>01</span><h3>Understand</h3><p>Business requirements, users, bottlenecks and the actual outcome you&apos;re trying to achieve.</p></div>
-            <div><span>02</span><h3>Design & build</h3><p>Appropriate architecture, considered interfaces, clear scope and real-world testing.</p></div>
-            <div><span>03</span><h3>Implement & support</h3><p>Launch, documentation, training and an accountable next step after delivery.</p></div>
+          <div className="cp-choice-grid">
+            <div className="cp-choice-card">
+              <div className="cp-choice-num">01 / DIGITAL PROJECTS</div>
+              <h3>Build a better digital presence.</h3>
+              <p>Websites, ecommerce, brand identity, local search and the customer experience.</p>
+              <Link href="/contact?interest=digital" className="cp-choice-link">Discuss a website or digital project <span aria-hidden="true">↗</span></Link>
+            </div>
+            <div className="cp-choice-card">
+              <div className="cp-choice-num">02 / SOFTWARE & SYSTEMS</div>
+              <h3>Simplify how your business works.</h3>
+              <p>Custom applications, HubSpot/CRM, workflow automation, integrations and operational reporting.</p>
+              <Link href="/contact?interest=systems" className="cp-choice-link">Discuss software or systems <span aria-hidden="true">↗</span></Link>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="atelier-founder" aria-labelledby="atelier-founder-title">
-        <div className="atelier-frame atelier-founder-grid">
-          <div className="atelier-founder-mark"><Image src="/cwlwm-knot.png" alt="" width={514} height={505} /><span>INDEPENDENT BY DESIGN.</span></div>
-          <div><span className="atelier-kicker atelier-kicker-light">06 / THE PERSON BEHIND THE WORK</span><h2 id="atelier-founder-title">A technical partner who knows the business side, too.</h2><p>Cwlwm Systems is independently founded and operated by Kasey Pelchy. My experience spans software development, business systems, data, marketing operations, automation and technical troubleshooting. You work directly with the person responsible for your solution.</p><p className="atelier-founder-disclosure">Cwlwm-owned projects and client engagements are distinguished from work performed in other professional roles.</p><Link href="/about" className="atelier-text-link atelier-text-link-light">More about Cwlwm <span aria-hidden="true">↗</span></Link></div>
+      <section className="cp-about cp-section" aria-labelledby="cp-about-title">
+        <div className="cp-container cp-about-grid">
+          <div>
+            <span className="cp-overline">THE PERSON BEHIND THE WORK</span>
+            <h2 id="cp-about-title">Experience in technology. Grounded in business.</h2>
+            <p>Cwlwm Systems is an independent company founded by Kasey Pelchy. My background spans software development, business operations, databases, automation, analytics and CRM systems.</p>
+            <p>Clients work directly with the person responsible for their project—from discovery and implementation to documentation and support.</p>
+            <Link href="/about" className="cp-inline-link">Learn about Cwlwm Systems <span aria-hidden="true">↗</span></Link>
+          </div>
+          <div className="cp-about-points">
+            <div><strong>Business-first</strong><p>Define the requirement and outcome before choosing a platform or writing code.</p></div>
+            <div><strong>Built for real use</strong><p>Prioritize clarity, maintainability, secure data handling and dependable workflows.</p></div>
+            <div><strong>Direct partnership</strong><p>A practical process with defined scope, testing and clear handoff or ongoing support.</p></div>
+          </div>
         </div>
       </section>
 
-      <section className="atelier-finale" aria-labelledby="atelier-finale-title">
-        <div className="atelier-frame atelier-finale-grid">
-          <span className="atelier-kicker atelier-kicker-muted">07 / THE NEXT STEP</span>
-          <div><h2 id="atelier-finale-title">Let&apos;s make something <em>worth building.</em></h2><div className="atelier-finale-bottom"><p>Tell me where the experience falls short, the workflow breaks down, or the next idea begins.</p><Link href="/contact" className="atelier-cta atelier-cta-dark">Start a conversation <span aria-hidden="true">↗</span></Link></div></div>
+      <section className="cp-final">
+        <div className="cp-container cp-final-row">
+          <div><span className="cp-overline">READY TO MOVE FORWARD?</span><h2>Have a project in mind?</h2><p>Tell me what you want to build, fix or connect.</p></div>
+          <Link href="/contact" className="cp-button cp-button-primary">Start a conversation <span aria-hidden="true">↗</span></Link>
         </div>
       </section>
     </div>
