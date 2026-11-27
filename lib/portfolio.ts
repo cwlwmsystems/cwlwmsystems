@@ -58,14 +58,30 @@ export const portfolioProjects: PortfolioProject[] = [
     repository: "https://github.com/kaseypelchy-ops/church-website"
   },
   {
-    slug: "community-websites", name: "Community Websites", type: "Community and nonprofit web projects", status: "Mixed project stages",
-    summary: "Accessible, manageable websites and communication experiences for local organizations.",
-    challenge: "Help smaller organizations establish a digital home with clear information, community engagement and support pathways.",
-    delivered: ["Responsive websites and page structures", "Organization-specific event, contact or donation flows", "Content and launch planning"],
-    engineering: ["Next.js and modern responsive interfaces", "Accessibility and information architecture", "Deployment and form-integration planning"],
-    tools: ["Next.js", "React", "TypeScript", "Content architecture"],
-    note: "The Port Allegany Lions Club repository is a working prototype with launch dependencies. Other work is not described as production without verification.",
-    repository: "https://github.com/cwlwmsystems/port-allegany-lions-club"
+    slug: "seo-aeo-search-intelligence",
+    name: "SEO, AEO & Search Intelligence",
+    type: "Founder engineering experience · Search operations",
+    status: "Production system from prior employment · Sanitized public showcase",
+    summary: "A search-operations platform connecting structured publishing, technical site health, organic search data and AI-visibility evidence into one improvement workflow.",
+    challenge: "Manage a large local-search content footprint consistently while connecting page ownership, rendered-site quality, Search Console data, analytics and AI visibility to actionable work.",
+    delivered: [
+      "Structured page inventory with localized content, SEO metadata, FAQs, internal links and redirects",
+      "Reusable data-driven WordPress page rendering using PostgreSQL and Supabase",
+      "Search Console and rendered-site evidence for site-health, opportunity and content-gap analysis",
+      "Intent, page-ownership, cannibalization and internal-link recommendation workflows",
+      "GA4 AI-referral and Bing AI-citation measurement with source-aware reporting",
+      "Optimization tracking from findings through implementation, verification and outcome measurement"
+    ],
+    engineering: [
+      "PostgreSQL, JSONB and PL/pgSQL models for content relationships and page-level API bundles",
+      "PHP/WordPress REST integration with route validation and safe fallback behavior",
+      "Next.js application workflows, scheduled pipelines and durable issue history",
+      "Evidence-linked scoring models that distinguish missing, zero and incomplete measurements",
+      "Traceable import lineage, editorial controls, and locked before-and-after experiment windows"
+    ],
+    tools: ["Next.js", "TypeScript", "PostgreSQL", "Supabase", "WordPress", "PHP", "Search Console", "GA4", "Bing AI Performance", "JSON-LD"],
+    note: "This is a documented technical case study of a production platform designed and developed by Cwlwm Systems' founder during prior employment at Zito Media. It is not a Cwlwm-owned product or client engagement. The production system, operational data and credentials remain private; the linked personal GitHub repository contains fictional records and simplified public-safe examples.",
+    repository: "https://github.com/kaseypelchy-ops/seo-aeo-content-platform-showcase"
   }
 ];
 export const skillAreas = [

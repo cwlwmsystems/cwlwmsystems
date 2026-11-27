@@ -62,6 +62,12 @@ const projects = [
     image: null,
     imageDescription: "Cwlwm Field Intelligence splash screen",
   },
+  {
+    slug: "seo-aeo-search-intelligence",
+    label: "Engineering showcase / prior employment",
+    image: null,
+    imageDescription: "Conceptual SEO and AEO search intelligence architecture",
+  },
 ].map(item => {
   const project = portfolioProjects.find(p => p.slug === item.slug);
   return project ? { ...item, project } : null;
@@ -145,6 +151,7 @@ export default function HomePage() {
               <article className="cp-work-card" key={item.slug}>
                 <Link href={`/work/${item.slug}`} className={`cp-work-image cp-work-image-${item.slug}`} aria-label={`View ${item.project.name} case study`}>
                   {item.image ? <div className="cp-work-photo" style={{backgroundImage:`url("${item.image}")`}} role="img" aria-label={item.imageDescription}/> :
+                    item.slug === "seo-aeo-search-intelligence" ? <div className="seo-intelligence-visual seo-intelligence-card" role="img" aria-label={item.imageDescription}><span className="seo-intelligence-eyebrow">SEARCH / CONTENT / MEASUREMENT</span><div className="seo-intelligence-metric"><strong>SEO <i>+</i> AEO</strong><small>SEARCH INTELLIGENCE</small></div><div className="seo-intelligence-flow"><span>Content</span><span>Evidence</span><span>Action</span></div><span className="seo-intelligence-foot">ENGINEERING SHOWCASE · PRIOR EMPLOYMENT</span></div> :
                     <FieldOperationsSplash />}
                   <span className="cp-work-view">VIEW PROJECT <span aria-hidden="true">↗</span></span>
                 </Link>
@@ -157,7 +164,7 @@ export default function HomePage() {
               </article>
             ))}
           </div>
-          <p className="cp-accuracy">Portfolio visuals use existing project brand and website assets. Salt &amp; Light Church is a public preview, not a verified finished launch. Cwlwm Field Operations is independent software in development; the visual shows its actual branded loading-screen design, not a dashboard.</p>
+          <p className="cp-accuracy">Portfolio visuals use existing project brand and website assets. Salt &amp; Light Church is a public preview, not a verified finished launch. Cwlwm Field Operations is independent software in development. The SEO/AEO project is an engineering showcase from prior employment, not a Cwlwm-owned product.</p>
         </div>
       </section>
 
