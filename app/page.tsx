@@ -16,7 +16,7 @@ const primaryServices = [
     name: "Websites & ecommerce",
     description: "High-quality digital experiences that are easy to navigate, maintain and grow.",
     tags: "Web design  /  Ecommerce  /  Analytics",
-    href: "/services#digital-experiences",
+    href: "/services/business-websites",
     icon: "window",
   },
   {
@@ -24,7 +24,7 @@ const primaryServices = [
     name: "Custom software",
     description: "Practical applications, portals and internal tools built around your actual workflow.",
     tags: "Applications  /  Portals  /  Data",
-    href: "/services#software-products",
+    href: "/services/custom-software",
     icon: "app",
   },
   {
@@ -32,7 +32,7 @@ const primaryServices = [
     name: "Automation & integrations",
     description: "Connect business systems, remove repetitive steps and improve data reliability.",
     tags: "APIs  /  CRM  /  Operations",
-    href: "/services#connected-systems",
+    href: "/services/automation-integrations",
     icon: "flow",
   },
 ] as const;
@@ -136,7 +136,7 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-          <div className="cp-services-extra"><span>Also available:</span><Link href="/services#brand-growth">Brand & digital growth ↗</Link><Link href="/services#ongoing-partnership">Ongoing technical partnership ↗</Link><Link href="/services" className="cp-services-all">View all services ↗</Link></div>
+          <div className="cp-services-extra"><span>Also available:</span><Link href="/services/seo-aeo">SEO, AEO & digital growth ↗</Link><Link href="/services#ongoing-partnership">Ongoing technical partnership ↗</Link><Link href="/services" className="cp-services-all">View all services ↗</Link></div>
         </div>
       </section>
 
