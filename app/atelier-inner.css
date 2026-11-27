@@ -191,3 +191,59 @@ body:has(.atelier-home) .company-global-footer .container,body:has(.atelier-inne
 .studio-page-cta h2{font-size:clamp(3.7rem,12vw,5.5rem)}
 }
 @media(prefers-reduced-motion:reduce){.atelier-inner *,.atelier-inner *::before,.atelier-inner *::after{transition:none!important;animation:none!important}}
+
+/* The studio footer — site-wide, no stock visuals or decorative cards */
+.studio-footer{background:#081f15;color:#eff1e9;padding:100px 0 20px;font-family:"Helvetica Neue",Arial,sans-serif}
+.studio-footer-container{width:min(calc(100% - 108px),1420px);margin:auto}
+.studio-footer-top{display:grid;grid-template-columns:1.17fr .83fr;gap:110px;padding-bottom:100px}
+.studio-footer-message>span{font-size:.63rem;font-weight:750;letter-spacing:.15em;color:#cdb38a}
+.studio-footer-message h2{font:400 clamp(3.2rem,5.25vw,6.5rem)/1.08 "Iowan Old Style","Baskerville",Georgia,serif;letter-spacing:-.065em;margin:25px 0 40px}
+.studio-footer-message h2 em{color:#d4b38a;font-style:italic}
+.studio-footer-cta{display:inline-flex;align-items:center;gap:65px;justify-content:space-between;background:#9c454b;color:white;padding:18px 22px;font-size:.87rem;font-weight:750;transition:background .2s}
+.studio-footer-cta:hover{background:#b55459}
+.studio-footer-columns{display:grid;grid-template-columns:.8fr .95fr 1.25fr;gap:27px;padding-top:16px}
+.studio-footer-columns>div{display:flex;flex-direction:column;gap:16px;min-width:0}
+.studio-footer-columns strong{display:block;font-size:.64rem;text-transform:uppercase;letter-spacing:.15em;color:#c9b18f;margin-bottom:14px}
+.studio-footer-columns a{font-size:.85rem;color:#c6d8c9;overflow-wrap:anywhere;transition:color .2s}
+.studio-footer-columns a:hover{color:white}
+.studio-footer-contact>span{font-size:.77rem;line-height:1.7;color:#9cbba2}
+.studio-footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.19);padding-top:24px}
+.studio-footer-brand{display:inline-flex;align-items:center;gap:15px;font:400 1.25rem Georgia,serif}
+.studio-footer-brand img{width:39px;height:39px;object-fit:contain}
+.studio-footer-bottom>span{font-size:.67rem;color:#b1c8b3}
+.studio-footer-bottom>div{display:flex;flex-wrap:wrap;gap:18px}
+.studio-footer-bottom>div a{font-size:.68rem;color:#b4ceb8}
+@media(max-width:1150px){.studio-footer-top{grid-template-columns:1fr;gap:45px}.studio-footer-columns{max-width:800px}}
+@media(max-width:700px){.studio-footer{padding:75px 0 18px}.studio-footer-container{width:min(calc(100% - 38px),1420px)}.studio-footer-top{padding-bottom:65px}.studio-footer-columns{grid-template-columns:repeat(2,1fr);gap:38px}.studio-footer-contact{grid-column:1 / -1}.studio-footer-message h2{font-size:clamp(3.3rem,11vw,5.5rem)}.studio-footer-bottom{align-items:start;flex-direction:column;gap:18px}}
+/* Process pages */
+.studio-process-intro,.studio-process-ownership{padding:clamp(105px,12vw,170px) 0;background:#f9f8f2}
+.studio-process-intro .studio-case-grid h2,.studio-process-ownership .studio-case-grid h2{font-size:clamp(3.2rem,5vw,6rem);margin:24px 0}
+.studio-process-intro .studio-case-grid h2 em,.studio-process-ownership .studio-case-grid h2 em{color:#a44b52}
+.studio-process-intro .studio-case-grid>p,.studio-process-ownership .studio-case-grid>div>p{font-size:1.18rem;line-height:1.8;color:#526a58;margin-top:18px}
+.studio-process-ownership{background:#e8ede4}
+.studio-process-ownership .studio-text-link{margin-top:18px}
+.studio-process-phases{background:#103525;color:#eff2e8;padding:clamp(90px,10vw,150px) 0}
+.studio-process-phase{display:grid;grid-template-columns:70px .85fr 1.15fr;align-items:start;gap:60px;padding:45px 4px;border-bottom:1px solid #56725b}
+.studio-process-phase:first-child{border-top:1px solid #56725b}
+.studio-process-phase>span{font-size:.76rem;color:#d9b78d;font-weight:750}
+.studio-process-phase h3{font-size:clamp(2rem,3.2vw,3.6rem);margin:0}
+.studio-process-phase p{color:#c2d7c5;line-height:1.7;font-size:1.02rem;margin:5px 0 0}
+/* Investment options */
+.studio-price-section{background:#f9f8f2;padding:clamp(95px,10.5vw,150px) 0}
+.studio-price-section-muted{background:#e8eee6}
+.studio-price-heading{display:grid;grid-template-columns:.45fr 1.55fr;gap:80px;align-items:start;margin-bottom:60px}
+.studio-price-heading h2{font-size:clamp(3.4rem,5.2vw,6.2rem);margin:0}
+.studio-price-heading h2 em{color:#a64b50}
+.studio-price-list{border-top:1px solid #b4c5b5}
+.studio-price-item{display:grid;grid-template-columns:48px minmax(0,1fr) 215px;gap:45px;padding:42px 3px;border-bottom:1px solid #c8d6c8}
+.studio-price-no{font-size:.68rem;color:#a64b50;font-weight:750}
+.studio-price-item h3{font-size:clamp(2rem,3vw,3.4rem);margin:0 0 14px}
+.studio-price-item p{color:#586f5d;line-height:1.7;max-width:650px}
+.studio-price-includes{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}
+.studio-price-includes span{font-size:.72rem;border:1px solid #c5d2c4;padding:8px 10px;color:#4b6652}
+.studio-price-action{display:flex;flex-direction:column;gap:32px;align-items:flex-start}
+.studio-price-action strong{font:400 1.6rem "Iowan Old Style",Georgia,serif;white-space:nowrap}
+.studio-price-action a{display:inline-flex;gap:35px;justify-content:space-between;font-size:.82rem;font-weight:750;padding-bottom:8px;border-bottom:1px solid #78927b}
+.studio-price-note{color:#697a6c;font-size:.84rem;line-height:1.75;max-width:910px;margin-top:35px}
+@media(max-width:900px){.studio-process-phase{grid-template-columns:40px 1fr;gap:18px}.studio-process-phase p{grid-column:2}.studio-price-heading{grid-template-columns:1fr;gap:20px}.studio-price-item{grid-template-columns:30px 1fr;gap:20px}.studio-price-action{grid-column:2;flex-direction:row;gap:20px;flex-wrap:wrap}}
+@media(max-width:600px){.studio-process-intro,.studio-process-ownership,.studio-process-phases,.studio-price-section{padding:85px 0}.studio-price-item{grid-template-columns:1fr}.studio-price-action{grid-column:1}.studio-price-heading h2{font-size:3.4rem}}
