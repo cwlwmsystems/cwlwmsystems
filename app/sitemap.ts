@@ -3,62 +3,69 @@ import { caseStudies } from "@/lib/case-studies";
 import { insights } from "@/lib/insights";
 import { site } from "@/lib/site";
 import { portfolioProjects } from "@/lib/portfolio";
+import { serviceLandings } from "@/lib/service-landings";
 
+/**
+ * Indexable public routes. Avoid presenting build time as the last actual
+ * modification date of every page; use real, verified content modification
+ * dates only when available.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = [
+  const publicPages = [
     "",
-    "/solutions",
+    "/services",
     "/work",
-    "/expertise",
-    "/problems",
-    "/case-studies",
-    "/pricing",
-    "/systems-review",
-    "/ongoing-partnership",
-    "/industries",
-    "/approach",
-    "/trust",
-    "/insights",
     "/about",
-    "/book",
+    "/approach",
     "/contact",
-    "/legal",
-    "/terms",
-    "/service-agreement",
-    "/privacy",
-    "/cookies",
-    "/acceptable-use",
-    "/data-processing",
-    "/subprocessors",
-    "/billing-cancellation",
-    "/security",
-    "/accessibility",
+    "/pricing",
+    "/expertise",
+    "/ongoing-partnership",
+    "/insights",
+    "/case-studies",
+    "/systems-review",
+    "/industries",
+    "/solutions",
+    "/problems",
+    "/trust",
+    "/book",
+  ];
+  const legalPages = [
+    "/legal", "/terms", "/service-agreement", "/privacy",
+    "/cookies", "/acceptable-use", "/data-processing",
+    "/subprocessors", "/billing-cancellation", "/security", "/accessibility",
   ];
 
   return [
-    ...routes.map((route) => ({
+    ...publicPages.map((route) => ({
       url: `${site.url}${route}`,
-      lastModified: new Date(),
-      changeFrequency: route === "" || route === "/insights" ? "weekly" as const : "monthly" as const,
-      priority: route === "" ? 1 : ["/solutions", "/case-studies", "/pricing", "/ongoing-partnership", "/contact"].includes(route) ? 0.85 : 0.7,
+      changeFrequency: (route === "" || route === "/insights" ? "weekly" : "monthly") as "weekly" | "monthly",
+      priority: route === "" ? 1 : ["/services", "/work", "/contact"].includes(route) ? 0.9 : 0.7,
+    })),
+    ...serviceLandings.map((service) => ({
+      url: `${site.url}/services/${service.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
     })),
     ...portfolioProjects.map((project) => ({
       url: `${site.url}/work/${project.slug}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    })),
-    ...caseStudies.map((study) => ({
-      url: `${site.url}/case-studies/${study.slug}`,
-      lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
+    ...caseStudies.map((study) => ({
+      url: `${site.url}/case-studies/${study.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
     ...insights.map((insight) => ({
       url: `${site.url}/insights/${insight.slug}`,
-      lastModified: new Date(),
       changeFrequency: "monthly" as const,
-      priority: 0.72,
+      priority: 0.6,
+    })),
+    ...legalPages.map((route) => ({
+      url: `${site.url}${route}`,
+      changeFrequency: "yearly" as const,
+      priority: 0.2,
     })),
   ];
 }
