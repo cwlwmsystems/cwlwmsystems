@@ -1,8 +1,37 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { engagementOptions, ongoingEngagementOptions } from "@/lib/site";
-export const metadata:Metadata={title:"Engagements & Pricing | Cwlwm Systems",description:"Explore starting points for systems reviews, integrations, custom software, and ongoing technical partnership. Project scope and pricing are confirmed in proposals.",alternates:{canonical:"/pricing"}};
-export default function PricingPage(){return <div className="company-site company-inner"><section className="company-inner-hero"><div className="company-wrap"><p className="company-eyebrow">WORK WITH CWLWM / ENGAGEMENTS</p><h1>Clear scope.<br/><em>Thoughtful investment.</em></h1><p>Each business and each project is different. These published starting points help you understand the typical scale before we discuss the details.</p></div></section>
-<section className="company-section company-pricing"><div className="company-wrap"><div className="company-heading-pair"><div><p className="company-eyebrow company-eyebrow-dark">PROJECT ENGAGEMENTS</p><h2 className="company-display">Start with <em>clarity.</em></h2></div><p>Every engagement begins with a clear understanding of the work, the people involved, key dependencies, and how the finished outcome will be accepted.</p></div><div className="company-pricing-rows">{engagementOptions.map((p,i)=><article key={p.title} className="company-pricing-row"><span>0{i+1}</span><div><h3>{p.title}</h3><p>{p.fit}</p><ul>{p.includes.map(x=><li key={x}>{x}</li>)}</ul></div><div className="company-price-action"><strong>{p.price}</strong><Link href={p.href} className="company-inline">Explore engagement <span aria-hidden="true">↗</span></Link></div></article>)}</div></div></section>
-<section className="company-section company-pricing company-pricing-tint"><div className="company-wrap"><div className="company-heading-pair"><div><p className="company-eyebrow company-eyebrow-dark">AFTER LAUNCH</p><h2 className="company-display">Stay supported.<br/><em>Keep improving.</em></h2></div><p>Ongoing arrangements are scoped around system complexity, recurring capacity, availability and priorities. They are not unlimited-work subscriptions.</p></div><div className="company-pricing-rows">{ongoingEngagementOptions.map((p,i)=><article key={p.title} className="company-pricing-row"><span>0{i+1}</span><div><h3>{p.title}</h3><p>{p.fit}</p><ul>{p.includes.map(x=><li key={x}>{x}</li>)}</ul></div><div className="company-price-action"><strong>{p.price}</strong><Link href={p.href} className="company-inline">Explore partnership <span aria-hidden="true">↗</span></Link></div></article>)}</div><p className="company-pricing-note">Starting prices are indicative only. Final scope, delivery stages, acceptance criteria, payment schedule, third-party costs, support boundaries and ownership are defined in the written proposal and statement of work.</p></div></section>
-<section className="company-cta"><div className="company-wrap company-cta-layout"><div><p className="company-eyebrow">LET US DEFINE THE WORK</p><h2 className="company-display">The best next step is <em>a conversation.</em></h2></div><Link href="/contact" className="company-button company-button-cream">Talk about your project <span aria-hidden="true">↗</span></Link></div></section></div>}
+
+export const metadata:Metadata={
+ title:"Engagements & Pricing | Cwlwm Systems",
+ description:"Explore published starting points for systems assessments, integrations, custom software and ongoing technical partnership.",
+ alternates:{canonical:"/pricing"},
+};
+
+export default function PricingPage() {
+ return <div className="company-site atelier-inner atelier-pricing-page">
+   <section className="studio-page-hero"><div className="studio-container">
+     <div className="studio-page-top"><span>06 / WORK WITH CWLWM</span><span>ENGAGEMENTS & STARTING POINTS</span></div>
+     <h1>Clear scope.<br/><em>Thoughtful investment.</em></h1>
+     <div className="studio-page-tail"><p>Good projects start with an honest understanding of scope. These are existing published starting points for technical engagements, not one-size-fits-all packages.</p><span>FINAL PRICING BY PROPOSAL</span></div>
+   </div></section>
+   <section className="studio-price-section"><div className="studio-container">
+     <div className="studio-price-heading"><span className="studio-overline">01 / PROJECT ENGAGEMENTS</span><h2>Start where it <em>makes sense.</em></h2></div>
+     <div className="studio-price-list">{engagementOptions.map((item,i)=><article key={item.title} className="studio-price-item">
+       <span className="studio-price-no">0{i+1}</span>
+       <div><h3>{item.title}</h3><p>{item.fit}</p><div className="studio-price-includes">{item.includes.map(x=><span key={x}>{x}</span>)}</div></div>
+       <div className="studio-price-action"><strong>{item.price}</strong><Link href={item.href}>Explore ↗</Link></div>
+     </article>)}</div>
+   </div></section>
+   <section className="studio-price-section studio-price-section-muted"><div className="studio-container">
+     <div className="studio-price-heading"><span className="studio-overline">02 / ONGOING PARTNERSHIP</span><h2>Long-term thinking.<br/><em>Reliable support.</em></h2></div>
+     <div className="studio-price-list">{ongoingEngagementOptions.map((item,i)=><article key={item.title} className="studio-price-item">
+       <span className="studio-price-no">0{i+1}</span>
+       <div><h3>{item.title}</h3><p>{item.fit}</p><div className="studio-price-includes">{item.includes.map(x=><span key={x}>{x}</span>)}</div></div>
+       <div className="studio-price-action"><strong>{item.price}</strong><Link href={item.href}>Explore ↗</Link></div>
+     </article>)}</div>
+     <p className="studio-price-note">Starting fees are illustrative, not commitments for every project. Scope, milestones, deliverables, ownership, additional vendor costs and maintenance expectations are confirmed in a written proposal and agreement.</p>
+   </div></section>
+   <section className="studio-page-cta"><div className="studio-container"><span>LET’S DEFINE THE WORK</span><div><h2>Every project<br/><em>has its own shape.</em></h2><Link href="/contact">Start a conversation ↗</Link></div></div></section>
+ </div>;
+}

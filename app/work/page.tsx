@@ -1,5 +1,52 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { portfolioProjects } from "@/lib/portfolio";
-export const metadata:Metadata={title:"Our Work | Cwlwm Systems",description:"Explore real client projects, original software products and digital projects developed by Cwlwm Systems.",alternates:{canonical:"/work"}};
-export default function WorkPage(){return <div className="company-site company-inner company-work-page"><section className="company-inner-hero"><div className="company-wrap"><p className="company-eyebrow">CWLWM SYSTEMS / SELECTED WORK</p><h1>Real work.<br/><em>Real thinking.</em></h1><p>A selection of websites, custom applications and independently developed products. Project stages are described without overstating outcomes.</p></div></section><section className="company-work-directory"><div className="company-wrap">{portfolioProjects.map((p,i)=><article key={p.slug} className="company-directory-item"><Link className={`company-directory-art company-directory-art-${i+1}`} href={`/work/${p.slug}`} aria-label={`Explore ${p.name}`}><span>PROJECT / 0{i+1}</span><strong>{p.name}</strong><span>EXPLORE <span aria-hidden="true">↗</span></span></Link><div className="company-directory-copy"><p className="company-feature-type">{p.type}</p><h2>{p.name}</h2><p>{p.summary}</p><p className="company-directory-status">{p.status}</p><Link className="company-inline" href={`/work/${p.slug}`}>Explore project <span aria-hidden="true">↗</span></Link></div></article>)}<p className="company-directory-note">Cwlwm Field Operations is an independently developed product, separate from previous employer work. Public case studies are included only where approved or suitable for publication.</p></div></section><section className="company-cta"><div className="company-wrap company-cta-layout"><div><p className="company-eyebrow">WORK WITH CWLWM</p><h2 className="company-display">Your project could be <em>next.</em></h2></div><Link className="company-button company-button-cream" href="/contact">Discuss a project <span aria-hidden="true">↗</span></Link></div></section></div>}
+
+export const metadata: Metadata = {
+  title: "Selected Work | Cwlwm Systems",
+  description: "Explore original client website and ecommerce work alongside independently developed software from Cwlwm Systems. See what is live, what was built, and how it works.",
+  alternates: { canonical: "/work" },
+};
+
+const media = [
+  {slug:"olson-tenglund",src:"https://raw.githubusercontent.com/kaseypelchy-ops/olson-tenglund-info/main/assets/parts-counter-scene.webp",label:"Image used on the Olson & Tenglund website"},
+  {slug:"port-petals",src:"https://raw.githubusercontent.com/cwlwmsystems/port-petals/main/public/heroes/flowers.jpg",label:"Image from the Port Petals storefront"},
+];
+
+const order = ["olson-tenglund","port-petals","cwlwm-field-operations","community-websites"];
+const projects = order.map(slug=>portfolioProjects.find(p=>p.slug===slug)).filter((p):p is typeof portfolioProjects[number]=>Boolean(p));
+
+export default function WorkPage() {
+  return <div className="company-site atelier-inner atelier-work-page">
+    <section className="studio-page-hero">
+      <div className="studio-container">
+        <div className="studio-page-top"><span>01 / THE PORTFOLIO</span><span>CLIENT WORK + INDEPENDENT DEVELOPMENT</span></div>
+        <h1>Built with<br/><em>intention.</em></h1>
+        <div className="studio-page-tail"><p>Each project starts with a real requirement and ends with practical decisions. This is selected work developed independently through Cwlwm Systems.</p><span>SCROLL TO EXPLORE ↓</span></div>
+      </div>
+    </section>
+    <section className="studio-work-index">
+      <div className="studio-container">
+        {projects.map((project,i)=>{
+          const image=media.find(item=>item.slug===project.slug);
+          return <article className="studio-work-item" key={project.slug}>
+            <Link href={`/work/${project.slug}`} className={`studio-work-visual studio-work-visual-${i+1}`} aria-label={`Explore ${project.name}`}>
+              {image ? <div className="studio-work-photo" role="img" aria-label={image.label} style={{backgroundImage:`url("${image.src}")`}}/> :
+                <div className="studio-work-diagram" aria-label="Technical architecture diagram; no fabricated product screenshots"><span>CWLWM / SYSTEM STUDY</span><div><b>INTERFACE</b><i>→</i><b>PROCESS</b><i>→</i><b>DATA</b></div><small>DESIGN · ARCHITECTURE · IMPLEMENTATION</small></div>}
+              <div className="studio-work-visual-footer"><span>PROJECT 0{i+1}</span><span>READ CASE STUDY ↗</span></div>
+            </Link>
+            <div className="studio-work-copy">
+              <span className="studio-overline">{project.type}</span>
+              <h2><Link href={`/work/${project.slug}`}>{project.name}</Link></h2>
+              <p>{project.summary}</p>
+              <span className="studio-status">{project.status}</span>
+              <Link href={`/work/${project.slug}`} className="studio-text-link">Explore the work <span aria-hidden="true">↗</span></Link>
+            </div>
+          </article>;
+        })}
+        <p className="studio-accuracy">Photography represents media used in the respective website projects. Architectural illustrations are schematics, not screenshots. Employment projects are not represented as Cwlwm client engagements.</p>
+      </div>
+    </section>
+    <section className="studio-page-cta"><div className="studio-container"><span>YOUR PROJECT / NEXT</span><div><h2>Build something<br/><em>meaningful.</em></h2><Link href="/contact">Discuss your project ↗</Link></div></div></section>
+  </div>;
+}
