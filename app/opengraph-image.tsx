@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Cwlwm Systems — Connected systems. Clearer operations.";
+export const alt = "Cwlwm Systems — Websites, Software and Connected Systems";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -12,10 +12,10 @@ export default function Image() {
       <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%" }}>
         <div style={{ display: "flex", fontSize: 30, letterSpacing: 3, textTransform: "uppercase", color: "#d6c9b6" }}>CWLWM SYSTEMS</div>
         <div style={{ display: "flex", flexDirection: "column", maxWidth: 870 }}>
-          <div style={{ fontSize: 74, fontWeight: 700, lineHeight: 1.02, letterSpacing: -3 }}>Make your business systems work together.</div>
-          <div style={{ marginTop: 28, fontSize: 28, color: "#c7d3cb" }}>Custom operational software · Integrations · Automation · AI</div>
+          <div style={{ fontSize: 66, fontWeight: 700, lineHeight: 1.02, letterSpacing: -3 }}>Better websites. Smarter systems. Stronger businesses.</div>
+          <div style={{ marginTop: 28, fontSize: 28, color: "#c7d3cb" }}>Websites · Ecommerce · Custom software · Automation</div>
         </div>
-        <div style={{ display: "flex", fontSize: 24, color: "#72aa87" }}>Connected systems. Clearer operations.</div>
+        <div style={{ display: "flex", fontSize: 24, color: "#72aa87" }}>Design. Build. Connect. Support.</div>
       </div>
     </div>,
     size,
