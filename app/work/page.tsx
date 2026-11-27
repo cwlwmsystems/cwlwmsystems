@@ -10,10 +10,11 @@ export const metadata: Metadata = {
 
 const media = [
   {slug:"olson-tenglund",src:"https://raw.githubusercontent.com/kaseypelchy-ops/olson-tenglund-info/main/assets/parts-counter-scene.webp",label:"Image used on the Olson & Tenglund website"},
-  {slug:"port-petals",src:"https://raw.githubusercontent.com/cwlwmsystems/port-petals/main/public/heroes/flowers.jpg",label:"Image from the Port Petals storefront"},
+  {slug:"port-petals",src:"https://raw.githubusercontent.com/cwlwmsystems/port-petals/main/public/port-petals-logo-transparent.png",label:"Port Petals logo artwork featured on the ecommerce storefront"},
+  {slug:"salt-light-church",src:"https://raw.githubusercontent.com/kaseypelchy-ops/church-website/main/public/images/placeholders/landscape/hero-worship.jpg",label:"Worship image used on the Salt & Light Church site preview"},
 ];
 
-const order = ["olson-tenglund","port-petals","cwlwm-field-operations","community-websites"];
+const order = ["olson-tenglund","port-petals","salt-light-church","cwlwm-field-operations","community-websites"];
 const projects = order.map(slug=>portfolioProjects.find(p=>p.slug===slug)).filter((p):p is typeof portfolioProjects[number]=>Boolean(p));
 
 export default function WorkPage() {
@@ -44,7 +45,7 @@ export default function WorkPage() {
             </div>
           </article>;
         })}
-        <p className="studio-accuracy">Photography represents media used in the respective website projects. Architectural illustrations are schematics, not screenshots. Employment projects are not represented as Cwlwm client engagements.</p>
+        <p className="studio-accuracy">Project visuals show artwork and media used on their respective websites. Salt &amp; Light Church is a public site preview with some placeholder content and unfinished integrations. Architecture illustrations are schematics, not screenshots. Employment projects are not represented as Cwlwm client engagements.</p>
       </div>
     </section>
     <section className="studio-page-cta"><div className="studio-container"><span>YOUR PROJECT / NEXT</span><div><h2>Build something<br/><em>meaningful.</em></h2><Link href="/contact">Discuss your project ↗</Link></div></div></section>

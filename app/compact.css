@@ -216,3 +216,17 @@ body:has(.compact-site) .site-header .container,body:has(.atelier-inner) .site-h
 .studio-case-schematic-flow strong{padding:11px!important}
 }
 @media(prefers-reduced-motion:reduce){.compact-site *,.compact-site *::before,.compact-site *::after{transition:none!important;animation:none!important}}
+
+/* Portfolio showcase: real branded project assets in a compact two-column grid */
+.cp-work-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.cp-work-image{aspect-ratio:1.88}
+.cp-work-image-port-petals{background:radial-gradient(circle at 84% 9%,#ebf1db,transparent 45%),linear-gradient(105deg,#f8e8df,#f3f1df)}
+.cp-work-image-port-petals .cp-work-photo{background-size:contain;background-repeat:no-repeat;background-position:center;inset:9%}
+.cp-work-image-salt-light-church{background:#17271e}
+.cp-work-image-salt-light-church .cp-work-photo{background-position:center 42%;filter:brightness(.9)}
+.cp-work-description>p{min-height:0}
+.studio-work-visual:has(.studio-work-photo[aria-label*="Port Petals"]){background:radial-gradient(circle at 80% 20%,#e4ecd8,transparent 45%),linear-gradient(120deg,#fae9df,#f4f0df)}
+.studio-work-visual .studio-work-photo[aria-label*="Port Petals"]{background-size:contain;background-repeat:no-repeat;inset:10%}
+.studio-case-photo[aria-label*="Port Petals"]{background-size:contain;background-repeat:no-repeat;background-color:#f6eee5}
+.studio-case-photo[aria-label*="Salt & Light"]{background-position:center 45%}
+@media(max-width:700px){.cp-work-grid{grid-template-columns:1fr}.cp-work-image{aspect-ratio:1.75}}

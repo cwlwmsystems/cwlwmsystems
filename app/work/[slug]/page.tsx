@@ -12,7 +12,8 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
 
 const images: Record<string, string> = {
   "olson-tenglund": "https://raw.githubusercontent.com/kaseypelchy-ops/olson-tenglund-info/main/assets/parts-counter-scene.webp",
-  "port-petals": "https://raw.githubusercontent.com/cwlwmsystems/port-petals/main/public/heroes/flowers.jpg",
+  "port-petals": "https://raw.githubusercontent.com/cwlwmsystems/port-petals/main/public/port-petals-logo-transparent.png",
+  "salt-light-church": "https://raw.githubusercontent.com/kaseypelchy-ops/church-website/main/public/images/placeholders/landscape/hero-worship.jpg",
 };
 
 export default async function ProjectPage({params}:{params:Promise<{slug:string}>}){
@@ -33,7 +34,7 @@ export default async function ProjectPage({params}:{params:Promise<{slug:string}
       <div className="studio-container">
         {image?<div className="studio-case-photo" role="img" aria-label={`Photography used by the ${p.name} project`} style={{backgroundImage:`url("${image}")`}}/>:
         <div className="studio-case-schematic" aria-label="Conceptual architecture, not a production screenshot"><div><span>CWLWM SYSTEMS / ARCHITECTURE</span><span>DOCUMENTED SYSTEM DESIGN</span></div><div className="studio-case-schematic-flow"><strong>USERS</strong><span>↔</span><strong>APPLICATION</strong><span>↔</span><strong>BUSINESS DATA</strong></div><div><span>DATA MODEL / INTEGRATION / WORKFLOWS</span><span>NOT A SCREENSHOT</span></div></div>}
-        <p className="studio-case-image-note">{image?"Project image originates from media used in the respective website; it is not presented as a full interface screenshot.":"This diagram is a schematic of the type of system described; it does not represent a production screenshot."}</p>
+        <p className="studio-case-image-note">{image?"This image or artwork is used on the linked project website, but it is not a screenshot of the entire interface. Salt & Light Church is an in-progress public preview.":"This diagram is a schematic of the type of system described; it does not represent a production screenshot."}</p>
       </div>
     </section>
     <section className="studio-case-chapter">

@@ -36,6 +36,28 @@ export const portfolioProjects: PortfolioProject[] = [
     website: "https://olsontenglund.com", repository: "https://github.com/kaseypelchy-ops/olson-tenglund-info"
   },
   {
+    slug: "salt-light-church", name: "Salt & Light Church", type: "Community website", status: "Public preview / final content and integrations in progress",
+    summary: "A branded church website that helps visitors find worship information, ministries, events, missions and ways to connect.",
+    challenge: "Give a local church a welcoming digital presence, make essential visitor information easy to find and organize ministry, event and community content into a coherent experience.",
+    delivered: [
+      "Custom visual identity application and responsive website layout",
+      "Homepage featuring worship information and a prominent Plan Your Visit path",
+      "Dedicated pages for ministries, missions, events, worship, giving and church information",
+      "Structured event presentation and clear pathways for new visitors",
+      "Consistent navigation, typography and responsive page templates"
+    ],
+    engineering: [
+      "Next.js application with reusable layouts, navigation and section components",
+      "Responsive content hierarchy and accessible navigation patterns",
+      "Separate route structures for visits, events, ministries and giving",
+      "Vercel preview deployment for review and iteration"
+    ],
+    tools: ["Next.js", "React", "TypeScript", "Responsive design", "Vercel"],
+    note: "The public Vercel site is a design and content preview. Some dates, photographs, donation links and other calls to action remain placeholders; a working donation integration or production rollout has not been verified.",
+    website: "https://saltlightchurch.vercel.app",
+    repository: "https://github.com/kaseypelchy-ops/church-website"
+  },
+  {
     slug: "community-websites", name: "Community Websites", type: "Community and nonprofit web projects", status: "Mixed project stages",
     summary: "Accessible, manageable websites and communication experiences for local organizations.",
     challenge: "Help smaller organizations establish a digital home with clear information, community engagement and support pathways.",

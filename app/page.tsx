@@ -46,8 +46,14 @@ const projects = [
   {
     slug: "port-petals",
     label: "Ecommerce & customer experience",
-    image: "https://raw.githubusercontent.com/cwlwmsystems/port-petals/main/public/heroes/flowers.jpg",
-    imageDescription: "Photography from the Port Petals storefront",
+    image: "https://raw.githubusercontent.com/cwlwmsystems/port-petals/main/public/port-petals-logo-transparent.png",
+    imageDescription: "Port Petals brand artwork featured in the storefront",
+  },
+  {
+    slug: "salt-light-church",
+    label: "Community website / public preview",
+    image: "https://raw.githubusercontent.com/kaseypelchy-ops/church-website/main/public/images/placeholders/landscape/hero-worship.jpg",
+    imageDescription: "Worship imagery used in the Salt & Light Church site preview",
   },
   {
     slug: "cwlwm-field-operations",
@@ -130,7 +136,7 @@ export default function HomePage() {
       <section className="cp-work cp-section" aria-labelledby="cp-work-title">
         <div className="cp-container">
           <div className="cp-section-header">
-            <div><span className="cp-overline">SELECTED WORK</span><h2 id="cp-work-title">Real projects. Practical results.</h2></div>
+            <div><span className="cp-overline">SELECTED WORK</span><h2 id="cp-work-title">Built for real businesses and communities.</h2></div>
             <Link href="/work" className="cp-inline-link">View all projects <span aria-hidden="true">↗</span></Link>
           </div>
           <div className="cp-work-grid">
@@ -154,7 +160,7 @@ export default function HomePage() {
               </article>
             ))}
           </div>
-          <p className="cp-accuracy">Project imagery originates from the respective websites. Cwlwm Field Operations is independently developed; its visual is a schematic, not a product screenshot.</p>
+          <p className="cp-accuracy">Portfolio visuals use existing project brand and website assets. Salt &amp; Light Church is a public preview, not a verified finished launch. Cwlwm Field Operations is independent software in development; its visual is a schematic, not a product screenshot.</p>
         </div>
       </section>
 
