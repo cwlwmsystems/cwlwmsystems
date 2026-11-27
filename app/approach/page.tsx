@@ -1,5 +1,33 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { companyPrinciples } from "@/lib/company";
-export const metadata:Metadata={title:"Our Approach | Cwlwm Systems",description:"How Cwlwm Systems approaches discovery, design, implementation, adoption and ongoing technical support.",alternates:{canonical:"/approach"}};
-export default function ApproachPage(){return <div className="company-site company-inner"><section className="company-inner-hero"><div className="company-wrap"><p className="company-eyebrow">HOW WE WORK / THE PROCESS</p><h1>Thoughtful from <em>day one.</em></h1><p>Good work is the result of clear goals, careful decisions and a process that keeps everyone aligned.</p></div></section><section className="company-section company-method"><div className="company-wrap"><div className="company-heading-pair"><div><p className="company-eyebrow company-eyebrow-dark">OUR PRINCIPLES</p><h2 className="company-display">Built to work.<br/><em>Built to last.</em></h2></div><p>Every engagement begins with the business problem. We choose the smallest appropriate solution and build toward a usable outcome.</p></div><div className="company-method-steps">{companyPrinciples.map(step=><article key={step.number}><span>{step.number}</span><h3>{step.name}</h3><p>{step.description}</p></article>)}</div></div></section><section className="company-section company-delivery"><div className="company-wrap company-founder-layout"><div><p className="company-eyebrow company-eyebrow-dark">WHAT TO EXPECT</p><h2 className="company-display">Clear ownership.<br/><em>No mystery.</em></h2></div><div><p>We start by discussing what needs to change and how success should be measured. Then we document scope, dependencies, responsibilities and implementation choices before committing to a delivery plan.</p><p>When the work is ready, we test the real workflows, help people adopt the new system and agree on either a documented handoff or ongoing technical support.</p><Link href="/contact" className="company-inline">Discuss a project <span aria-hidden="true">↗</span></Link></div></div></section><section className="company-cta"><div className="company-wrap company-cta-layout"><div><p className="company-eyebrow">LET US BEGIN</p><h2 className="company-display">The right solution starts with <em>clarity.</em></h2></div><Link className="company-button company-button-cream" href="/contact">Start a conversation <span aria-hidden="true">↗</span></Link></div></section></div>}
+
+export const metadata:Metadata={
+ title:"Our Approach | Cwlwm Systems",
+ description:"How Cwlwm Systems approaches discovery, design, architecture, implementation, onboarding and long-term technical ownership.",
+ alternates:{canonical:"/approach"},
+};
+
+export default function ApproachPage(){
+ return <div className="company-site atelier-inner atelier-approach-page">
+   <section className="studio-page-hero"><div className="studio-container">
+     <div className="studio-page-top"><span>05 / THE APPROACH</span><span>BUSINESS FIRST / TECHNOLOGY SECOND</span></div>
+     <h1>Considered from<br/><em>the beginning.</em></h1>
+     <div className="studio-page-tail"><p>Not just a finished interface, but a clear process, strong decisions and a system your business can own with confidence.</p><span>DISCOVERY → DELIVERY</span></div>
+   </div></section>
+   <section className="studio-process-intro"><div className="studio-container studio-case-grid">
+     <div><span className="studio-overline">A WORKING PRINCIPLE</span><h2>Understand first.<br/><em>Build second.</em></h2></div>
+     <p>The objective isn't to introduce more technology. It's to understand what needs to change, the people involved, the systems already in place and what a practical result looks like. Then we choose the right level of design and engineering.</p>
+   </div></section>
+   <section className="studio-process-phases"><div className="studio-container">
+     {companyPrinciples.map((step)=><article key={step.number} className="studio-process-phase">
+       <span>{step.number}</span><h3>{step.name}</h3><p>{step.description}</p>
+     </article>)}
+   </div></section>
+   <section className="studio-process-ownership"><div className="studio-container studio-case-grid">
+     <div><span className="studio-overline">LONG-TERM THINKING</span><h2>What happens<br/><em>after launch?</em></h2></div>
+     <div><p>We define what success means before starting. When the work is ready, we validate the real workflows, prepare documentation and agree on support, training, or a straightforward handoff. Clients should never be left guessing what happens next.</p><Link href="/services#ongoing-partnership" className="studio-text-link">Explore ongoing partnership <span aria-hidden="true">↗</span></Link></div>
+   </div></section>
+   <section className="studio-page-cta"><div className="studio-container"><span>YOUR PROJECT / OUR NEXT CONVERSATION</span><div><h2>Let's get<br/><em>it right.</em></h2><Link href="/contact">Discuss a project ↗</Link></div></div></section>
+ </div>;
+}
