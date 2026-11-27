@@ -114,7 +114,7 @@ export default async function ServiceLandingPage({
         <div className="cp-landing-container">
           <header className="cp-landing-section-head">
             <span>02 / THE DELIVERABLES</span>
-            <h2>What's included in the conversation.</h2>
+            <h2>What&apos;s included in the conversation.</h2>
             <p>The scope is defined around your requirements, not a fixed list of unnecessary features.</p>
           </header>
           <div className="cp-landing-deliverables">
@@ -189,7 +189,7 @@ export default async function ServiceLandingPage({
 
       <section className="cp-landing-finish">
         <div className="cp-landing-container">
-          <div><span>LET'S DISCUSS YOUR REQUIREMENTS</span><h2>Make the next move count.</h2><p>Start with your business problem and what you want to improve. We'll identify a sensible next step.</p></div>
+          <div><span>LET&apos;S DISCUSS YOUR REQUIREMENTS</span><h2>Make the next move count.</h2><p>Start with your business problem and what you want to improve. We&apos;ll identify a sensible next step.</p></div>
           <Link className="cp-landing-button" href={contactUrl}>Start a conversation <span aria-hidden="true">↗</span></Link>
         </div>
       </section>
