@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { companyServices } from "@/lib/company";
+import { serviceLandings } from "@/lib/service-landings";
 
 export const metadata:Metadata={
   title:"Services | Websites, Software & Connected Systems",
@@ -27,6 +28,7 @@ export default function ServicesPage(){
         </article>)}
       </div>
     </section>
+    <section className="cp-service-directory"><div className="studio-container"><div className="cp-service-directory-heading"><span className="studio-overline">FIND THE RIGHT STARTING POINT</span><h2>Explore the services in detail.</h2><p>Clear scope, common questions and relevant project experience for the problems businesses bring to Cwlwm.</p></div><div className="cp-service-directory-grid">{serviceLandings.map((service)=><Link key={service.slug} href={`/services/${service.slug}`} className="cp-service-directory-link"><span>{service.eyebrow} ↗</span><strong>{service.metaTitle}</strong><p>{service.metaDescription}</p></Link>)}</div></div></section>
     <section className="studio-page-cta"><div className="studio-container"><span>WHAT DO YOU NEED TO CHANGE?</span><div><h2>Let&apos;s find<br/><em>the right answer.</em></h2><Link href="/contact">Start with a conversation ↗</Link></div></div></section>
   </div>;
 }
