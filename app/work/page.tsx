@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { portfolioProjects } from "@/lib/portfolio";
+import { FieldOperationsSplash } from "@/components/FieldOperationsSplash";
 
 export const metadata: Metadata = {
   title: "Selected Work | Cwlwm Systems",
@@ -33,7 +34,7 @@ export default function WorkPage() {
           return <article className="studio-work-item" key={project.slug}>
             <Link href={`/work/${project.slug}`} className={`studio-work-visual studio-work-visual-${i+1}`} aria-label={`Explore ${project.name}`}>
               {image ? <div className="studio-work-photo" role="img" aria-label={image.label} style={{backgroundImage:`url("${image.src}")`}}/> :
-                <div className="studio-work-diagram" aria-label="Technical architecture diagram; no fabricated product screenshots"><span>CWLWM / SYSTEM STUDY</span><div><b>INTERFACE</b><i>→</i><b>PROCESS</b><i>→</i><b>DATA</b></div><small>DESIGN · ARCHITECTURE · IMPLEMENTATION</small></div>}
+                project.slug === "cwlwm-field-operations" ? <FieldOperationsSplash /> : <div className="studio-work-diagram" aria-label="Abstract design schematic"><span>CWLWM / SYSTEM STUDY</span><div><b>INTERFACE</b><i>→</i><b>PROCESS</b><i>→</i><b>DATA</b></div><small>DESIGN · ARCHITECTURE · IMPLEMENTATION</small></div>}
               <div className="studio-work-visual-footer"><span>PROJECT 0{i+1}</span><span>READ CASE STUDY ↗</span></div>
             </Link>
             <div className="studio-work-copy">
@@ -45,7 +46,7 @@ export default function WorkPage() {
             </div>
           </article>;
         })}
-        <p className="studio-accuracy">Project visuals show artwork and media used on their respective websites. Salt &amp; Light Church is a public site preview with some placeholder content and unfinished integrations. Architecture illustrations are schematics, not screenshots. Employment projects are not represented as Cwlwm client engagements.</p>
+        <p className="studio-accuracy">Project visuals show artwork and media used on their respective websites. Salt &amp; Light Church is a public site preview with some placeholder content and unfinished integrations. The Field Operations image reproduces its actual branded loading screen, not its operational dashboard. Remaining architecture illustrations are schematics. Employment projects are not represented as Cwlwm client engagements.</p>
       </div>
     </section>
     <section className="studio-page-cta"><div className="studio-container"><span>YOUR PROJECT / NEXT</span><div><h2>Build something<br/><em>meaningful.</em></h2><Link href="/contact">Discuss your project ↗</Link></div></div></section>
