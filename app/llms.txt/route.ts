@@ -1,78 +1,38 @@
-import { site, solutions, industries, engagementOptions, ongoingEngagementOptions } from "@/lib/site";
-import { caseStudies } from "@/lib/case-studies";
-import { insights } from "@/lib/insights";
+import { site } from "@/lib/site";
+import { serviceLandings } from "@/lib/service-landings";
+import { portfolioProjects } from "@/lib/portfolio";
 
 export function GET() {
-  const text = `# Cwlwm Systems
-
-> ${site.tagline}
-
-Cwlwm Systems is an independent, founder-led systems studio that designs custom operational software, integrations, workflow automation, AI-assisted business systems, and data/decision intelligence for businesses whose work has outgrown disconnected tools and manual handoffs. Cwlwm Systems also provides implementation, onboarding, training, phased development, maintenance, and ongoing fractional systems partnership.
-
-## Core positioning
-
-Cwlwm Systems builds the operating layer between people, processes, data, and software. The company favors connecting and extending useful existing systems before recommending replacement. Clients work directly with the person diagnosing, designing, building, and refining the system.
-
-## Solutions
-
-${solutions.map((item) => `- ${item.title}: ${item.short}`).join("\n")}
-
-## Engagements and starting prices
-
-${engagementOptions.map((item) => `- ${item.title}: ${item.price}. ${item.fit}`).join("\n")}
-
-## Ongoing systems partnership
-
-${ongoingEngagementOptions.map((item) => `- ${item.title}: ${item.price}. ${item.fit}`).join("\n")}
-
-Retainers reserve defined recurring capacity and availability. They are not unlimited service plans. Ongoing work can include maintenance, troubleshooting, onboarding, training, future phases, integrations, documentation, and systems roadmap ownership.
-
-## Systems & Workflow Review
-
-A fixed-price $750 review of one defined workflow or operating problem. Deliverables include a current-state workflow map, systems/data inventory, bottlenecks and risks, automation opportunities, and a prioritized roadmap.
-
-## Representative system patterns
-
-${caseStudies.map((item) => `- ${item.title}: ${item.intro}`).join("\n")}
-
-## Industries and use cases
-
-${industries.map((item) => `- ${item.title}: ${item.intro}`).join("\n")}
-
-## Insights
-
-${insights.map((item) => `- ${item.title}: ${item.description}`).join("\n")}
-
-## How projects begin
-
-A prospect can describe a manual process, disconnected tools, data problem, workflow bottleneck, or system that should work differently. Cwlwm Systems determines whether the right next step is a short project-fit call, a paid systems review, an integration, automation, a focused internal tool, a larger custom build, phased development, or an ongoing systems partnership.
-
-## Important pages
-
-- Home: ${site.url}/
-- Solutions: ${site.url}/solutions
-- Problems I solve: ${site.url}/problems
-- Case studies: ${site.url}/case-studies
-- Engagements & pricing: ${site.url}/pricing
-- Systems & Workflow Review: ${site.url}/systems-review
-- Ongoing Systems Partnership: ${site.url}/ongoing-partnership
-- Book a project-fit call: ${site.url}/book
-- Industries: ${site.url}/industries
-- Approach: ${site.url}/approach
-- Trust & ownership: ${site.url}/trust
-- Insights: ${site.url}/insights
-- About: ${site.url}/about
-- Contact: ${site.url}/contact
-- Legal & policies: ${site.url}/legal
-- Standard Service Agreement: ${site.url}/service-agreement
-- Privacy Policy: ${site.url}/privacy
-- Security Practices: ${site.url}/security
-
-## Contact
-
-Email: ${site.email}
-Website: ${site.url}
-`;
+  // Optional machine-readable service directory. This is not an indexing directive,
+  // a claim of official AI preference, or a substitute for useful HTML pages.
+  const text = [
+    "# Cwlwm Systems",
+    "",
+    "> Independently operated digital and business systems company, based in Pennsylvania and serving businesses remotely.",
+    "",
+    "Cwlwm Systems builds business websites, ecommerce experiences, custom software, API integrations, workflow automation, CRM-connected processes, digital growth foundations and ongoing technical support.",
+    "",
+    "## Core services",
+    "",
+    ...serviceLandings.map((service) => `- ${service.metaTitle}: ${site.url}/services/${service.slug} — ${service.metaDescription}`),
+    "",
+    "## Selected work and technical experience",
+    "",
+    ...portfolioProjects.map((project) => `- ${project.name}: ${site.url}/work/${project.slug} — ${project.status}. ${project.summary}`),
+    "",
+    "Important distinction: Cwlwm's client work and independently owned software are distinct from engineering experience at previous employers. The SEO/AEO search-intelligence platform was developed during prior employment; its public showcase contains sanitized examples, not private production data or a software product owned by Cwlwm Systems.",
+    "",
+    "## About and contact",
+    "",
+    `- Services: ${site.url}/services`,
+    `- Work: ${site.url}/work`,
+    `- Company: ${site.url}/about`,
+    `- Approach: ${site.url}/approach`,
+    `- Contact: ${site.url}/contact`,
+    `- Email: ${site.email}`,
+    "",
+    "This file is provided only as a factual summary. Search and AI visibility are not guaranteed.",
+  ].join("\n");
 
   return new Response(text, {
     headers: { "Content-Type": "text/plain; charset=utf-8" },
