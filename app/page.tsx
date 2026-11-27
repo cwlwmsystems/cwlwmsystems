@@ -73,18 +73,6 @@ const projects = [
   return project ? { ...item, project } : null;
 }).filter((item): item is NonNullable<typeof item> => item !== null);
 
-type Project = typeof portfolioProjects[number];
-type ProjectTile = {
-  slug: string;
-  label: string;
-  image: string | null;
-  imageDescription: string;
-  project: Project | undefined;
-};
-type DefinedProjectTile = Omit<ProjectTile, "project"> & { project: Project };
-// Typed inference helper used to keep project references grounded to portfolio entries.
- 
-
 export default function HomePage() {
   return (
     <div className="company-site compact-site">
