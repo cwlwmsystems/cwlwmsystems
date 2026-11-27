@@ -58,3 +58,16 @@
 @media(max-width:850px){.cp-landing-container{width:min(calc(100% - 42px),1130px)}.cp-landing-hero-grid{grid-template-columns:1fr;gap:30px}.cp-landing-audience{max-width:none}}
 @media(max-width:650px){.cp-landing-container{width:min(calc(100% - 34px),1130px)}.cp-landing-hero{padding:28px 0 47px}.cp-landing-breadcrumb{margin-bottom:35px}.cp-landing h1{font-size:2.4rem}.cp-landing-section{padding:46px 0}.cp-landing-three,.cp-landing-deliverables,.cp-landing-proof-grid{grid-template-columns:1fr}.cp-landing-finish .cp-landing-container{align-items:flex-start;flex-direction:column;gap:22px}.cp-landing-actions{align-items:flex-start;flex-direction:column}}
 @media(prefers-reduced-motion:reduce){.cp-landing *{transition:none!important}}
+
+/* Service directory: direct paths to individually helpful commercial landing pages */
+.cp-service-directory{padding:57px 0 68px;background:#eef3ed}
+.cp-service-directory-heading{margin-bottom:25px}
+.cp-service-directory-heading h2{font:650 clamp(1.7rem,2.6vw,2.4rem)/1.15 Arial,sans-serif;letter-spacing:-.04em;margin:9px 0}
+.cp-service-directory-heading>p{font-size:.9rem;line-height:1.65;color:#5c7161;max-width:720px}
+.cp-service-directory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.cp-service-directory-link{padding:22px 24px;border:1px solid #cad8ca;background:#fff;border-radius:6px;transition:border-color .2s,transform .2s}
+.cp-service-directory-link:hover{transform:translateY(-2px);border-color:#71947a}
+.cp-service-directory-link>span{display:block;color:#8a6557;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.cp-service-directory-link strong{display:block;font-size:1.09rem;margin:12px 0 7px;color:#244833}
+.cp-service-directory-link p{font-size:.85rem;line-height:1.55;color:#617366;margin:0}
+@media(max-width:650px){.cp-service-directory{padding:48px 0}.cp-service-directory-grid{grid-template-columns:1fr}}
