@@ -230,3 +230,37 @@ body:has(.compact-site) .site-header .container,body:has(.atelier-inner) .site-h
 .studio-case-photo[aria-label*="Port Petals"]{background-size:contain;background-repeat:no-repeat;background-color:#f6eee5}
 .studio-case-photo[aria-label*="Salt & Light"]{background-position:center 45%}
 @media(max-width:700px){.cp-work-grid{grid-template-columns:1fr}.cp-work-image{aspect-ratio:1.75}}
+
+/* Authentic Field Intelligence branded loading-screen presentation.
+   Uses the real logo from the independent Field Operations project repository.
+   Static portfolio depiction, not a fake operational dashboard. */
+.field-splash{
+ position:absolute;inset:0;overflow:hidden;display:grid;place-items:center;
+ background:
+  radial-gradient(ellipse 70% 75% at -5% 0%,rgba(35,149,100,.27),transparent 75%),
+  radial-gradient(ellipse 65% 70% at 105% 97%,rgba(213,59,84,.22),transparent 75%),
+  #fbfcfa;
+ isolation:isolate;
+}
+.field-splash-watermark{position:absolute;width:37%;aspect-ratio:1;background:url("/cwlwm-knot.png") center/contain no-repeat;opacity:.037;pointer-events:none}
+.field-splash-watermark-a{bottom:-19%;left:-14%}
+.field-splash-watermark-b{top:-24%;right:-13%}
+.field-splash-content{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0;position:relative;z-index:1}
+.field-splash-brand{
+ width:38%;max-width:260px;height:65%;max-height:310px;
+ background:url("https://raw.githubusercontent.com/cwlwmsystems/cwlwm-field-operations/main/public/brand/cwlwm-systems-full.png") center/contain no-repeat;
+}
+.field-splash-product{color:#08603d;font-weight:850;font-size:clamp(.48rem,.77vw,.82rem);letter-spacing:.32em;text-align:center;margin-top:-3%}
+.field-splash-progress{margin-top:16px;width:32%;height:5px;border:1px solid #d3e0d6;border-radius:99px;overflow:hidden;background:#fff}
+.field-splash-progress span{display:block;width:47%;height:100%;background:linear-gradient(90deg,#005d39 0%,#0a7a47 52%,#d83b52 97%);border-radius:99px}
+.field-splash-label{font-size:clamp(.4rem,.63vw,.65rem);letter-spacing:.25em;font-weight:750;color:#7c9584;margin-top:8px}
+.studio-work-visual:has(.field-splash),.studio-case-visual-section:has(.field-splash){background:#fbfcfa}
+.studio-case-splash{width:100%;aspect-ratio:2.15;position:relative;border:1px solid #d7e3d6;overflow:hidden}
+.studio-work-visual:has(.field-splash)::after{display:none}
+.studio-work-visual:has(.field-splash) .studio-work-visual-footer{color:#28503c;border-color:rgba(35,88,55,.3)}
+.cp-work-image:has(.field-splash) .cp-work-view{z-index:2}
+@media(max-width:700px){
+ .field-splash-brand{height:64%;width:39%}
+ .field-splash-progress{margin-top:9px;height:4px}
+ .studio-case-splash{aspect-ratio:1.6}
+}

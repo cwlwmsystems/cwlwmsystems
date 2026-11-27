@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { portfolioProjects } from "@/lib/portfolio";
+import { FieldOperationsSplash } from "@/components/FieldOperationsSplash";
 
 export function generateStaticParams() { return portfolioProjects.map(p=>({slug:p.slug})); }
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
@@ -33,8 +34,8 @@ export default async function ProjectPage({params}:{params:Promise<{slug:string}
     <section className="studio-case-visual-section">
       <div className="studio-container">
         {image?<div className="studio-case-photo" role="img" aria-label={`Photography used by the ${p.name} project`} style={{backgroundImage:`url("${image}")`}}/>:
-        <div className="studio-case-schematic" aria-label="Conceptual architecture, not a production screenshot"><div><span>CWLWM SYSTEMS / ARCHITECTURE</span><span>DOCUMENTED SYSTEM DESIGN</span></div><div className="studio-case-schematic-flow"><strong>USERS</strong><span>↔</span><strong>APPLICATION</strong><span>↔</span><strong>BUSINESS DATA</strong></div><div><span>DATA MODEL / INTEGRATION / WORKFLOWS</span><span>NOT A SCREENSHOT</span></div></div>}
-        <p className="studio-case-image-note">{image?"This image or artwork is used on the linked project website, but it is not a screenshot of the entire interface. Salt & Light Church is an in-progress public preview.":"This diagram is a schematic of the type of system described; it does not represent a production screenshot."}</p>
+        p.slug === "cwlwm-field-operations" ? <div className="studio-case-splash"><FieldOperationsSplash /></div> : <div className="studio-case-schematic" aria-label="Conceptual architecture, not a production screenshot"><div><span>CWLWM SYSTEMS / ARCHITECTURE</span><span>DOCUMENTED SYSTEM DESIGN</span></div><div className="studio-case-schematic-flow"><strong>USERS</strong><span>↔</span><strong>APPLICATION</strong><span>↔</span><strong>BUSINESS DATA</strong></div><div><span>DATA MODEL / INTEGRATION / WORKFLOWS</span><span>NOT A SCREENSHOT</span></div></div>}
+        <p className="studio-case-image-note">{image?"This image or artwork is used on the linked project website, but it is not a screenshot of the entire interface. Salt & Light Church is an in-progress public preview." : p.slug === "cwlwm-field-operations" ? "This is a static reconstruction of the real Field Intelligence loading screen using the product branding; it is not a screenshot of the authenticated application dashboard." : "This diagram is a schematic of the type of system described; it does not represent a production screenshot."}</p>
       </div>
     </section>
     <section className="studio-case-chapter">
