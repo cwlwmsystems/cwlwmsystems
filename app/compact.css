@@ -281,3 +281,16 @@ body:has(.compact-site) .site-header .container,body:has(.atelier-inner) .site-h
 .studio-work-visual:has(.seo-intelligence-visual)::after{display:none}
 .studio-work-visual:has(.seo-intelligence-visual) .studio-work-visual-footer{z-index:2;background:rgba(14,45,32,.8)}
 @media(max-width:700px){.seo-intelligence-visual{padding:18px}.seo-intelligence-case{aspect-ratio:1.6;min-height:300px}.seo-intelligence-flow{gap:4px}.seo-intelligence-flow span{padding:8px;font-size:.55rem}}
+
+/* About page: compact founder portrait with real provided artwork */
+.studio-founder-layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(270px,.75fr);gap:clamp(36px,5.5vw,88px);align-items:center}
+.studio-founder-story h2{font-size:clamp(1.75rem,2.9vw,2.9rem);margin:16px 0 26px}
+.studio-founder-story>p{font-size:.96rem;line-height:1.75;color:#4e6856;margin:0 0 18px}
+.studio-founder-story .studio-text-link{margin-top:12px}
+.studio-founder-identity{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:17px;border-top:1px solid #c6d4c8;padding-top:20px}
+.studio-founder-identity h3{font-size:1.3rem!important;margin:0}
+.studio-founder-identity span{font-size:.64rem;letter-spacing:.11em;font-weight:750;color:#7b887d}
+.studio-founder-photo{margin:0;background:#faf6ef;border:1px solid #d8ded2;border-radius:7px;overflow:hidden;max-width:420px;justify-self:end;width:100%;box-shadow:0 15px 35px rgba(17,46,27,.08)}
+.studio-founder-photo>img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+.studio-founder-photo figcaption{border-top:1px solid #dde1d8;display:flex;justify-content:space-between;gap:12px;padding:14px 16px;color:#45624a;font-size:.65rem;letter-spacing:.09em;font-weight:750}
+@media(max-width:740px){.studio-founder-layout{grid-template-columns:1fr;gap:32px}.studio-founder-photo{justify-self:start;max-width:370px}.studio-founder-story h2{font-size:clamp(1.8rem,6vw,2.45rem)}}
