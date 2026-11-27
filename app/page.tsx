@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { portfolioProjects } from "@/lib/portfolio";
+import { FieldOperationsSplash } from "@/components/FieldOperationsSplash";
 
 export const metadata: Metadata = {
   title: "Websites, Software & Business Systems | Cwlwm Systems",
@@ -59,7 +60,7 @@ const projects = [
     slug: "cwlwm-field-operations",
     label: "Custom software in development",
     image: null,
-    imageDescription: "Conceptual architecture schematic",
+    imageDescription: "Cwlwm Field Intelligence splash screen",
   },
 ].map(item => {
   const project = portfolioProjects.find(p => p.slug === item.slug);
@@ -144,11 +145,7 @@ export default function HomePage() {
               <article className="cp-work-card" key={item.slug}>
                 <Link href={`/work/${item.slug}`} className={`cp-work-image cp-work-image-${item.slug}`} aria-label={`View ${item.project.name} case study`}>
                   {item.image ? <div className="cp-work-photo" style={{backgroundImage:`url("${item.image}")`}} role="img" aria-label={item.imageDescription}/> :
-                    <div className="cp-work-schematic">
-                      <div className="cp-work-schematic-label">FIELD OPERATIONS / SYSTEM DESIGN</div>
-                      <div className="cp-schematic-map"><span>TEAM</span><i aria-hidden="true">↔</i><span>PLATFORM</span><i aria-hidden="true">↔</i><span>DATA</span></div>
-                      <div className="cp-schematic-footer">ARCHITECTURE — NOT A SCREENSHOT</div>
-                    </div>}
+                    <FieldOperationsSplash />}
                   <span className="cp-work-view">VIEW PROJECT <span aria-hidden="true">↗</span></span>
                 </Link>
                 <div className="cp-work-description">
@@ -160,7 +157,7 @@ export default function HomePage() {
               </article>
             ))}
           </div>
-          <p className="cp-accuracy">Portfolio visuals use existing project brand and website assets. Salt &amp; Light Church is a public preview, not a verified finished launch. Cwlwm Field Operations is independent software in development; its visual is a schematic, not a product screenshot.</p>
+          <p className="cp-accuracy">Portfolio visuals use existing project brand and website assets. Salt &amp; Light Church is a public preview, not a verified finished launch. Cwlwm Field Operations is independent software in development; the visual shows its actual branded loading-screen design, not a dashboard.</p>
         </div>
       </section>
 
