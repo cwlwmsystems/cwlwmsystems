@@ -23,7 +23,7 @@ return <div className="company-site atelier-inner atelier-about-page">
         <Link href="/expertise" className="studio-text-link">Explore technical expertise <span aria-hidden="true">↗</span></Link>
       </div>
       <figure className="studio-founder-photo">
-        <Image src="/images/kasey-pelchy-founder.webp" width={480} height={480} sizes="(max-width: 740px) 90vw, 390px" alt="Illustrated portrait of Cwlwm Systems founder Kasey Pelchy wearing glasses and a light sweater" />
+        <Image src="/images/kasey-pelchy-founder.webp" width={280} height={280} sizes="(max-width: 740px) 90vw, 330px" alt="Illustrated portrait of Cwlwm Systems founder Kasey Pelchy wearing glasses and a light sweater" />
         <figcaption><span>KASEY PELCHY</span><span>FOUNDER &amp; DEVELOPER</span></figcaption>
       </figure>
     </div>
