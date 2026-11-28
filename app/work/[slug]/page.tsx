@@ -11,6 +11,28 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   return {title:`${p.name} | Selected Work`,description:p.summary,alternates:{canonical:`/work/${slug}`}};
 }
 
+const relatedServicesByProject: Record<string, { slug: string; label: string }[]> = {
+  "port-petals": [
+    { slug: "ecommerce-development", label: "Ecommerce development" },
+    { slug: "automation-integrations", label: "Automation and integrations" },
+  ],
+  "cwlwm-field-operations": [
+    { slug: "custom-software", label: "Custom business software" },
+    { slug: "automation-integrations", label: "Automation and integrations" },
+  ],
+  "olson-tenglund": [
+    { slug: "business-websites", label: "Business website development" },
+    { slug: "seo-aeo", label: "SEO and search visibility" },
+  ],
+  "salt-light-church": [
+    { slug: "business-websites", label: "Business website development" },
+  ],
+  "seo-aeo-search-intelligence": [
+    { slug: "seo-aeo", label: "SEO and search intelligence" },
+    { slug: "custom-software", label: "Custom software engineering" },
+  ],
+};
+
 const images: Record<string, string> = {
   "olson-tenglund": "https://raw.githubusercontent.com/kaseypelchy-ops/olson-tenglund-info/main/assets/parts-counter-scene.webp",
   "port-petals": "https://raw.githubusercontent.com/cwlwmsystems/port-petals/main/public/port-petals-logo-transparent.png",
@@ -22,6 +44,7 @@ export default async function ProjectPage({params}:{params:Promise<{slug:string}
   const p=portfolioProjects.find(x=>x.slug===slug);
   if (!p) notFound();
   const image=images[p.slug];
+  const relatedServices=relatedServicesByProject[p.slug] ?? [];
   const next=portfolioProjects[(portfolioProjects.findIndex(x=>x.slug===p.slug)+1)%portfolioProjects.length];
   return <div className="company-site atelier-inner atelier-case">
     <section className="studio-page-hero studio-case-hero">
@@ -53,6 +76,17 @@ export default async function ProjectPage({params}:{params:Promise<{slug:string}
     <section className="studio-case-chapter">
       <div className="studio-container studio-case-grid"><div><span className="studio-overline">04 / STATUS & TRANSPARENCY</span><h2>The details<br/><em>matter.</em></h2></div><div className="studio-case-notes"><p>{p.note}</p><div className="studio-case-links">{p.website&&<a href={p.website} target="_blank" rel="noopener noreferrer">Live website ↗</a>}{p.study&&<a href={p.study} target="_blank" rel="noopener noreferrer">Approved case study ↗</a>}{p.repository&&<a href={p.repository} target="_blank" rel="noopener noreferrer">Technical repository ↗</a>}</div></div></div>
     </section>
+    {relatedServices.length > 0 && <section className="studio-case-chapter">
+      <div className="studio-container studio-case-grid">
+        <div><span className="studio-overline">05 / RELATED SERVICES</span><h2>Explore the<br/><em>capabilities.</em></h2></div>
+        <div className="studio-case-notes">
+          <p>Explore the services connected to this work, including how Cwlwm scopes, builds and supports similar systems.</p>
+          <div className="studio-case-links">
+            {relatedServices.map((service) => <Link href={`/services/${service.slug}`} key={service.slug}>{service.label} ↗</Link>)}
+          </div>
+        </div>
+      </div>
+    </section>}
     <section className="studio-next-project"><div className="studio-container"><span className="studio-overline">NEXT PROJECT</span><Link href={`/work/${next.slug}`}>{next.name} <span aria-hidden="true">↗</span></Link></div></section>
     <section className="studio-page-cta"><div className="studio-container"><span>GOOD WORK / STARTS HERE</span><div><h2>What&apos;s your<br/><em>next move?</em></h2><Link href="/contact">Start a conversation ↗</Link></div></div></section>
   </div>;
