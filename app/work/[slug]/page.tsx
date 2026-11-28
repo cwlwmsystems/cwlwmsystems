@@ -70,15 +70,26 @@ export default async function ProjectPage({params}:{params:Promise<{slug:string}
         <div className="studio-case-list">{p.delivered.map((item,i)=><div key={item}><span>{String(i+1).padStart(2,"0")}</span><p>{item}</p></div>)}</div>
       </div>
     </section>
+    {p.proofPoints && p.proofPoints.length > 0 && <section className="studio-case-chapter">
+      <div className="studio-container studio-case-grid">
+        <div><span className="studio-overline">03 / VERIFIED PROJECT EVIDENCE</span><h2>How the system<br/><em>works in practice.</em></h2></div>
+        <div className="studio-case-list">
+          {p.proofPoints.map((point, i) => <div key={point.title}>
+            <span>{String(i + 1).padStart(2, "0")}</span>
+            <div><h3>{point.title}</h3><p>{point.detail}</p></div>
+          </div>)}
+        </div>
+      </div>
+    </section>}
     <section className="studio-case-chapter studio-case-chapter-dark">
-      <div className="studio-container studio-case-grid"><div><span className="studio-overline">03 / ENGINEERING</span><h2>Considered<br/><em>under the hood.</em></h2></div><div><div className="studio-case-list">{p.engineering.map((item,i)=><div key={item}><span>{String(i+1).padStart(2,"0")}</span><p>{item}</p></div>)}</div><div className="studio-case-tools">{p.tools.map(tool=><span key={tool}>{tool}</span>)}</div></div></div>
+      <div className="studio-container studio-case-grid"><div><span className="studio-overline">{p.proofPoints?.length ? "04" : "03"} / ENGINEERING</span><h2>Considered<br/><em>under the hood.</em></h2></div><div><div className="studio-case-list">{p.engineering.map((item,i)=><div key={item}><span>{String(i+1).padStart(2,"0")}</span><p>{item}</p></div>)}</div><div className="studio-case-tools">{p.tools.map(tool=><span key={tool}>{tool}</span>)}</div></div></div>
     </section>
     <section className="studio-case-chapter">
-      <div className="studio-container studio-case-grid"><div><span className="studio-overline">04 / STATUS & TRANSPARENCY</span><h2>The details<br/><em>matter.</em></h2></div><div className="studio-case-notes"><p>{p.note}</p><div className="studio-case-links">{p.website&&<a href={p.website} target="_blank" rel="noopener noreferrer">Live website ↗</a>}{p.study&&<a href={p.study} target="_blank" rel="noopener noreferrer">Approved case study ↗</a>}{p.repository&&<a href={p.repository} target="_blank" rel="noopener noreferrer">Technical repository ↗</a>}</div></div></div>
+      <div className="studio-container studio-case-grid"><div><span className="studio-overline">{p.proofPoints?.length ? "05" : "04"} / STATUS & TRANSPARENCY</span><h2>The details<br/><em>matter.</em></h2></div><div className="studio-case-notes"><p>{p.note}</p><div className="studio-case-links">{p.website&&<a href={p.website} target="_blank" rel="noopener noreferrer">Live website ↗</a>}{p.study&&<a href={p.study} target="_blank" rel="noopener noreferrer">Approved case study ↗</a>}{p.repository&&<a href={p.repository} target="_blank" rel="noopener noreferrer">Technical repository ↗</a>}</div></div></div>
     </section>
     {relatedServices.length > 0 && <section className="studio-case-chapter">
       <div className="studio-container studio-case-grid">
-        <div><span className="studio-overline">05 / RELATED SERVICES</span><h2>Explore the<br/><em>capabilities.</em></h2></div>
+        <div><span className="studio-overline">{p.proofPoints?.length ? "06" : "05"} / RELATED SERVICES</span><h2>Explore the<br/><em>capabilities.</em></h2></div>
         <div className="studio-case-notes">
           <p>Explore the services connected to this work, including how Cwlwm scopes, builds and supports similar systems.</p>
           <div className="studio-case-links">
