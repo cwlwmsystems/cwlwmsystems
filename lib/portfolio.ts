@@ -2,27 +2,62 @@ export type PortfolioProject = {
   slug: string; name: string; type: string; status: string; summary: string; challenge: string;
   delivered: string[]; engineering: string[]; tools: string[]; note: string;
   website?: string; repository?: string; study?: string;
+  proofPoints?: { title: string; detail: string }[];
 };
 export const portfolioProjects: PortfolioProject[] = [
   {
     slug: "port-petals", name: "Port Petals", type: "Client ecommerce platform", status: "Production / active development",
-    summary: "A connected storefront and operations platform for a floral and gift retailer.",
-    challenge: "Connect online purchasing, payments, pickup and delivery, customer accounts, loyalty, communication and staff operations.",
-    delivered: ["Responsive catalog, cart and optional customer accounts", "Square-hosted checkout with verified payment-webhook confirmation", "Pickup and local delivery administration", "Customer order history, wishlists, rewards and referral workflows", "Marketing consent separated from account registration"],
-    engineering: ["Server-side checkout validation and webhook processing", "Supabase relational data, authentication and access policies", "Rewards ledger and transaction-aware fulfillment workflows", "Staff administration, notifications and deployment"],
+    summary: "A live storefront and retail operations application connecting product discovery, Square payments, pickup and local delivery.",
+    challenge: "An independent floral and gift retailer needs more than a catalog. Customers must choose products, confirm fulfillment details and complete payment, while staff need a dependable order record and a way to manage pickup, delivery and customer activity without treating a checkout redirect as proof of payment.",
+    delivered: [
+      "Responsive product catalog, item detail pages and cart for flowers, gifts and seasonal merchandise",
+      "Pickup and local delivery choices with date, lead-time, availability and server-side pricing checks",
+      "Square-hosted checkout connected to internally tracked order and payment states",
+      "Customer accounts and order history, with administrative product and order management",
+      "Loyalty, rewards and referral capabilities with explicit marketing-consent choices"
+    ],
+    engineering: [
+      "Created and validated internal orders before starting hosted Square payment",
+      "Validated Square webhook signatures and finalized paid orders only after confirmed payment events",
+      "Handled repeated payment notifications through an idempotent payment-completion workflow",
+      "Used Supabase data models, access controls and transaction-aware reward records",
+      "Separated fulfillment state from payment state for clearer operational recovery"
+    ],
+    proofPoints: [
+      { title: "Customer path", detail: "Customers can browse, select pickup or local delivery, and move from cart to hosted Square checkout." },
+      { title: "Payment trust", detail: "The payment return page does not mark an order paid. A validated completed Square payment drives the internal confirmation." },
+      { title: "Retail operations", detail: "Order records and administrative workflows support fulfillment follow-through after checkout." }
+    ],
     tools: ["Next.js", "React", "TypeScript", "Supabase", "Square", "Resend", "Vercel"],
-    note: "The project README documents a production deployment and ongoing development. Partial-refund reward accounting and additional automated test coverage are not presented as complete.",
+    note: "The project repository documents a live Vercel deployment and ongoing development. These are implemented capabilities, not claims about higher sales, conversion rates or reduced labor. Partial-refund reward accounting and some additional automated test coverage are not presented as complete.",
     website: "https://www.portpetals.com", repository: "https://github.com/cwlwmsystems/port-petals",
     study: "https://github.com/cwlwmsystems/.github/blob/main/case-studies/port-petals.md"
   },
   {
-    slug: "cwlwm-field-operations", name: "Cwlwm Field Operations", type: "Independent Cwlwm software product", status: "Development platform",
-    summary: "A company-agnostic, multi-tenant application for field sales and operational coordination.",
-    challenge: "Provide one structured environment for distributed teams, territories, representative activity, scheduling, dispatch and reporting.",
-    delivered: ["Organization-scoped records, membership and access roles", "Territory and location management with mapping", "Field activity, sales and appointment workflows", "Scheduling, dispatch and operational reporting", "Administrative and audit-oriented controls"],
-    engineering: ["Multi-tenant PostgreSQL data architecture", "Supabase row-level security and protected access", "Organization-aware operations and role permissions", "Release and validation documentation"],
+    slug: "cwlwm-field-operations", name: "Cwlwm Field Operations", type: "Independent Cwlwm software product", status: "v1.1 development checkpoint / not publicly launched",
+    summary: "An independently developed, multi-tenant field operations platform for territory work, sales activity, dispatch and reporting.",
+    challenge: "Distributed field teams need a consistent way to assign territories, work location queues, record interactions, coordinate appointments and understand operational exceptions. The architecture also has to keep each organization's users and business records separate while supporting administrators, managers, dispatchers and field representatives.",
+    delivered: [
+      "Organization-scoped workspaces, memberships, roles and user administration",
+      "Territory assignments, location and lead records, representative work queues and maps",
+      "Sales capture, appointments, scheduling capacity and rescheduling workflows",
+      "Dispatcher visibility, representative presence and operational alerts",
+      "Reporting dashboards and security/audit administration at the v1.1 development checkpoint"
+    ],
+    engineering: [
+      "Designed a tenant-first PostgreSQL/Supabase data model with organization-owned records",
+      "Applied row-level security and role-aware permissions to isolate tenant data",
+      "Built protected application routes and controlled operational workflows",
+      "Separated representative, dispatcher and administrator responsibilities",
+      "Documented database migrations, release validation and clean-room development safeguards"
+    ],
+    proofPoints: [
+      { title: "Operational flow", detail: "The platform connects territory and location assignment to field activity, sales and downstream scheduling." },
+      { title: "Data boundaries", detail: "Organization-scoped records, membership checks and row-level security form the tenant isolation model." },
+      { title: "Development maturity", detail: "The repository documents v1.1 capabilities and a roadmap for system health and diagnostics; it does not establish a public SaaS launch." }
+    ],
     tools: ["Next.js", "React", "TypeScript", "PostgreSQL", "Supabase", "Vercel"],
-    note: "Independently developed by Cwlwm Systems as a general-purpose product. It is separate from Zito Media's FieldOS application, which was used by Zito. Development milestones do not imply a publicly available SaaS launch.",
+    note: "Cwlwm Field Operations is independently developed as a company-agnostic clean-room product and is not Zito Media's FieldOS application. The repository documents a v1.1 release checkpoint, not verified customer adoption or general availability. Screenshots and visual reconstructions should not be mistaken for live customer activity.",
     repository: "https://github.com/cwlwmsystems/cwlwm-field-operations"
   },
   {
